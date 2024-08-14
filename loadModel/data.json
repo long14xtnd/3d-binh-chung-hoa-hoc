@@ -1,0 +1,386 @@
+[
+  {
+    "id": 1,
+    "name": "Lựu đạn CS Flamess Blast",
+    "description": "Bộ đội Hóa học thuộc Tiểu đoàn 52/ Quân khu 9 thu được của địch tại Tây Ninh, năm 1970.",
+    "name_en": "CS Flamess Blast Grenade",
+    "description_en": "Chemical Corps of Military Zone 9 captured enemy equipment at Tay Ninh, 1970.",
+    "model": "1-Luu dan CS Flamess Blast.glb"
+  },
+  {
+    "id": 2,
+    "name": "Lựu đạn CS M25-A2",
+    "description": "Bộ đội Hóa học thu được của địch tại đèo Cù Mông tỉnh Bình Định khi tham gia xử lý bom đạn hóa học của Mỹ sau chiến tranh, năm 1995",
+    "name_en": "CS M25 A2 Grenade",
+    "description_en": "Chemical Corps captured enemy equipment at Cu Mong pass, Binh Dinh province during the post-war cleanup of American chemical ordnance, 1995.",
+    "model": "2- Luu dan CS M25-A2.glb"
+  },
+  {
+    "id": 3,
+    "name": "Lựu đạn CS XM 54",
+    "description": "Bộ đội Hóa học thu được của địch trong chiến dịch Đường 9 Nam Lào, năm 1971.",
+    "name_en": "CS XM 54 Grenade",
+    "description_en": "Chemical Corps captured enemy equipment during the Route 9 Southern Laos campaign, 1971.",
+    "model": "3-Luu Dan CS XM54.glb"
+  },
+  {
+    "id": 4,
+    "name": "Súng M72",
+    "description": "Quân đội Mỹ sử dụng trong chiến tranh Việt Nam",
+    "name_en": "M72 Gun",
+    "description_en": "Used by the American army in the Vietnam War.",
+    "model": "4-Sung M72.glb"
+  },
+  {
+    "id": 5,
+    "name": "Đạn xuyên M72",
+    "description": "Quân đội Mỹ sử dụng trong chiến tranh Việt Nam",
+    "name_en": "M72 Armor-Piercing Rounds",
+    "description_en": "Used by the American army in the Vietnam War.",
+    "model": "5-Mo hinh dan xuyen-dan M72.glb"
+  },
+  {
+    "id": 6,
+    "name": "Thùng phuy chứa chất độc CS",
+    "description": "Mỹ sản xuất đưa sang sử dụng trong chiến tranh xâm lược Việt Nam. Bộ đội Hóa học thu dược trong trận càn tại Thanh Phú, Tân An, Cầu Kè, Trà Vinh, 7/10/1965",
+    "name_en": "Drum for storing CS toxic substance",
+    "description_en": "Made by America and brought to use in the Vietnam invasion war. Captured by the Chemical Corps during the Thanh Phu, Tan An, Cau Ke, Tra Vinh sweep, 10/7/1965.",
+    "model": "6-Thung Phuy Dung CS.glb"
+  },
+  {
+    "id": 7,
+    "name": "Can nhựa đựng chất độc CS",
+    "description": "Mỹ sản xuất trang bị cho quân đội Mỹ trong chiến tranh xâm lược Việt nam. B109 thu được trong trận bám trụ chiến đấu bảo vệ căn cứ phía bắc Tây Ninh, tháng 6/1970",
+    "name_en": "Plastic canister for CS toxic substance",
+    "description_en": "Made by America and equipped for the American army in the Vietnam invasion war. Captured by the Chemical Corps during the battle to hold the northern base at Tay Ninh, June 1970.",
+    "model": "7-Can nhua + tui dung chat doc CS.glb"
+  },
+  {
+    "id": 8,
+    "name": "Đạn hỏa tiễn 2,7 inch",
+    "description": "Chiến lợi phẩm ta thu được trong chiến dịch Trị Thiên, năm 1972.",
+    "name_en": "2.7-inch Rocket Ammunition",
+    "description_en": "Spoils of war captured during the Tri-Thien campaign, 1972.",
+    "model": "8-Dan hoa tien 2,7 inch.glb"
+  },
+  {
+    "id": 9,
+    "name": "Đạn pháo CS 150mm",
+    "description": "Mỹ sản xuất và sử dụng trong chiến tranh xâm lược Việt nam. Bộ đội Hóa học thu được năm 1973",
+    "name_en": "CS 150mm Artillery Shell",
+    "description_en": "Made and used by America in the Vietnam invasion war. Captured by the Chemical Corps in 1973.",
+    "model": "9- Dan phao CS 150.glb"
+  },
+  {
+    "id": 10,
+    "name": "Lựu đạn GB GAS",
+    "description": "Quân đội Mỹ sử dụng trong chiến tranh Việt Nam",
+    "name_en": "GB GAS Grenade",
+    "description_en": "Used by the American army in the Vietnam War.",
+    "model": "10- Luu dan GBGAS.glb"
+  },
+  {
+    "id": 11,
+    "name": "Súng phun lửa XM 191",
+    "description": "Mỹ sản xuất trang bị cho lính Mỹ để sử dụng trong chiến tranh xâm lược Việt Nam. Sau năm 1975, Bộ đội Hóa học thu gom tại các kho, căn cứ quân sự của Mỹ để lại sau chiến tranh đã cải tiến phục vụ cho công tác huấn luyện, sãn sàng chiến đấu ở các đơn vị hóa học trong toàn quân.",
+    "name_en": "XM 191 Flamethrower",
+    "description_en": "Made by America, equipped for American soldiers for use in the Vietnam invasion war. After 1975, collected by the Chemical Corps at warehouses, military bases left by the US after the war, have been improved for training, readiness, and combat at chemical units throughout the military.",
+    "model": "11- Sung phun lia XM191+ Dan WPSMKE.glb"
+  },
+  {
+    "id": 12,
+    "name": "Dàn phóng E8",
+    "description": "Mỹ sản cuất, trang bị cho quân đội Mỹ trong chiến tranh xâm lược Việt Nam. Bộ đội Hóa học thu được tại Gio Linh - Quảng Trị trong chiến dịch Đường 9 Khe Sanh, năm 1968.",
+    "name_en": "E8 Launcher",
+    "description_en": "Made by America, equipped for the American army in the Vietnam invasion war. Captured by the Chemical Corps at Gio Linh - Quang Tri during the Route 9 Khe Sanh campaign, 1968.",
+    "model": "13- Dan phong E8.glb"
+  },
+  {
+    "id": 13,
+    "name": "Dàn phóng E8 chứa chất độc hóa học",
+    "description": "Mỹ sản xuất, trang bị cho quân dội Mỹ trong chiến tranh Việt Nam. Ta thu được của địch tại Gio Linh - Quảng Trị trong chiến dịch Đường 9 - Khe Sanh, năm 1968",
+    "name_en": "E8 Launcher with chemical agents",
+    "description_en": "Made by America, equipped for the American army in the Vietnam War. Captured by us from the enemy at Gio Linh - Quang Tri during the Route 9 - Khe Sanh campaign, 1968.",
+    "model": "14- Dan phong E8 + dan E8.glb"
+  },
+  {
+    "id": 14,
+    "name": "Mặt nạ Mỹ",
+    "description": "Quân đội Mỹ sử dụng trong chiến tranh, từ năm 1962-1968",
+    "name_en": "American gas mask",
+    "description_en": "Used by the American army in the war, from 1962-1968.",
+    "model": "15-Mat Na Quan Doi My.glb"
+  },
+  {
+    "id": 15,
+    "name": "Khuôn sản xuất mặt nạ",
+    "description": "Viện Hóa học môi trường quân sự chế tạo sản xuất mặt nạ phòng độc phục vụ cho huấn luyện, sẵn sàng chiến đấu và các nhiệm vụ chuyên môn khác.",
+    "name_en": "Gas mask mold production",
+    "description_en": "The Military Environmental Chemistry Institute manufactured gas masks for training, SSCD, and other specialized tasks.",
+    "model": "16- Khuon san xuat mat na.glb"
+  },
+  {
+    "id": 16,
+    "name": "Mặt nạ MO04",
+    "description": "Viện Hóa học quân sự Binh chủng Hóa học sử dụng trong quá trình xử lý chất độc hóa học của Mỹ còn tồn đọng ở Tánh Linh - Bình Thuận, năm 1995.",
+    "name_en": "MO04 Mask",
+    "description_en": "The Military Chemistry Institute of the Chemical Corps used in the process of handling American chemical residues at Tanh Linh - Binh Thuan, 1995.",
+    "model": "17-Mat Na Mo04.glb"
+  },
+  {
+    "id": 17,
+    "name": "Hộp khói 2,5kh và Bộ đo gió",
+    "description": "Đại đội 92 - Tiểu đoàn 902/ Cục Hóa học sử dụng thả khói ngụy trang bảo vệ nhà máy điện, nước Yên Phụ năm 1967. Đại đội 92 - Tiểu đoàn 902/ Cục Hóa học đã sử dụng xác định đại lượng để phục vụ cho việc dùng màn khói ngụy trang bảo vệ nhà máy điện, nước Yên Phụ, năm 1967.",
+    "name_en": "2.5kg Smoke Canister and Wind measuring kit",
+    "description_en": "Company 92 of Battalion 902 used smoke for camouflage to protect the Yen Phu power and water plant in 1967. Company 92 of Battalion 902 of the Chemical Corps used quantitative determination for the use of smoke screens to protect the Yen Phu power and water plant, 1967.",
+    "model": "18- Hop khoi, may dien thoai, hop do gio.glb"
+  },
+  {
+    "id": 18,
+    "name": "Khuôn hộp lọc",
+    "description": "X61/Cục Hóa học chế tạo phục vụ cho việc sản xuất hộp lọc cung cấp cho chiến trường miền Nam từ năm 1968 đến năm 1975.",
+    "name_en": "Filter box mold",
+    "description_en": "Factory X61 of the Chemical Corps manufactured filter boxes supplied to the Southern battlefield from 1968 to 1975.",
+    "model": "19- Khuon hop loc.glb"
+  },
+  {
+    "id": 19,
+    "name": "Bình dò độc lỗ (bình tiêu độc đeo lưng)",
+    "description": "Liên Xô sản xuất viện trợ cho Việt Nam trong những năm kháng chiến chống Mỹ cứu nước. Đại đội 62 - Sư đoàn 330/ Quân khu 3 đã sử dụng trong đợt khắc phục hậu quả vụ nhiễm độc Ga Gôi, Vụ Bản, Nam Định (21-28/8/1996)",
+    "name_en": "Toxic detection bottle with back strap (back-worn decontamination bottle)",
+    "description_en": "The Soviet Union produced and aided Vietnam during the years of resistance against America to save the country. Company 62, Division 330 of Military Zone 3 used it during the recovery from the Ga Goi toxic incident, Vu Ban, Nam Dinh (21-28/8/1996).",
+    "model": "20- Binh doc lo.glb"
+  },
+  {
+    "id": 20,
+    "name": "Lựu đạn XM58 và Bình xịt CS XM 32",
+    "description": "Quân đội Mỹ sử dụng trong chiến tranh Việt Nam từ năm 1965-1972. Sau chiến tranh Bộ đội Hóa học thu gom, xử lý tại Quảng Trị.",
+    "name_en": "CSXM 58 Grenade and CSXM 32 Spray Bottle",
+    "description_en": "The U.S. military used equipment in the Vietnam War from 1965 to 1972. After the war, the military collected and processed these at Quang Tri.",
+    "model": "21-Luu dan XM58+binh xit CS XM 32.glb"
+  },
+  {
+    "id": 21,
+    "name": "Khí tài phòng hô hấp ứng dụng",
+    "description": "Quân đội Mỹ sử dụng trong chiến tranh Việt Nam",
+    "name_en": "Respiratory protection equipment",
+    "description_en": "The U.S. military used equipment in the Vietnam War",
+    "model": "22- Khi tai phong ho hap ung dung.glb"
+  },
+  {
+    "id": 22,
+    "name": "Lựu đạn XM 576 - E1",
+    "description": "Mỹ sản xuất trang bị cho quân đội Mỹ trong chiến tranh xâm lược Việt Nam. Sau năm 1975 Bộ đội Hóa học đã thu gom tại các kho căn cứ quân sự của Mỹ.",
+    "name_en": "XM 576 - E1 Grenade",
+    "description_en": "The U.S. produced equipment for the U.S. military in the Vietnam War. After 1975, the military collected these at the U.S. military bases' warehouses.",
+    "model": "23-Luu dan CS XM 576-E1 + ngoi phat no XM 295.glb"
+  },
+  {
+    "id": 23,
+    "name": "Vật liệu Emviromat và Vật liệu cách li mang điện HDPE",
+    "description": "Binh chủng Hóa học sử dụng trong Dự án 'xử lý đất nhiễm chất độc hóa học chứa dioxin tại sân bay Biên Hòa - Đồng Nai', từ năm 2006-2009.",
+    "name_en": "Enviromat material and HDPE geomembrane insulation material",
+    "description_en": "The Chemical Corps used this equipment in the project 'Treatment of dioxin-contaminated soil at Bien Hoa Airbase - Dong Nai' from 2006 to 2009.",
+    "model": "25- Vat lieu Emviromat + Vat kieu cach li mang dien HDPE.glb"
+  },
+  {
+    "id": 24,
+    "name": "Mặt nạ MV-5",
+    "description": "Tác dụng lọc khí nhiễm (nhiễm độc, nhiễm xạ, nhiễm trùng) thành không khí sạch cung cấp cho người hít thở, che phòng cho cơ quan hô hấp, da mặt, da đầu.",
+    "name_en": "MV-5 Mask",
+    "description_en": "The equipment functions to filter contaminated air (toxic, radioactive, infectious) into clean air for breathing, providing protection for the respiratory system, facial skin, and scalp.",
+    "model": "26- Mat na MV-5.glb"
+  },
+  {
+    "id": 25,
+    "name": "Hộp lọc FD 3.5",
+    "description": "Nhà máy X61 sản xuất phục vụ công tác huấn luyện, sẵn sàng chiến đấu cho các đơn vị Hóa học toàn quân và các nhiệm cụ chuyên môn khác của Binh chủng.",
+    "name_en": "FD 3.5 Filter Cartridge",
+    "description_en": "Factory X61 produced this equipment for training purposes and SSCD for the chemical units of the whole army and other specialized tasks of the Corps.",
+    "model": "27- Hop loc FD 3,5.glb"
+  },
+  {
+    "id": 26,
+    "name": "Hộp lọc FPT 200",
+    "description": "Nhà máy X61 sản xuất phục vụ công tác huấn luyện, sẵn sàng chiến đấu cho các đơn vị Hóa học toàn quân và các nhiệm cụ chuyên môn khác của Binh chủng.",
+    "name_en": "FPT 200 Filter Cartridge",
+    "description_en": "Factory X61 produced this equipment for training purposes and SSCD for the chemical units of the whole army and other specialized tasks of the Corps.",
+    "model": "28- Hop loc FPT 200.glb"
+  },
+  {
+    "id": 27,
+    "name": "Hộp lọc FP 15",
+    "description": "Nhà máy X61 sản xuất phục vụ công tác huấn luyện, sẵn sàng chiến đấu cho các đơn vị Hóa học toàn quân và các nhiệm cụ chuyên môn khác của Binh chủng.",
+    "name_en": "FP 15 Filter Cartridge",
+    "description_en": "Factory X61 produced this equipment for training purposes and SSCD for the chemical units of the whole army and other specialized tasks of the Corps.",
+    "model": "29- Hop loc FD 15.glb"
+  },
+  {
+    "id": 28,
+    "name": "Mô hình trang bị khí tài trinh độc",
+    "description": "Quân đội Mỹ sử dụng trong chiến tranh Việt Nam",
+    "name_en": "Decontamination equipment model",
+    "description_en": "The U.S. military used equipment in the Vietnam War.",
+    "model": "30- Mo hinh trang bi khi tai trinh doc.glb"
+  },
+  {
+    "id": 29,
+    "name": "Bộ khí tài phòng da L1",
+    "description": "Chiến sĩ Tiểu đoàn 903 - Trung đoàn Phòng hóa 86/ Binh chủng Hóa học đã sử dụng trong quá trình tham gia khắc phục xử lý chất độc CS do Mỹ để lại sau chiến tranh tại khu vực Đèo Cù Mông - Bình Định, tháng 11/2005.",
+    "name_en": "L1 Skin Protection Kit",
+    "description_en": "Soldiers from Battalion 903, Regiment 86, Chemical Corps, used in the process of participating in the remediation of CS toxic substances left by the US after the war in the area of Cu Mong Pass - Binh Dinh, in November 2005.",
+    "model": "31. Bo khi tai phong da L1.glb"
+  },
+  {
+    "id": 30,
+    "name": "Mô hình máy báo độc tự động GSA 11",
+    "description": "Tiểu đoàn đào tạo của Trường Sĩ quan Phòng hóa đã sử dụng phục vụ học tập, huấn luyện cho học viên, từ năm 1985 đến 1995.",
+    "name_en": "GSA 11 Automatic Toxicity Alarm Device Model",
+    "description_en": "The training battalion of the Chemical Officer School used it for study and training purposes for students from 1985 to 1995.",
+    "model": "32. Mo hinh may bao doc tu dong GSA11.glb"
+  },
+  {
+    "id": 31,
+    "name": "Các sản phẩm lực đạn khói, mặt nạ, hộp khói, ống trình độc Nhà máy X61 sản xuất",
+    "description": "Tháng 3/1972, Quân đội Nhân dân Việt Nam tấn công vào Quảng Trị với 2 trung đoàn xe tăng. Quân đội Sài Gòn điều Thiết đoàn xe tăng số 20 (gồm 57 xe tăng M48A3) và Lữ đoàn thiết giáp số 1 (gồm 57 xe M48A3) tới khu vực để chặn đường tấn công của Quân đội Nhân dân Việt Nam tại Quảng Trị. Ngày 9/4/1972, với chiến thuật 'Trâu Rừng' (giấu xe trong chiến hào, chỉ nhô tháp pháo lên để phục kích), 8 xe M48 đã bắn hạ được 6 xe tăng của QĐNDVN. Song đến ngày 27/4/1972, đến lượt hàng chục M48 bị T-54 của Quân đội Nhân dân Việt Nam bắn hạ bằng chiến thuật bí mật áp sát, trong đó riêng Đại đội trưởng Nguyễn Văn Thái đã diệt được 5 chiếc ở Tây Đông Hà[8]. Trong 1 tháng, cả hai đơn vị thiết giáp của quân đội Sài Gòn bị tiêu diệt gần như hoàn toàn (Trung đoàn xe tăng số 20 mất toàn bộ 57 xe M48, trong khi Lữ đoàn thiết giáp số 1 mất 43 xe M48). Kết quả là vào tháng 5/1972, Hoa Kỳ phải viện trợ khẩn cấp cho VNCH thêm 120 chiếc M48A3 để bù đắp thiệt hại. Sau khi thoả thuận ngừng bắn năm 1973 diễn ra, Thiết đoàn 20 được Hoa Kỳ tổ chức lại cùng với 2 thiết đoàn số 21 và 22 với xe tăng M48A3. Cũng có một số đại đội Patton được thành lập để dùng trong các đơn vị kị binh bọc giáp. Cho đến đầu năm 1975, quân đội Sài Gòn có 3 Thiết đoàn chiến xa trang bị M48 với tổng số 162 xe, tất cả đều là M48A3 - phiên bản hiện đại nhất khi đó.",
+    "name_en": "Plastic cans and CS poison bags",
+    "description_en": "In March 1972, the Vietnam People's Army attacked Quang Tri with two tank regiments. The Saigon Army dispatched the 20th Tank Group (including 57 M48A3 tanks) and the 1st Armored Brigade (including 57 M48A3 vehicles) to the area to block the Vietnam People's Army's attack in Quang Tri. On April 9, 1972, with the 'Jungle Buffalo' tactic (hiding the vehicle in the trenches, only raising the turret to ambush), 8 M48 vehicles shot down 6 tanks of the People's Army of Vietnam. But on April 27, 1972, dozens of M48s were shot down by T-54s of the Vietnam People's Army using secret close-in tactics, of which Company Commander Nguyen Van Thai alone destroyed 5 in the area. Tay Dong Ha[8]. In 1 month, both armored units of the Saigon army were almost completely destroyed (The 20th Tank Regiment lost all 57 M48 vehicles, while the 1st Armored Brigade lost 43 M48 vehicles). As a result, in May 1972, the United States had to provide emergency aid to the Republic of Vietnam with an additional 120 M48A3s to compensate for the damage. After the 1973 ceasefire agreement took place, the 20th Armored Division was reorganized by the United States along with the 2nd Armored Divisions 21 and 22 with M48A3 tanks. There were also several Patton companies raised for use in armored cavalry units. Until early 1975, the Saigon army had 3 Armored Tank Groups equipped with M48s with a total of 162 vehicles, all of which were M48A3s - the most modern version at that time.",
+    "model": "33. Cac san pham luu dan khoi, mat na, hop khoi, ong trinh doc Nha may X61 san xuat.glb"
+  },
+  {
+    "id": 32,
+    "name": "Máy đếm xung DT100",
+    "description": "Viện Hóa học Quân sự dùng để đo số xung điện xuất hiện dưới sự tác động của bức xạ α, β, ¥ vào đầu ghi bức xạ và phục vụ công tác nghiên cứu, sản xuất máy đo phóng xạ, từ năm 1976-2000",
+    "name_en": "DT-100 Pulse Counter",
+    "description_en": "The Military Chemistry Institute used to measure the number of electrical pulses generated under the influence of α, β, and gamma radiation at the radiation detector head and served in the research and production of radiation measurement devices from 1976-2000.",
+    "model": "34. May dem xung DT100.glb"
+  },
+  {
+    "id": 33,
+    "name": "Mô hình robot trinh sát chất độc",
+    "description": "Là sản phẩm của đề tài thuộc Chương trình KC.AT của Viện Hóa học môi trường quân sự thuộc Binh chủng Hóa học, năm 2018. Robot trinh sát có tác dụng trinh sát tác nhân phóng xạ và hóa học tại các khu vực có hoạt độ phóng xạ và nồng độ hóa chất cao, khu vực bị ô nhiễm mà con người không vào được. Thực hành trinh sát lấy mẫu và vô hiệu hóa một số mục tiêu nguy hiểm. Thiết bị được trang bị cho lực lượng ứng cứu các sự cố hóa-độc-xạ, sẵn sàng chiến đấu của bộ đội Hóa học.",
+    "name_en": "Toxic reconnaissance robot model",
+    "description_en": "It is a product of the research topic under the KC.AT Program of the Military Environmental Chemistry Institute under the Chemical Corps, in 2018. The reconnaissance robot is designed to scout radioactive and chemical agents in areas with high radiation activity and chemical concentration, in polluted areas where humans cannot enter. It practices scouting, sampling, and neutralizing some dangerous targets. The device is equipped for the chemical forces ready to respond to chemical-radiation incidents.",
+    "model": "35. Mo hinh Robot.glb"
+  },
+  {
+    "id": 34,
+    "name": "Mô hình quy trình công nghệ xử lý chất độc CS",
+    "description": "Là sản phẩm của đề tài thuộc Chương trình KC.AT của Viện Hóa học môi trường quân sự thuộc Binh chủng Hóa học, năm 2018. Hệ thống lò đốt hai cấp (LĐ-2C) dùng để xử lý triệt để chất độc CS và sản phẩm thủy phân chất độc CS ở dạng rắn hoặc lỏng bằng phương pháp phân hủy nhiệt. Ngoài ra hệ thống lò đốt còn có khả năng xử lý các loại rác thải nguy hại và hóa chất độc hại khó xử lý triệt để bằng các phương pháp hóa học. Hệ thống lò được thiết kế để có thể vận chuyển dễ dàng đến các khu vực xử lý, do vậy có thể xử lý tại chỗ các khu vực ô nhiễm ở tất cả các tỉnh thành trong cả nước.",
+    "name_en": "CS toxic substance treatment technology process model",
+    "description_en": "It is a product of the research topic under the KC.AT Program of the Military Environmental Chemistry Institute under the Chemical Corps, in 2018. The two-stage incinerator system (LD-2C) is used for the thorough treatment of CS poison and hydrolysis products of CS poison in solid or liquid form by thermal decomposition. In addition, the incinerator system is also capable of dealing with hazardous waste and harmful chemicals that are difficult to completely treat by chemical methods. The system is designed to be easily transported to treatment areas, thus enabling on-site treatment of polluted areas in all provinces across the country.",
+    "model": "37. Mo hinh quy trinh cong nghe xu ly chat doc CS.glb"
+  },
+  {
+    "id": 35,
+    "name": "Mô hình xe thả khói KH-01",
+    "description": "Dùng để thả khói ngụy trang các mục tiêu bằng màn khói trung tính trên diện rộng nhằm hạn chế việc quan sát, trinh sát của đối phương bằng các thiết bị thông thường và điện tử.",
+    "name_en": "KH-01 Smoke Deployment Vehicle Model",
+    "description_en": "Used to deploy smoke for camouflaging targets with a wide-area neutral smoke screen to limit the enemy's observation and reconnaissance using conventional and electronic devices.",
+    "model": "38. Mo hinh xe tha khoi KH-01.glb"
+  },
+  {
+    "id": 36,
+    "name": "Vô tuyến điện sóng cực ngắn 2W",
+    "description": "Chiến sĩ tiểu đoàn 901, Binh chủng Hóa học sử dụng trong quá trình tham gia dập tắt đám cháy dại mỏ than Thống Nhất, cẩm Phả, Quảng Ninh, từ 28/7/1977-03/3/1977",
+    "name_en": "2W Ultra-Shortwave Radio",
+    "description_en": "Soldiers of Battalion 901, Chemical Corps, used in the process of participating in extinguishing the wild fire at Thong Nhat coal mine, Cam Pha, Quang Ninh, from July 28, 1977, to March 3, 1977.",
+    "model": "39. Vo tuyen dien song cuc ngan 2W.glb"
+  },
+  {
+    "id": 37,
+    "name": "Mô hình đạn cháy, đạn M72, lựu đạn hình cầu, đạn M79",
+    "description": "Bộ đội Hóa học cắt bổ phục vụ công tác nghiên cứu quy trình tháo gỡ bom đạn hóa học tồn lưu sau chiến tranh.",
+    "name_en": "Models of incendiary rounds, M72 rounds, spherical grenades, M79 rounds",
+    "description_en": "Chemical troops carry out disassembly to serve the research process of removing chemical munitions remaining after the war.",
+    "model": "41.Mo hinh dan M72, thang day.glb"
+  },
+  {
+    "id": 38,
+    "name": "Mô hình xe DA-3534",
+    "description": "Xe Da-3534 được Xưởng khí tài 61, Binh chủng Hóa học cải tiến từ xe tạo khói TDA đã tham gia trừ dịch sâu bông tại Nông trường Thuận Hải tháng 9/1977. Để phục vụ công tác giáo dục truyền thống, Xưởng Khí tài 61 đã làm mô hình theo nguyên mẫu xe DA-3435.",
+    "name_en": "DA-3534 Vehicle Model",
+    "description_en": "The DA-3534 vehicle, modified from the TDA smoke-generating vehicle by the 61st Equipment Workshop of the Chemical Corps, participated in pest control operations at the Thuan Hai Farm in September 1977. To serve the purpose of traditional education, the 61st Equipment Workshop has created a model based on the prototype of the DA-3435 vehicle",
+    "model": "42.Mo Hinh Xe Da.glb"
+  },
+  {
+    "id": 39,
+    "name": "Kết quả hợp tác với shimizu thử nghiệm công nghệ xử lý dioxin tại biên Hòa",
+    "description": "Năm 2019 - 2020, Tập đoàn Shimizu đã phối hợp với Trung tâm công nghệ xử lý môi trường thuộc Binh chủng Hóa học, tổ chức thử nghiệm công nghệ rửa đất để xử lý đất nhiễm dioxin tại sân bay Biên Hòa, tỉnh Đồng Nai. Dây truyền công nghệ được triển khai lắp đặt tại sân bay Biên Hòa, với công suất 14 tấn/giờ và thời gian làm việc 8 giờ/ngày, nhà máy xử lý được từ 120 - 150 m3 đất nhiễm (tương đương với 220 đến 270 tấn) trong ngày và từ 30.000 - 37.000 m3 đất nhiễm trong một năm. Trung tâm Công nghệ xử lý môi trường và các cơ quan có liên quan của Việt Nam đã giám sát, đánh giá quá trình triển khai thử nghiệm. Hoạt động quan trắc môi trường đã được thực hiện nghiêm túc, chặt chẽ, kết quả cho thấy không có sự phát tán dioxin vào nước thải và không khí, hoàn toàn không ảnh hưởng tới môi trường xung quanh. Những người tham gia thử nghiệm được thăm khám, theo dõi sức khỏe và định lượng dioxin trước và sau thử nghiệm, kết quả cho thấy không có phơi nhiễm dioxin ở những người tham gia thử nghiệm. Theo đánh giá của các chuyên gia, nhà khoa học, công nghệ rửa đất này đảm bảo tính hiệu quả về kỹ thuật, tiết kiệm kinh phí, thời gian thực hiện, đặc biệt là thân thiện với môi trường.",
+    "name_en": "Results of cooperation with Shimizu Corporation on dioxin treatment technology trials at Bien Hoa Airport",
+    "description_en": "In 2019 - 2020, the Shimizu Corporation, in coordination with the Environmental Treatment Technology Center of the Chemical Corps, conducted soil washing technology trials for the treatment of dioxin-contaminated soil at Bien Hoa Airport in Dong Nai Province. The technological production line was installed at Bien Hoa Airport, with a capacity of 14 tons/hour and operating 8 hours/day, the facility could treat from 120 - 150 cubic meters of contaminated soil (equivalent to 220 to 270 tons) per day and from 30,000 - 37,000 cubic meters of contaminated soil per year. The Center for Environmental Treatment Technology and related Vietnamese agencies supervised and evaluated the trial deployment process. Environmental monitoring activities were carried out rigorously and strictly, showing no spread of dioxin into wastewater or the air, with no impact on the surrounding environment. Participants in the trials were examined, monitored for health, and had their dioxin levels measured before and after the trials, showing no dioxin exposure. According to assessments by experts and scientists, this soil washing technology is technically effective, cost-efficient, timely, and particularly environmentally friendly.",
+    "model": "43. Ket qua dieu tra, thu gom, xu li chat doc CS ton luu sau chien tranh tren dia ban cac tinh thuoc QK 4, 5, 7, 9.glb"
+  },
+  {
+    "id": 40,
+    "name": "Máy đo phóng xạ DP-3B",
+    "description": "Tiểu đoàn 901 sử dụng trong huấn luyện sẵn sàng chiến đấu, từ năm 1977-1987",
+    "name_en": "DP-3B Radiation Meter",
+    "description_en": "Battalion 901 used this equipment in combat readiness training from 1977 to 1987",
+    "model": "44. May do phong xa DP-3B.glb"
+  },
+  {
+    "id": 41,
+    "name": "Bơm trinh độc nửa tự động PPKHR",
+    "description": "Bộ đội Hóa học sử dụng trong công tác huấn luyện, SSCĐ, từ năm 1979-1983",
+    "name_en": "PPKHR Semi-Automatic Decontamination Pump",
+    "description_en": "The Chemical Corps used this equipment in training and combat readiness from 1979 to 1983.",
+    "model": "45. Bom trinh doc nua tu dong.glb"
+  },
+  {
+    "id": 42,
+    "name": "Máy đo phóng xạ KĐU-2M",
+    "description": "Liên Xô sản xuất. Bộ đội Hóa học Hải quân sử dụng trên tàu săn ngầm HQ-09",
+    "name_en": "KĐU-2M Radiation Meter",
+    "description_en": "The Soviet Union produced it. The Naval Chemical Forces used it on the submarine hunter ship HQ-09.",
+    "model": "46. May do phong xa KDU-2M.glb"
+  },
+  {
+    "id": 43,
+    "name": "Giá thử áp xuất bình tiêu độc đeo lưng",
+    "description": "So Xí nghiệp X61, Binh chủng Hóa học nghiên cứu thiết kế và sản cuất. Giá thử có tác dụng kiểm tra độ chịu áp xuất tối đa của bình tiêu độc",
+    "name_en": "Pressure test stand for back-worn decontamination bottles",
+    "description_en": "The X61 Factory, under the Chemical Corps, researched, designed, and manufactured it. The test stand is used to check the maximum pressure tolerance of the decontamination canisters.",
+    "model": "47. Gia thu ap suat binh tieu doc deo lung.glb"
+  },
+  {
+    "id": 44,
+    "name": "Hòm hóa nghiệm HN 01",
+    "description": "Dùng trang bị cho viện hóa nghiệm, quân y. sản phẩm do Viện Hóa học môi trường quân sự nghiên cứu, chế tạo.",
+    "name_en": "HN01 Chemistry Box",
+    "description_en": "The equipment is used to supply chemical laboratories and military medical services. The product is researched and manufactured by the Military Environmental Chemistry Institute.",
+    "model": "49. Hom hoa nghiem HN 01.glb"
+  },
+  {
+    "id": 45,
+    "name": "Vải tráng cao su và Giày lọc Sol khí",
+    "description": "Sản phẩm của đề tài do Viện Hóa học Quân sự làm chủ. Vải dùng để thiết kế quần áo phòng da cho Bộ đội Hóa học, năm 1999. Là sản phẩm của đề tài KCB 01,04,09,06 'Nghiên cứu chế tạo giấy lọc bụi phóng xạ' do đồng chí Hoàng Ngọc Sơn, Viện Hóa học Quân sự Binh chủng Hóa học làm chủ nhiệm. Giấy SOL khí dùng để chế tạo các phin lọc của hộp lọc phòng độc tập thể FP - 300, FP 1000",
+    "name_en": "Rubber-coated fabric and Sol gas filter paper",
+    "description_en": "The product is part of a project carried out by the Military Chemical Institute. The fabric was used to design protective clothing for the Chemical Troops in 1999. This is a product of the research project KCB 01,04,09,06 'Research and Manufacture of Radioactive Dust Filter Paper' led by Comrade Hoàng Ngọc Sơn from the Military Chemical Institute, Chemical Corps. The SOL paper is used to create filter cartridges for the collective protection filter boxes FP - 300, FP 1000.",
+    "model": "50. Vai chuyen dung + Giay loc sol khi.glb"
+  },
+  {
+    "id": 46,
+    "name": "Mặt nạ 17 A1",
+    "description": "Có tác dụng lọc không khí nhiễm độc thành không khí sạch cung cấp cho người hít thở",
+    "name_en": "17 A1 Mask",
+    "description_en": "The function is to filter contaminated air into clean air to provide for breathing.",
+    "model": "51.Mat Na 17A1.glb"
+  },
+  {
+    "id": 47,
+    "name": "Mặt nạ F-11",
+    "description": "Mỹ sản xuất cho lính Mỹ sử dụng trong chiến tranh xâm lược Việt Nam. Sau năm 1975, Bộ đội Hóa học đã thu gom tại các kho, căn cứ quân sự của Mỹ để lại sau chiến tranh.",
+    "name_en": "F-11 Mask",
+    "description_en": "The US manufactured and used it for American soldiers during the Vietnam War. After 1975, the Chemical Corps collected them at various warehouses and military bases that the United States had left behind after the war.",
+    "model": "52.Mat Na MF-11.glb"
+  },
+  {
+    "id": 48,
+    "name": "Mặt nạ trùm dã chiến",
+    "description": "Sản phẩm thuộc đề tài của Thượng tá, TS Lưu Tam Bát, Viện hóa học quân sự/BTL Hóa học nghiên cứu sản xuất, sử dụng để đo và cảnh báo phóng xạ trên nhiều kênh, trong điều kiện thời tiết phức tạp, năm 1998. Sản phẩm được ứng dụng rộng rãi trong lĩnh vực quân sự và đạt hiệu quả cao.",
+    "name_en": "Radiation detection and warning device - Decontamination tube",
+    "description_en": "The product is part of the research project led by Lieutenant Colonel, PhD. Luu Tam Bat of the Military Chemical Institute, Chemical Corps, which was researched and produced for use in measuring and warning of radiation across multiple channels, under complex weather conditions in 1998. The product has been widely applied in the military field and has achieved high efficiency.",
+    "model": "54.Thiet bi nhan va canh bao phong xa.glb"
+  }
+]

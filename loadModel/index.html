@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Load Model 3D</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="responsive.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8 col-12" id="modelContainer">
+          <div class="grid-container">
+            <model-viewer
+              min-camera-orbit="auto 0deg auto"
+              max-camera-orbit="auto 87deg auto"
+              max-field-of-view="40deg"
+              min-field-of-view="30deg"
+              exposure="2"
+              interaction-prompt="none"
+              id="sphere"
+              restrict-gltf-model="y"
+              src="models/1-Luu dan CS Flamess Blast.glb"
+              camera-controls
+              shadow-intensity="0"
+              shadow-softness="0"
+              auto-rotate
+              environment-image=""
+              skybox-image=""
+              tone-mapping="commerce"
+              default-roughness="0.5"
+            >
+              <!-- Nút để kích hoạt fullscreen -->
+              <div
+                id="fullscreen-button"
+                style="
+                  position: fixed;
+                  top: 10px;
+                  right: 10px;
+                  z-index: 9999;
+                  cursor: pointer;
+                "
+              >
+                <img
+                  width="30px"
+                  height="30px"
+                  src="https://static-00.iconduck.com/assets.00/fullscreen-icon-512x512-qymo2y3f.png"
+                  alt=""
+                />
+              </div>
+            </model-viewer>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <h1 class="text-danger name_vn">Lựu đạn CS M25-A2</h1>
+          <p class="desc_vn">
+            Bộ đội Hóa học thu được của địch tại đèo Cù Mông tỉnh Bình Định khi
+            tham gia xử lý bom đạn hóa học của Mỹ sau chiến tranh, năm 1995
+          </p>
+          <h1 class="text-danger name_en">CS M25 A2 Grenade</h1>
+          <p class="desc_en">
+            Chemical Corps captured enemy equipment at Cu Mong pass, Binh Dinh
+            province during the post-war cleanup of American chemical ordnance,
+            1995.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
+    ></script>
+    <script>
+      // Call the function to get the data
+
+      //xử lý load model theo id
+      const searchParams = new URLSearchParams(window.location.search);
+      if (searchParams.has("id")) {
+        console.log(searchParams.get("id")); // price_descending
+        async function getDataById() {
+          const id = searchParams.get("id"); // Get ID from URL
+          try {
+            const response = await fetch("data.json"); // Fetch the JSON file
+            const data = await response.json(); // Parse JSON
+
+            // Find the element with the matching ID
+            const item = data.find((element) => element.id == id);
+
+            if (item) {
+              console.log(item); // Output the item to the console
+              // You can also display the data on your page
+
+              const modelViewer = document.getElementById("sphere");
+              modelViewer.setAttribute("src", `./models/${item.model}`);
+              document.querySelector(".name_vn").textContent = item.name;
+              document.querySelector(".desc_vn").textContent = item.description;
+
+              // Update the English content
+              document.querySelector(".name_en").textContent = item.name_en;
+              document.querySelector(".desc_en").textContent =
+                item.description_en;
+            } else {
+              console.log("Item not found");
+            }
+          } catch (error) {
+            console.error("Error fetching the JSON data:", error);
+          }
+        }
+        getDataById();
+      }
+    </script>
+  </body>
+</html>
