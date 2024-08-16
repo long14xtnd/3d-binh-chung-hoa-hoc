@@ -36,7 +36,7 @@
           <tilt>-90</tilt>
           <fov>170</fov>
         </flyinstart>
-        <pannorth>0</pannorth>
+        <pannorth>-87.7522</pannorth>
         <scaletofit>1</scaletofit>
         <projection>rectilinear</projection>
         <flyinprojection>stereo</flyinprojection>
@@ -46,6 +46,11 @@
         <capturedatetime>2023-11-30T10:29:12</capturedatetime>
         <tags>30-11</tags>
         <customprops/>
+        <floorplancoordinates>
+          <floorplanid>FloorPlan01</floorplanid>
+          <x>680</x>
+          <y>448</y>
+        </floorplancoordinates>
       </userdata>
       <projectsettings>
         <userdata>
@@ -273,7 +278,7 @@
           <tilt>-90</tilt>
           <fov>170</fov>
         </flyinstart>
-        <pannorth>0</pannorth>
+        <pannorth>111.598</pannorth>
         <scaletofit>1</scaletofit>
         <projection>rectilinear</projection>
         <flyinprojection>stereo</flyinprojection>
@@ -283,6 +288,11 @@
         <customprops/>
         <capturedatetime>2023-11-30T11:28:26</capturedatetime>
         <tags>30-11</tags>
+        <floorplancoordinates>
+          <floorplanid>FloorPlan01</floorplanid>
+          <x>636</x>
+          <y>716</y>
+        </floorplancoordinates>
       </userdata>
       <floorplans/>
       <hotspots>
@@ -457,6 +467,8 @@
           <title>42</title>
           <linktype>url</linktype>
           <linksubtype>unknown</linksubtype>
+          <target>_parent</target>
+          <skinid>ht_url</skinid>
           <type>point</type>
           <distance>0</distance>
           <distanceauto>1</distanceauto>
@@ -467,7 +479,7 @@
         </hotspot>
         <hotspot>
           <position>
-            <pan>-103.26</pan>
+            <pan>-103.35</pan>
             <tilt>-1.48</tilt>
             <fov>10</fov>
           </position>
@@ -482,6 +494,8 @@
           <title>38</title>
           <linktype>url</linktype>
           <linksubtype>unknown</linksubtype>
+          <target>_parent</target>
+          <skinid>ht_url</skinid>
           <type>point</type>
           <distance>0</distance>
           <distanceauto>1</distanceauto>
@@ -766,7 +780,7 @@
           <tilt>-90</tilt>
           <fov>170</fov>
         </flyinstart>
-        <pannorth>0</pannorth>
+        <pannorth>-86.1622</pannorth>
         <scaletofit>1</scaletofit>
         <projection>rectilinear</projection>
         <flyinprojection>stereo</flyinprojection>
@@ -776,6 +790,11 @@
         <customprops/>
         <capturedatetime>2023-11-30T10:38:30</capturedatetime>
         <tags>30-11</tags>
+        <floorplancoordinates>
+          <floorplanid>FloorPlan01</floorplanid>
+          <x>376</x>
+          <y>672</y>
+        </floorplancoordinates>
       </userdata>
       <floorplans/>
       <hotspots>
@@ -941,7 +960,7 @@
           <tilt>-90</tilt>
           <fov>170</fov>
         </flyinstart>
-        <pannorth>0</pannorth>
+        <pannorth>272.448</pannorth>
         <scaletofit>1</scaletofit>
         <projection>rectilinear</projection>
         <flyinprojection>stereo</flyinprojection>
@@ -951,6 +970,11 @@
         <customprops/>
         <capturedatetime>2023-11-30T10:44:38</capturedatetime>
         <tags>30-11</tags>
+        <floorplancoordinates>
+          <floorplanid>FloorPlan01</floorplanid>
+          <x>116</x>
+          <y>704</y>
+        </floorplancoordinates>
       </userdata>
       <floorplans/>
       <hotspots>
@@ -1329,7 +1353,7 @@
           <tilt>-90</tilt>
           <fov>170</fov>
         </flyinstart>
-        <pannorth>0</pannorth>
+        <pannorth>271.41</pannorth>
         <scaletofit>1</scaletofit>
         <projection>rectilinear</projection>
         <flyinprojection>stereo</flyinprojection>
@@ -1339,6 +1363,11 @@
         <customprops/>
         <capturedatetime>2023-11-30T10:52:32</capturedatetime>
         <tags>30-11</tags>
+        <floorplancoordinates>
+          <floorplanid>FloorPlan01</floorplanid>
+          <x>132</x>
+          <y>448</y>
+        </floorplancoordinates>
       </userdata>
       <floorplans/>
       <hotspots>
@@ -1504,7 +1533,7 @@
           <tilt>-90</tilt>
           <fov>170</fov>
         </flyinstart>
-        <pannorth>0</pannorth>
+        <pannorth>-106.112</pannorth>
         <scaletofit>1</scaletofit>
         <projection>rectilinear</projection>
         <flyinprojection>stereo</flyinprojection>
@@ -1514,6 +1543,11 @@
         <customprops/>
         <capturedatetime>2023-11-30T10:59:26</capturedatetime>
         <tags>30-11</tags>
+        <floorplancoordinates>
+          <floorplanid>FloorPlan01</floorplanid>
+          <x>160</x>
+          <y>176</y>
+        </floorplancoordinates>
       </userdata>
       <floorplans/>
       <hotspots>
@@ -1992,7 +2026,7 @@
           <tilt>-90</tilt>
           <fov>170</fov>
         </flyinstart>
-        <pannorth>0</pannorth>
+        <pannorth>-89.1793</pannorth>
         <scaletofit>1</scaletofit>
         <projection>rectilinear</projection>
         <flyinprojection>stereo</flyinprojection>
@@ -2002,6 +2036,11 @@
         <customprops/>
         <capturedatetime>2023-11-30T11:02:00</capturedatetime>
         <tags>30-11</tags>
+        <floorplancoordinates>
+          <floorplanid>FloorPlan01</floorplanid>
+          <x>380</x>
+          <y>220</y>
+        </floorplancoordinates>
       </userdata>
       <floorplans/>
       <hotspots>
@@ -2138,350 +2177,6 @@
       <input>
         <patch/>
         <type>auto</type>
-        <filename>D:/Viettech/3D-binh-chung-hoa-hoc/30-11/9.png</filename>
-        <videotype>equi</videotype>
-        <levelpitch>0</levelpitch>
-        <levelroll>0</levelroll>
-      </input>
-      <viewingparameter>
-        <pan>
-          <start>1.08704</start>
-          <min>0</min>
-          <max>360</max>
-        </pan>
-        <tilt>
-          <start>0</start>
-          <min>-90</min>
-          <max>90</max>
-        </tilt>
-        <fov>
-          <start>164.187</start>
-          <minunit>pixels</minunit>
-          <minpixels>2</minpixels>
-          <max>140</max>
-          <maxfovstereographic>330</maxfovstereographic>
-          <maxfovfisheye>360</maxfovfisheye>
-        </fov>
-        <flyinstart>
-          <pan>0</pan>
-          <tilt>-90</tilt>
-          <fov>170</fov>
-        </flyinstart>
-        <pannorth>0</pannorth>
-        <scaletofit>1</scaletofit>
-        <projection>rectilinear</projection>
-        <flyinprojection>stereo</flyinprojection>
-        <defaultviewtimestamp>2024-08-14T11:47:17</defaultviewtimestamp>
-      </viewingparameter>
-      <userdata>
-        <customprops/>
-        <capturedatetime>2023-11-30T11:09:12</capturedatetime>
-        <tags>30-11</tags>
-      </userdata>
-      <floorplans/>
-      <hotspots>
-        <hotspot>
-          <position>
-            <pan>-122.97</pan>
-            <tilt>-18.28</tilt>
-            <fov>10</fov>
-          </position>
-          <next>
-            <pan>0</pan>
-            <tilt>0</tilt>
-            <fov>0</fov>
-          </next>
-          <customprops/>
-          <polygon/>
-          <id>Point01</id>
-          <title>$(ut)</title>
-          <linktype>node</linktype>
-          <linksubtype>unknown</linksubtype>
-          <url>{node13}</url>
-          <skinid>floor_hotspot</skinid>
-          <type>point</type>
-          <distance>0</distance>
-          <distanceauto>1</distanceauto>
-          <autoplace>0</autoplace>
-          <use3d>0</use3d>
-          <width>0</width>
-          <height>0</height>
-        </hotspot>
-      </hotspots>
-      <output/>
-      <streetview/>
-      <streetviewproject/>
-      <ggloudproject/>
-      <sounds/>
-      <id>node9</id>
-    </panorama>
-    <panorama>
-      <projectsettings>
-        <userdata>
-          <customprops/>
-        </userdata>
-      </projectsettings>
-      <input>
-        <patch/>
-        <type>auto</type>
-        <filename>D:/Viettech/3D-binh-chung-hoa-hoc/30-11/10.png</filename>
-        <videotype>equi</videotype>
-        <levelpitch>0</levelpitch>
-        <levelroll>0</levelroll>
-      </input>
-      <viewingparameter>
-        <pan>
-          <start>-88.7657</start>
-          <min>0</min>
-          <max>360</max>
-        </pan>
-        <tilt>
-          <start>0</start>
-          <min>-90</min>
-          <max>90</max>
-        </tilt>
-        <fov>
-          <start>164.187</start>
-          <minunit>pixels</minunit>
-          <minpixels>2</minpixels>
-          <max>140</max>
-          <maxfovstereographic>330</maxfovstereographic>
-          <maxfovfisheye>360</maxfovfisheye>
-        </fov>
-        <flyinstart>
-          <pan>0</pan>
-          <tilt>-90</tilt>
-          <fov>170</fov>
-        </flyinstart>
-        <pannorth>0</pannorth>
-        <scaletofit>1</scaletofit>
-        <projection>rectilinear</projection>
-        <flyinprojection>stereo</flyinprojection>
-        <defaultviewtimestamp>2024-08-14T11:47:24</defaultviewtimestamp>
-      </viewingparameter>
-      <userdata>
-        <customprops/>
-        <capturedatetime>2023-11-30T11:11:04</capturedatetime>
-        <tags>30-11</tags>
-      </userdata>
-      <floorplans/>
-      <hotspots>
-        <hotspot>
-          <position>
-            <pan>-323.29</pan>
-            <tilt>-19.42</tilt>
-            <fov>10</fov>
-          </position>
-          <next>
-            <pan>0</pan>
-            <tilt>0</tilt>
-            <fov>0</fov>
-          </next>
-          <customprops/>
-          <polygon/>
-          <id>Point02</id>
-          <title>$(ut)</title>
-          <linktype>node</linktype>
-          <linksubtype>unknown</linksubtype>
-          <url>{node4}</url>
-          <skinid>floor_hotspot</skinid>
-          <type>point</type>
-          <distance>0</distance>
-          <distanceauto>1</distanceauto>
-          <autoplace>0</autoplace>
-          <use3d>0</use3d>
-          <width>0</width>
-          <height>0</height>
-        </hotspot>
-      </hotspots>
-      <output/>
-      <streetview/>
-      <streetviewproject/>
-      <ggloudproject/>
-      <sounds/>
-      <id>node10</id>
-    </panorama>
-    <panorama>
-      <projectsettings>
-        <userdata>
-          <customprops/>
-        </userdata>
-      </projectsettings>
-      <input>
-        <patch/>
-        <type>auto</type>
-        <filename>D:/Viettech/3D-binh-chung-hoa-hoc/30-11/11.png</filename>
-        <videotype>equi</videotype>
-        <levelpitch>0</levelpitch>
-        <levelroll>0</levelroll>
-      </input>
-      <viewingparameter>
-        <pan>
-          <start>179.225</start>
-          <min>0</min>
-          <max>360</max>
-        </pan>
-        <tilt>
-          <start>0</start>
-          <min>-90</min>
-          <max>90</max>
-        </tilt>
-        <fov>
-          <start>164.187</start>
-          <minunit>pixels</minunit>
-          <minpixels>2</minpixels>
-          <max>140</max>
-          <maxfovstereographic>330</maxfovstereographic>
-          <maxfovfisheye>360</maxfovfisheye>
-        </fov>
-        <flyinstart>
-          <pan>0</pan>
-          <tilt>-90</tilt>
-          <fov>170</fov>
-        </flyinstart>
-        <pannorth>0</pannorth>
-        <scaletofit>1</scaletofit>
-        <projection>rectilinear</projection>
-        <flyinprojection>stereo</flyinprojection>
-        <defaultviewtimestamp>2024-08-14T11:47:36</defaultviewtimestamp>
-      </viewingparameter>
-      <userdata>
-        <customprops/>
-        <capturedatetime>2023-11-30T11:13:36</capturedatetime>
-        <tags>30-11</tags>
-      </userdata>
-      <floorplans/>
-      <hotspots>
-        <hotspot>
-          <position>
-            <pan>-307.63</pan>
-            <tilt>-17.97</tilt>
-            <fov>10</fov>
-          </position>
-          <next>
-            <pan>0</pan>
-            <tilt>0</tilt>
-            <fov>0</fov>
-          </next>
-          <customprops/>
-          <polygon/>
-          <id>Point01</id>
-          <title>$(ut)</title>
-          <linktype>node</linktype>
-          <linksubtype>unknown</linksubtype>
-          <url>{node4}</url>
-          <skinid>floor_hotspot</skinid>
-          <type>point</type>
-          <distance>0</distance>
-          <distanceauto>1</distanceauto>
-          <autoplace>0</autoplace>
-          <use3d>0</use3d>
-          <width>0</width>
-          <height>0</height>
-        </hotspot>
-      </hotspots>
-      <output/>
-      <streetview/>
-      <streetviewproject/>
-      <ggloudproject/>
-      <sounds/>
-      <id>node11</id>
-    </panorama>
-    <panorama>
-      <projectsettings>
-        <userdata>
-          <customprops/>
-        </userdata>
-      </projectsettings>
-      <input>
-        <patch/>
-        <type>auto</type>
-        <filename>D:/Viettech/3D-binh-chung-hoa-hoc/30-11/12.png</filename>
-        <videotype>equi</videotype>
-        <levelpitch>0</levelpitch>
-        <levelroll>0</levelroll>
-      </input>
-      <viewingparameter>
-        <pan>
-          <start>90.3533</start>
-          <min>0</min>
-          <max>360</max>
-        </pan>
-        <tilt>
-          <start>0</start>
-          <min>-90</min>
-          <max>90</max>
-        </tilt>
-        <fov>
-          <start>164.187</start>
-          <minunit>pixels</minunit>
-          <minpixels>2</minpixels>
-          <max>140</max>
-          <maxfovstereographic>330</maxfovstereographic>
-          <maxfovfisheye>360</maxfovfisheye>
-        </fov>
-        <flyinstart>
-          <pan>0</pan>
-          <tilt>-90</tilt>
-          <fov>170</fov>
-        </flyinstart>
-        <pannorth>0</pannorth>
-        <scaletofit>1</scaletofit>
-        <projection>rectilinear</projection>
-        <flyinprojection>stereo</flyinprojection>
-        <defaultviewtimestamp>2024-08-14T11:47:44</defaultviewtimestamp>
-      </viewingparameter>
-      <userdata>
-        <customprops/>
-        <capturedatetime>2023-11-30T11:15:40</capturedatetime>
-        <tags>30-11</tags>
-      </userdata>
-      <floorplans/>
-      <hotspots>
-        <hotspot>
-          <position>
-            <pan>-89.41</pan>
-            <tilt>-29.61</tilt>
-            <fov>10</fov>
-          </position>
-          <next>
-            <pan>0</pan>
-            <tilt>0</tilt>
-            <fov>0</fov>
-          </next>
-          <customprops/>
-          <polygon/>
-          <id>Point01</id>
-          <title>$(ut)</title>
-          <linktype>node</linktype>
-          <linksubtype>unknown</linksubtype>
-          <url>{node7}</url>
-          <skinid>floor_hotspot</skinid>
-          <type>point</type>
-          <distance>0</distance>
-          <distanceauto>1</distanceauto>
-          <autoplace>0</autoplace>
-          <use3d>0</use3d>
-          <width>0</width>
-          <height>0</height>
-        </hotspot>
-      </hotspots>
-      <output/>
-      <streetview/>
-      <streetviewproject/>
-      <ggloudproject/>
-      <sounds/>
-      <id>node12</id>
-    </panorama>
-    <panorama>
-      <projectsettings>
-        <userdata>
-          <customprops/>
-        </userdata>
-      </projectsettings>
-      <input>
-        <patch/>
-        <type>auto</type>
         <filename>D:/Viettech/3D-binh-chung-hoa-hoc/30-11/13.png</filename>
         <videotype>equi</videotype>
         <levelpitch>0</levelpitch>
@@ -2511,7 +2206,7 @@
           <tilt>-90</tilt>
           <fov>170</fov>
         </flyinstart>
-        <pannorth>0</pannorth>
+        <pannorth>79.6349</pannorth>
         <scaletofit>1</scaletofit>
         <projection>rectilinear</projection>
         <flyinprojection>stereo</flyinprojection>
@@ -2521,6 +2216,11 @@
         <customprops/>
         <capturedatetime>2023-11-30T11:26:10</capturedatetime>
         <tags>30-11</tags>
+        <floorplancoordinates>
+          <floorplanid>FloorPlan01</floorplanid>
+          <x>640</x>
+          <y>204</y>
+        </floorplancoordinates>
       </userdata>
       <floorplans/>
       <hotspots>
@@ -3095,6 +2795,370 @@
       </sounds>
       <id>node13</id>
     </panorama>
+    <panorama>
+      <projectsettings>
+        <userdata>
+          <customprops/>
+        </userdata>
+      </projectsettings>
+      <input>
+        <patch/>
+        <type>auto</type>
+        <filename>D:/Viettech/3D-binh-chung-hoa-hoc/30-11/9.png</filename>
+        <videotype>equi</videotype>
+        <levelpitch>0</levelpitch>
+        <levelroll>0</levelroll>
+      </input>
+      <viewingparameter>
+        <pan>
+          <start>1.08704</start>
+          <min>0</min>
+          <max>360</max>
+        </pan>
+        <tilt>
+          <start>0</start>
+          <min>-90</min>
+          <max>90</max>
+        </tilt>
+        <fov>
+          <start>164.187</start>
+          <minunit>pixels</minunit>
+          <minpixels>2</minpixels>
+          <max>140</max>
+          <maxfovstereographic>330</maxfovstereographic>
+          <maxfovfisheye>360</maxfovfisheye>
+        </fov>
+        <flyinstart>
+          <pan>0</pan>
+          <tilt>-90</tilt>
+          <fov>170</fov>
+        </flyinstart>
+        <pannorth>-88.8915</pannorth>
+        <scaletofit>1</scaletofit>
+        <projection>rectilinear</projection>
+        <flyinprojection>stereo</flyinprojection>
+        <defaultviewtimestamp>2024-08-14T11:47:17</defaultviewtimestamp>
+      </viewingparameter>
+      <userdata>
+        <customprops/>
+        <capturedatetime>2023-11-30T11:09:12</capturedatetime>
+        <tags>30-11</tags>
+        <floorplancoordinates>
+          <floorplanid>FloorPlan01</floorplanid>
+          <x>496</x>
+          <y>444</y>
+        </floorplancoordinates>
+      </userdata>
+      <floorplans/>
+      <hotspots>
+        <hotspot>
+          <position>
+            <pan>-122.97</pan>
+            <tilt>-18.28</tilt>
+            <fov>10</fov>
+          </position>
+          <next>
+            <pan>0</pan>
+            <tilt>0</tilt>
+            <fov>0</fov>
+          </next>
+          <customprops/>
+          <polygon/>
+          <id>Point01</id>
+          <title>$(ut)</title>
+          <linktype>node</linktype>
+          <linksubtype>unknown</linksubtype>
+          <url>{node13}</url>
+          <skinid>floor_hotspot</skinid>
+          <type>point</type>
+          <distance>0</distance>
+          <distanceauto>1</distanceauto>
+          <autoplace>0</autoplace>
+          <use3d>0</use3d>
+          <width>0</width>
+          <height>0</height>
+        </hotspot>
+      </hotspots>
+      <output/>
+      <streetview/>
+      <streetviewproject/>
+      <ggloudproject/>
+      <sounds/>
+      <id>node9</id>
+    </panorama>
+    <panorama>
+      <projectsettings>
+        <userdata>
+          <customprops/>
+        </userdata>
+      </projectsettings>
+      <input>
+        <patch/>
+        <type>auto</type>
+        <filename>D:/Viettech/3D-binh-chung-hoa-hoc/30-11/10.png</filename>
+        <videotype>equi</videotype>
+        <levelpitch>0</levelpitch>
+        <levelroll>0</levelroll>
+      </input>
+      <viewingparameter>
+        <pan>
+          <start>-88.7657</start>
+          <min>0</min>
+          <max>360</max>
+        </pan>
+        <tilt>
+          <start>0</start>
+          <min>-90</min>
+          <max>90</max>
+        </tilt>
+        <fov>
+          <start>164.187</start>
+          <minunit>pixels</minunit>
+          <minpixels>2</minpixels>
+          <max>140</max>
+          <maxfovstereographic>330</maxfovstereographic>
+          <maxfovfisheye>360</maxfovfisheye>
+        </fov>
+        <flyinstart>
+          <pan>0</pan>
+          <tilt>-90</tilt>
+          <fov>170</fov>
+        </flyinstart>
+        <pannorth>-93.1415</pannorth>
+        <scaletofit>1</scaletofit>
+        <projection>rectilinear</projection>
+        <flyinprojection>stereo</flyinprojection>
+        <defaultviewtimestamp>2024-08-14T11:47:24</defaultviewtimestamp>
+      </viewingparameter>
+      <userdata>
+        <customprops/>
+        <capturedatetime>2023-11-30T11:11:04</capturedatetime>
+        <tags>30-11</tags>
+        <floorplancoordinates>
+          <floorplanid>FloorPlan01</floorplanid>
+          <x>392</x>
+          <y>564</y>
+        </floorplancoordinates>
+      </userdata>
+      <floorplans/>
+      <hotspots>
+        <hotspot>
+          <position>
+            <pan>-323.29</pan>
+            <tilt>-19.42</tilt>
+            <fov>10</fov>
+          </position>
+          <next>
+            <pan>0</pan>
+            <tilt>0</tilt>
+            <fov>0</fov>
+          </next>
+          <customprops/>
+          <polygon/>
+          <id>Point02</id>
+          <title>$(ut)</title>
+          <linktype>node</linktype>
+          <linksubtype>unknown</linksubtype>
+          <url>{node4}</url>
+          <skinid>floor_hotspot</skinid>
+          <type>point</type>
+          <distance>0</distance>
+          <distanceauto>1</distanceauto>
+          <autoplace>0</autoplace>
+          <use3d>0</use3d>
+          <width>0</width>
+          <height>0</height>
+        </hotspot>
+      </hotspots>
+      <output/>
+      <streetview/>
+      <streetviewproject/>
+      <ggloudproject/>
+      <sounds/>
+      <id>node10</id>
+    </panorama>
+    <panorama>
+      <projectsettings>
+        <userdata>
+          <customprops/>
+        </userdata>
+      </projectsettings>
+      <input>
+        <patch/>
+        <type>auto</type>
+        <filename>D:/Viettech/3D-binh-chung-hoa-hoc/30-11/11.png</filename>
+        <videotype>equi</videotype>
+        <levelpitch>0</levelpitch>
+        <levelroll>0</levelroll>
+      </input>
+      <viewingparameter>
+        <pan>
+          <start>179.225</start>
+          <min>0</min>
+          <max>360</max>
+        </pan>
+        <tilt>
+          <start>0</start>
+          <min>-90</min>
+          <max>90</max>
+        </tilt>
+        <fov>
+          <start>164.187</start>
+          <minunit>pixels</minunit>
+          <minpixels>2</minpixels>
+          <max>140</max>
+          <maxfovstereographic>330</maxfovstereographic>
+          <maxfovfisheye>360</maxfovfisheye>
+        </fov>
+        <flyinstart>
+          <pan>0</pan>
+          <tilt>-90</tilt>
+          <fov>170</fov>
+        </flyinstart>
+        <pannorth>-89.7814</pannorth>
+        <scaletofit>1</scaletofit>
+        <projection>rectilinear</projection>
+        <flyinprojection>stereo</flyinprojection>
+        <defaultviewtimestamp>2024-08-14T11:47:36</defaultviewtimestamp>
+      </viewingparameter>
+      <userdata>
+        <customprops/>
+        <capturedatetime>2023-11-30T11:13:36</capturedatetime>
+        <tags>30-11</tags>
+        <floorplancoordinates>
+          <floorplanid>FloorPlan01</floorplanid>
+          <x>280</x>
+          <y>428</y>
+        </floorplancoordinates>
+      </userdata>
+      <floorplans/>
+      <hotspots>
+        <hotspot>
+          <position>
+            <pan>-307.63</pan>
+            <tilt>-17.97</tilt>
+            <fov>10</fov>
+          </position>
+          <next>
+            <pan>0</pan>
+            <tilt>0</tilt>
+            <fov>0</fov>
+          </next>
+          <customprops/>
+          <polygon/>
+          <id>Point01</id>
+          <title>$(ut)</title>
+          <linktype>node</linktype>
+          <linksubtype>unknown</linksubtype>
+          <url>{node4}</url>
+          <skinid>floor_hotspot</skinid>
+          <type>point</type>
+          <distance>0</distance>
+          <distanceauto>1</distanceauto>
+          <autoplace>0</autoplace>
+          <use3d>0</use3d>
+          <width>0</width>
+          <height>0</height>
+        </hotspot>
+      </hotspots>
+      <output/>
+      <streetview/>
+      <streetviewproject/>
+      <ggloudproject/>
+      <sounds/>
+      <id>node11</id>
+    </panorama>
+    <panorama>
+      <projectsettings>
+        <userdata>
+          <customprops/>
+        </userdata>
+      </projectsettings>
+      <input>
+        <patch/>
+        <type>auto</type>
+        <filename>D:/Viettech/3D-binh-chung-hoa-hoc/30-11/12.png</filename>
+        <videotype>equi</videotype>
+        <levelpitch>0</levelpitch>
+        <levelroll>0</levelroll>
+      </input>
+      <viewingparameter>
+        <pan>
+          <start>90.3533</start>
+          <min>0</min>
+          <max>360</max>
+        </pan>
+        <tilt>
+          <start>0</start>
+          <min>-90</min>
+          <max>90</max>
+        </tilt>
+        <fov>
+          <start>164.187</start>
+          <minunit>pixels</minunit>
+          <minpixels>2</minpixels>
+          <max>140</max>
+          <maxfovstereographic>330</maxfovstereographic>
+          <maxfovfisheye>360</maxfovfisheye>
+        </fov>
+        <flyinstart>
+          <pan>0</pan>
+          <tilt>-90</tilt>
+          <fov>170</fov>
+        </flyinstart>
+        <pannorth>-92.7145</pannorth>
+        <scaletofit>1</scaletofit>
+        <projection>rectilinear</projection>
+        <flyinprojection>stereo</flyinprojection>
+        <defaultviewtimestamp>2024-08-14T11:47:44</defaultviewtimestamp>
+      </viewingparameter>
+      <userdata>
+        <customprops/>
+        <capturedatetime>2023-11-30T11:15:40</capturedatetime>
+        <tags>30-11</tags>
+        <floorplancoordinates>
+          <floorplanid>FloorPlan01</floorplanid>
+          <x>388</x>
+          <y>348</y>
+        </floorplancoordinates>
+      </userdata>
+      <floorplans/>
+      <hotspots>
+        <hotspot>
+          <position>
+            <pan>-89.41</pan>
+            <tilt>-29.61</tilt>
+            <fov>10</fov>
+          </position>
+          <next>
+            <pan>0</pan>
+            <tilt>0</tilt>
+            <fov>0</fov>
+          </next>
+          <customprops/>
+          <polygon/>
+          <id>Point01</id>
+          <title>$(ut)</title>
+          <linktype>node</linktype>
+          <linksubtype>unknown</linksubtype>
+          <url>{node7}</url>
+          <skinid>floor_hotspot</skinid>
+          <type>point</type>
+          <distance>0</distance>
+          <distanceauto>1</distanceauto>
+          <autoplace>0</autoplace>
+          <use3d>0</use3d>
+          <width>0</width>
+          <height>0</height>
+        </hotspot>
+      </hotspots>
+      <output/>
+      <streetview/>
+      <streetviewproject/>
+      <ggloudproject/>
+      <sounds/>
+      <id>node12</id>
+    </panorama>
   </tour>
   <panorama>
     <id>master</id>
@@ -3116,32 +3180,11 @@
         <title>Đôi nét về Bảo tàng binh chủng hoá học</title>
         <description>Bảo tàng Hoá học thuộc loại hình bảo tàng lịch sử quân sự chuyên ngành, có nhiệm vụ nghiên cứu, sưu tầm, kiểm kê, bảo quản, trưng bày, tuyên truyền giáo dục các hiện vật bảo tàng phản ánh về quá trình ra đời, xây dựng, chiến đấu, trưởng thành của bộ đội Hoá học Quân đội nhân dân Việt Nam.
 Địa chỉ: Phường Quan Hoa, quận Cầu Giấy, Hà Nội. Ngày thành lập: 14/11/1995. Tổng diện tích 1.750m2, diện tích trưng bày trong nhà 232m2.
-
-1. Phần thứ nhất: Quá trình hình thành và phát triển lực lượng (1958-1964).
-
-Phần này trưng bày một số hiện vật, hình ảnh thể hiện sự ra đời và quá trình phát triển của Binh chủng Hoá học.
-
-2. Phần thứ hai: Phòng chống tốt - chiến đấu giỏi
-
-Phần này trưng bày các loại hình trang bị và khí tài phòng độc, các loại vũ khí như súng phun lửa, một số hình ảnh về hoạt động chiến đấu của bộ đội hoá học.
-
+1. Phần thứ nhất: Quá trình hình thành và phát triển lực lượng (1958-1964).Phần này trưng bày một số hiện vật, hình ảnh thể hiện sự ra đời và quá trình phát triển của Binh chủng Hoá học.
+2. Phần thứ hai: Phòng chống tốt - chiến đấu giỏi.Phần này trưng bày các loại hình trang bị và khí tài phòng độc, các loại vũ khí như súng phun lửa, một số hình ảnh về hoạt động chiến đấu của bộ đội hoá học.
 3. Phần thứ ba: Những mốc son lịch sử
-
 Phần này giới thiệu các hoạt động của bộ đội hoá học trong các chiến dịch, phục vụ chiến đấu tại miền Bắc và chiến trường miền Nam. Một số sưu tập hiện vật được trưng bày như các loại bom, mìn, chất độc hoá học đế quốc Mỹ sử dụng trong chiến tranh xâm lược Việt Nam. Các loại khí tài trang bị cho bộ đội hoá học sử dụng phòng chống chất độc.
-
-4. Phần thứ tư: Bảo vệ môi trường và sinh thái
-
-Phần này giới thiệu hiện vật, hình ảnh của bộ đội hoá học trong công cuộc xây dựng Tổ quốc, tham gia bảo vệ môi trường sinh thái, phục vụ bộ đội và đời sống của nhân dân.
-
-Phần trưng bày ngoài sân vườn: Diện tích hơn 100m2.
-
-Kho hiện vật: lưu giữ 3.200 hiện vật.
-
-Các sưu tập:
-
-Sưu tập bom, mìn, lựu đạn hoá học của Mỹ sử dụng trong chiến tranh xâm lược Việt Nam.
-
-Sưu tập các loại mặt nạ, khí tài phòng độc./.</description>
+4. Phần thứ tư: Bảo vệ môi trường và sinh thái.Phần này giới thiệu hiện vật, hình ảnh của bộ đội hoá học trong công cuộc xây dựng Tổ quốc, tham gia bảo vệ môi trường sinh thái, phục vụ bộ đội và đời sống của nhân dân.Phần trưng bày ngoài sân vườn: Diện tích hơn 100m2.Kho hiện vật: lưu giữ 3.200 hiện vật.Các sưu tập:Sưu tập bom, mìn, lựu đạn hoá học của Mỹ sử dụng trong chiến tranh xâm lược Việt Nam.Sưu tập các loại mặt nạ, khí tài phòng độc.</description>
         <author>hailongdev - 0859128666</author>
       </userdata>
       <usenodealtitude>0</usenodealtitude>
@@ -3180,7 +3223,15 @@ Sưu tập các loại mặt nạ, khí tài phòng độc./.</description>
         <value id="Project">true</value>
       </translationsenabled>
     </projectsettings>
-    <floorplans/>
+    <floorplans>
+      <floorplan>
+        <id>FloorPlan01</id>
+        <floorplanfilename>C:/Users/Admin/Documents/Zalo Received Files/floorplanBCHH.png</floorplanfilename>
+        <type>file</type>
+        <lastmodified>2024-08-15T09:45:27</lastmodified>
+        <floorplanoutputbackgroundcolor>#ffffff</floorplanoutputbackgroundcolor>
+      </floorplan>
+    </floorplans>
     <hotspots/>
     <output>
       <placeidcache>{"entries":[]}</placeidcache>
@@ -3206,7 +3257,7 @@ Sưu tập các loại mặt nạ, khí tài phòng độc./.</description>
         </transition>
         <autorotate>
           <enabled>1</enabled>
-          <nodedelay>15</nodedelay>
+          <nodedelay>20</nodedelay>
           <noderandom>0</noderandom>
           <nodefilter>30-11</nodefilter>
           <delay>30</delay>

@@ -37,7 +37,7 @@ model-viewer {
   .a {
     grid-column: 1 / 13;
     grid-row: 1 / 5;
-  }
+  } 
 }
 #modelContainer:fullscreen {
   width: 100%;

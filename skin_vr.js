@@ -1,7 +1,7 @@
 // Garden Gnome Software - VR - Skin
 // Pano2VR 7.0.9/20024
 // Filename: venis.ggsk
-// Generated 2024-08-14T17:38:16
+// Generated 2024-08-16T09:07:33
 
 function pano2vrVrSkin(player,base) {
 	player.addVariable('vis_sounds_splashscreen', 2, false, { ignoreInState: 1  });
@@ -1491,8 +1491,8 @@ alert("The current view has been copied.");
 			me._map.userData.backgroundColorAlpha = v;
 			me._map.userData.setOpacity(me._map.userData.opacity);
 		}
-		el.translateX(-2.84);
-		el.translateY(0.72);
+		el.translateX(2.9);
+		el.translateY(-0.5);
 		el.scale.set(1.00, 1.00, 1.0);
 		el.userData.width = 200;
 		el.userData.height = 600;
@@ -1500,10 +1500,10 @@ alert("The current view has been copied.");
 		el.userData.curScaleOffX = 0;
 		el.userData.curScaleOffY = 0;
 		el.name = 'map';
-		el.userData.x = -2.84;
-		el.userData.y = 0.72;
-		el.userData.hanchor = 0;
-		el.userData.vanchor = 2;
+		el.userData.x = 2.9;
+		el.userData.y = -0.5;
+		el.userData.hanchor = 2;
+		el.userData.vanchor = 0;
 		el.translateZ(0.040);
 		el.renderOrder = 4;
 		el.rotateZ(0.00);
@@ -1553,7 +1553,8 @@ alert("The current view has been copied.");
 			var newLogicStateVisible;
 			if (
 				((player.getVariableValue('vis_map') == true)) || 
-				((player.getVariableValue('vis_floorplan') == true))
+				((player.getVariableValue('vis_floorplan') == true)) && 
+				((player.getVariableValue('resp_desktop') == true))
 			)
 			{
 				newLogicStateVisible = 0;
@@ -1564,8 +1565,8 @@ alert("The current view has been copied.");
 			if (me._map.ggCurrentLogicStateVisible != newLogicStateVisible) {
 				me._map.ggCurrentLogicStateVisible = newLogicStateVisible;
 				if (me._map.ggCurrentLogicStateVisible == 0) {
-			me._map.visible=((!me._map.material && Number(me._map.userData.opacity>0)) || Number(me._map.material.opacity)>0)?true:false;
-			me._map.userData.visible=true;
+			me._map.visible=false;
+			me._map.userData.visible=false;
 				}
 				else {
 			me._map.visible=false;
@@ -2613,6 +2614,30 @@ alert("The current view has been copied.");
 		el.userData.materialOver = new THREE.MeshBasicMaterial( {map: textureOver, side: THREE.DoubleSide, transparent: true} );
 		el.userData.materialOver.name = 'map_fs_small_materialOver';
 		el.userData.ggId="map_fs_small";
+		me._map_fs_small.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getVariableValue('resp_phone') == true))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._map_fs_small.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._map_fs_small.ggCurrentLogicStateVisible = newLogicStateVisible;
+				if (me._map_fs_small.ggCurrentLogicStateVisible == 0) {
+			me._map_fs_small.visible=false;
+			me._map_fs_small.userData.visible=false;
+				}
+				else {
+			me._map_fs_small.visible=((!me._map_fs_small.material && Number(me._map_fs_small.userData.opacity>0)) || Number(me._map_fs_small.material.opacity)>0)?true:false;
+			me._map_fs_small.userData.visible=true;
+				}
+			}
+		}
+		me._map_fs_small.logicBlock_visible();
 		me._map_fs_small.userData.onclick=function (e) {
 			if (
 				(
@@ -6889,449 +6914,6 @@ alert("The current view has been copied.");
 		}
 		me._url_hs_popup.add(me._url_hs_popup_iframe);
 		me.skinGroup.add(me._url_hs_popup);
-		el = new THREE.Group();
-		el.userData.setOpacityInternal = function(v) {};
-		el.translateX(0);
-		el.translateY(0);
-		el.scale.set(1.00, 1.00, 1.0);
-		el.userData.width = 320;
-		el.userData.height = 140;
-		el.userData.scale = {x: 1.00, y: 1.00, z: 1.0};
-		el.userData.curScaleOffX = 0;
-		el.userData.curScaleOffY = 0;
-		el.name = 'sounds_splashscreen';
-		el.userData.x = 0;
-		el.userData.y = 0;
-		el.userData.hanchor = 1;
-		el.userData.vanchor = 1;
-		el.translateZ(0.120);
-		el.renderOrder = 12;
-		el.rotateZ(0.00);
-		el.userData.angle = 0.00;
-		el.userData.setOpacityInternal = function(v) {
-			if (me._sounds_splashscreen.material) me._sounds_splashscreen.material.opacity = v;
-			me._sounds_splashscreen.visible = (v>0 && me._sounds_splashscreen.userData.visible);
-		}
-		el.userData.isVisible = function() {
-			let vis = me._sounds_splashscreen.visible
-			let parentEl = me._sounds_splashscreen.parent;
-			while (vis && parentEl) {
-				if (!parentEl.visible) {
-					vis = false;
-					break;
-				}
-				parentEl = parentEl.parent;
-			}
-			return vis;
-		}
-		el.userData.setOpacity = function(v) {
-			me._sounds_splashscreen.userData.opacity = v;
-			v = v * me._sounds_splashscreen.userData.parentOpacity;
-			me._sounds_splashscreen.userData.setOpacityInternal(v);
-			for (let i = 0; i < me._sounds_splashscreen.children.length; i++) {
-				let child = me._sounds_splashscreen.children[i];
-				if (child.userData.setParentOpacity) {
-					child.userData.setParentOpacity(v);
-				}
-			};
-		}
-		el.userData.setParentOpacity = function(v) {
-			me._sounds_splashscreen.userData.parentOpacity = v;
-			v = v * me._sounds_splashscreen.userData.opacity
-			me._sounds_splashscreen.userData.setOpacityInternal(v);
-			for (let i = 0; i < me._sounds_splashscreen.children.length; i++) {
-				let child = me._sounds_splashscreen.children[i];
-				if (child.userData.setParentOpacity) {
-					child.userData.setParentOpacity(v);
-				}
-			};
-		}
-		el.visible = false;
-		el.userData.visible = false;
-		el.userData.opacity = 1.00;
-		el.userData.parentOpacity = 1.0;
-		el.userData.transitions = [];
-		me._sounds_splashscreen = el;
-		el.userData.ggId="sounds_splashscreen";
-		me._sounds_splashscreen.logicBlock_visible = function() {
-			var newLogicStateVisible;
-			if (
-				((player.getVariableValue('vis_sounds_splashscreen') == true))
-			)
-			{
-				newLogicStateVisible = 0;
-			}
-			else {
-				newLogicStateVisible = -1;
-			}
-			if (me._sounds_splashscreen.ggCurrentLogicStateVisible != newLogicStateVisible) {
-				me._sounds_splashscreen.ggCurrentLogicStateVisible = newLogicStateVisible;
-				if (me._sounds_splashscreen.ggCurrentLogicStateVisible == 0) {
-			me._sounds_splashscreen.visible=((!me._sounds_splashscreen.material && Number(me._sounds_splashscreen.userData.opacity>0)) || Number(me._sounds_splashscreen.material.opacity)>0)?true:false;
-			me._sounds_splashscreen.userData.visible=true;
-				}
-				else {
-			me._sounds_splashscreen.visible=false;
-			me._sounds_splashscreen.userData.visible=false;
-				}
-			}
-		}
-		me._sounds_splashscreen.logicBlock_visible();
-		me._sounds_splashscreen.userData.ggUpdatePosition=function (useTransition) {
-		}
-		width = 3.2;
-		height = 1.4;
-		roundedRectShape = new THREE.Shape();
-		roundedRectShape.moveTo((-width / 2.0) + 0.27, (height / 2.0));
-		roundedRectShape.lineTo((width / 2.0) - 0.27, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.27);
-		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.27);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.27, (-height / 2.0));
-		roundedRectShape.lineTo((-width / 2.0) + 0.27, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.27);
-		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.27);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.27, (height / 2.0));
-		geometry = new THREE.ShapeGeometry(roundedRectShape);
-		geometry.name = 'sounds_splashscreen_bg_geometry';
-		geometry.computeBoundingBox();
-		var min = geometry.boundingBox.min;
-		var max = geometry.boundingBox.max;
-		var offset = new THREE.Vector2(0 - min.x, 0 - min.y);
-		var range = new THREE.Vector2(max.x - min.x, max.y - min.y);
-		var vertexPositions = geometry.getAttribute('position');
-		var vertexUVs = geometry.getAttribute('uv');
-		for (var i = 0; i < vertexPositions.count; i++) {
-			var v1 = vertexPositions.getX(i);
-			var	v2 = vertexPositions.getY(i);
-			vertexUVs.setX(i, (v1 + offset.x) / range.x);
-			vertexUVs.setY(i, (v2 + offset.y) / range.y);
-		}
-		geometry.uvsNeedUpdate = true;
-		material = new THREE.MeshBasicMaterial( { color: new THREE.Color('rgba(61,61,61,1)').convertSRGBToLinear(), side : THREE.DoubleSide, transparent : true } ); 
-		material.name = 'sounds_splashscreen_bg_material';
-		el = new THREE.Mesh( geometry, material );
-		width = 3.2;
-		height = 1.4;
-		borderShape = new THREE.Shape();
-		borderShape.moveTo((width / 2.0) - 0.05 + 0.32, (height / 2.0) + 0.05);
-		borderShape.lineTo((width / 2.0) + 0.05 - 0.32, (height / 2.0) + 0.05);
-		borderShape.quadraticCurveTo((width / 2.0) + 0.05, (height / 2.0) + 0.05, (width / 2.0) + 0.05, (height / 2.0) + 0.05 - 0.32);
-		borderShape.lineTo((width / 2.0) + 0.05, (-height / 2.0) - 0.05 + 0.32);
-		borderShape.quadraticCurveTo((width / 2.0) + 0.05, (-height / 2.0) - 0.05, (width / 2.0) + 0.05 - 0.32, (-height / 2.0) - 0.05);
-		borderShape.lineTo((-width / 2.0) - 0.05 + 0.32, (-height / 2.0) - 0.05);
-		borderShape.quadraticCurveTo((-width / 2.0) - 0.05, (-height / 2.0) - 0.05, (-width / 2.0) - 0.05, (-height / 2.0) - 0.05 + 0.32);
-		borderShape.lineTo((-width / 2.0) - 0.05, (height / 2.0) + 0.05 - 0.32);
-		borderShape.quadraticCurveTo((-width / 2.0) - 0.05, (height / 2.0) + 0.05, (-width / 2.0) - 0.05 + 0.32, (height / 2.0) + 0.05);
-		innerShape = new THREE.Path();
-		innerShape.moveTo((-width / 2.0) + 0.27, (height / 2.0));
-		innerShape.lineTo((width / 2.0) - 0.27, (height / 2.0));
-		innerShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.27);
-		innerShape.lineTo((width / 2.0), (-height / 2.0) + 0.27);
-		innerShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.27, (-height / 2.0));
-		innerShape.lineTo((-width / 2.0) + 0.27, (-height / 2.0));
-		innerShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.27);
-		innerShape.lineTo((-width / 2.0), (height / 2.0) - 0.27);
-		innerShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.27, (height / 2.0));
-		borderShape.holes.push(innerShape);
-		borderGeometry = new THREE.ShapeGeometry(borderShape);
-		borderGeometry.name = 'sounds_splashscreen_bg_borderGeometry';
-		borderMaterial = new THREE.MeshBasicMaterial( {color: new THREE.Color('rgba(0,0,0,1)').convertSRGBToLinear() , side: THREE.DoubleSide, transparent: true } );
-		borderMaterial.name = 'sounds_splashscreen_bg_borderMaterial';
-		el.userData.border = new THREE.Mesh( borderGeometry, borderMaterial );
-		el.userData.border.name = 'sounds_splashscreen_bg_borderMesh';
-		el.add(el.userData.border);
-		el.userData.backgroundColorAlpha = 1;
-		el.userData.borderColorAlpha = 1;
-		el.userData.setOpacityInternal = function(v) {
-			me._sounds_splashscreen_bg.material.opacity = v * me._sounds_splashscreen_bg.userData.backgroundColorAlpha;
-			me._sounds_splashscreen_bg.userData.border.material.opacity = v * me._sounds_splashscreen_bg.userData.borderColorAlpha;
-			if (me._sounds_splashscreen_bg.userData.ggSubElement) {
-				me._sounds_splashscreen_bg.userData.ggSubElement.material.opacity = v
-				me._sounds_splashscreen_bg.userData.ggSubElement.visible = (v>0 && me._sounds_splashscreen_bg.userData.visible);
-			}
-			me._sounds_splashscreen_bg.visible = (v>0 && me._sounds_splashscreen_bg.userData.visible);
-		}
-		el.userData.setBackgroundColor = function(v) {
-			me._sounds_splashscreen_bg.material.color = v;
-		}
-		el.userData.setBackgroundColorAlpha = function(v) {
-			me._sounds_splashscreen_bg.userData.backgroundColorAlpha = v;
-			me._sounds_splashscreen_bg.userData.setOpacity(me._sounds_splashscreen_bg.userData.opacity);
-		}
-		el.userData.setBorderColor = function(v) {
-			me._sounds_splashscreen_bg.userData.border.material.color = v;
-		}
-		el.userData.setBorderColorAlpha = function(v) {
-			me._sounds_splashscreen_bg.userData.borderColorAlpha = v;
-			me._sounds_splashscreen_bg.userData.setOpacity(me._sounds_splashscreen_bg.userData.opacity);
-		}
-		el.translateX(0.05);
-		el.translateY(-0.05);
-		el.scale.set(1.00, 1.00, 1.0);
-		el.userData.width = 320;
-		el.userData.height = 140;
-		el.userData.scale = {x: 1.00, y: 1.00, z: 1.0};
-		el.userData.curScaleOffX = 0;
-		el.userData.curScaleOffY = 0;
-		el.name = 'sounds_splashscreen_bg';
-		el.userData.x = 0.05;
-		el.userData.y = -0.05;
-		el.userData.hanchor = 0;
-		el.userData.vanchor = 0;
-		el.translateZ(0.130);
-		el.renderOrder = 13;
-		el.rotateZ(0.00);
-		el.userData.angle = 0.00;
-		el.userData.isVisible = function() {
-			let vis = me._sounds_splashscreen_bg.visible
-			let parentEl = me._sounds_splashscreen_bg.parent;
-			while (vis && parentEl) {
-				if (!parentEl.visible) {
-					vis = false;
-					break;
-				}
-				parentEl = parentEl.parent;
-			}
-			return vis;
-		}
-		el.userData.setOpacity = function(v) {
-			me._sounds_splashscreen_bg.userData.opacity = v;
-			v = v * me._sounds_splashscreen_bg.userData.parentOpacity;
-			me._sounds_splashscreen_bg.userData.setOpacityInternal(v);
-			for (let i = 0; i < me._sounds_splashscreen_bg.children.length; i++) {
-				let child = me._sounds_splashscreen_bg.children[i];
-				if (child.userData.setParentOpacity) {
-					child.userData.setParentOpacity(v);
-				}
-			};
-		}
-		el.userData.setParentOpacity = function(v) {
-			me._sounds_splashscreen_bg.userData.parentOpacity = v;
-			v = v * me._sounds_splashscreen_bg.userData.opacity
-			me._sounds_splashscreen_bg.userData.setOpacityInternal(v);
-			for (let i = 0; i < me._sounds_splashscreen_bg.children.length; i++) {
-				let child = me._sounds_splashscreen_bg.children[i];
-				if (child.userData.setParentOpacity) {
-					child.userData.setParentOpacity(v);
-				}
-			};
-		}
-		el.visible = true;
-		el.userData.visible = true;
-		el.userData.opacity = 1.00;
-		el.userData.parentOpacity = 1.0;
-		el.userData.transitions = [];
-		me._sounds_splashscreen_bg = el;
-		el.userData.ggId="sounds_splashscreen_bg";
-		me._sounds_splashscreen_bg.userData.ggUpdatePosition=function (useTransition) {
-		}
-		geometry = new THREE.PlaneBufferGeometry(1, 1, 5, 5 );
-		geometry.name = 'sounds_off_geometry';
-		loader = new THREE.TextureLoader();
-		texture = loader.load('data:image/png;base64,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');
-		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true} );
-		material.name = 'sounds_off_material';
-		el = new THREE.Mesh( geometry, material );
-		el.userData.materialNormal = material;
-		el.translateX(0.75);
-		el.translateY(0);
-		el.scale.set(1.00, 1.00, 1.0);
-		el.userData.width = 100;
-		el.userData.height = 100;
-		el.userData.scale = {x: 1.00, y: 1.00, z: 1.0};
-		el.userData.curScaleOffX = 0;
-		el.userData.curScaleOffY = 0;
-		el.name = 'sounds_off';
-		el.userData.x = 0.75;
-		el.userData.y = 0;
-		el.userData.hanchor = 1;
-		el.userData.vanchor = 1;
-		el.translateZ(0.140);
-		el.renderOrder = 14;
-		el.rotateZ(0.00);
-		el.userData.angle = 0.00;
-		el.userData.setOpacityInternal = function(v) {
-			if (me._sounds_off.material) me._sounds_off.material.opacity = v;
-			me._sounds_off.visible = (v>0 && me._sounds_off.userData.visible);
-		}
-		el.userData.isVisible = function() {
-			let vis = me._sounds_off.visible
-			let parentEl = me._sounds_off.parent;
-			while (vis && parentEl) {
-				if (!parentEl.visible) {
-					vis = false;
-					break;
-				}
-				parentEl = parentEl.parent;
-			}
-			return vis;
-		}
-		el.userData.setOpacity = function(v) {
-			me._sounds_off.userData.opacity = v;
-			v = v * me._sounds_off.userData.parentOpacity;
-			me._sounds_off.userData.setOpacityInternal(v);
-			for (let i = 0; i < me._sounds_off.children.length; i++) {
-				let child = me._sounds_off.children[i];
-				if (child.userData.setParentOpacity) {
-					child.userData.setParentOpacity(v);
-				}
-			};
-		}
-		el.userData.setParentOpacity = function(v) {
-			me._sounds_off.userData.parentOpacity = v;
-			v = v * me._sounds_off.userData.opacity
-			me._sounds_off.userData.setOpacityInternal(v);
-			for (let i = 0; i < me._sounds_off.children.length; i++) {
-				let child = me._sounds_off.children[i];
-				if (child.userData.setParentOpacity) {
-					child.userData.setParentOpacity(v);
-				}
-			};
-		}
-		el.visible = true;
-		el.userData.visible = true;
-		el.userData.opacity = 1.00;
-		el.userData.parentOpacity = 1.0;
-		el.userData.transitions = [];
-		me._sounds_off = el;
-		textureOver = loader.load('data:image/png;base64,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');
-		el.userData.materialOver = new THREE.MeshBasicMaterial( {map: textureOver, side: THREE.DoubleSide, transparent: true} );
-		el.userData.materialOver.name = 'sounds_off_materialOver';
-		el.userData.ggId="sounds_off";
-		me._sounds_off.userData.onclick=function (e) {
-			player.mute("_all");
-			player.setVariableValue('toggle_audio', false);
-			player.setVariableValue('sounds_splashscreen_accepted', true);
-		}
-		me._sounds_off.userData.onmouseover=function (e) {
-			me._sounds_off.material = me._sounds_off.userData.materialOver;
-			me.elementMouseOver['sounds_off']=true;
-		}
-		me._sounds_off.userData.onmouseout=function (e) {
-			me._sounds_off.material = me._sounds_off.userData.materialNormal;
-			me.elementMouseOver['sounds_off']=false;
-		}
-		me._sounds_off.userData.ggUpdatePosition=function (useTransition) {
-		}
-		me._sounds_splashscreen_bg.add(me._sounds_off);
-		geometry = new THREE.PlaneBufferGeometry(1, 1, 5, 5 );
-		geometry.name = 'sounds_on_geometry';
-		loader = new THREE.TextureLoader();
-		texture = loader.load('data:image/png;base64,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');
-		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true} );
-		material.name = 'sounds_on_material';
-		el = new THREE.Mesh( geometry, material );
-		el.userData.materialNormal = material;
-		el.translateX(-0.75);
-		el.translateY(0);
-		el.scale.set(1.00, 1.00, 1.0);
-		el.userData.width = 100;
-		el.userData.height = 100;
-		el.userData.scale = {x: 1.00, y: 1.00, z: 1.0};
-		el.userData.curScaleOffX = 0;
-		el.userData.curScaleOffY = 0;
-		el.name = 'sounds_on';
-		el.userData.x = -0.75;
-		el.userData.y = 0;
-		el.userData.hanchor = 1;
-		el.userData.vanchor = 1;
-		el.translateZ(0.150);
-		el.renderOrder = 15;
-		el.rotateZ(0.00);
-		el.userData.angle = 0.00;
-		el.userData.setOpacityInternal = function(v) {
-			if (me._sounds_on.material) me._sounds_on.material.opacity = v;
-			me._sounds_on.visible = (v>0 && me._sounds_on.userData.visible);
-		}
-		el.userData.isVisible = function() {
-			let vis = me._sounds_on.visible
-			let parentEl = me._sounds_on.parent;
-			while (vis && parentEl) {
-				if (!parentEl.visible) {
-					vis = false;
-					break;
-				}
-				parentEl = parentEl.parent;
-			}
-			return vis;
-		}
-		el.userData.setOpacity = function(v) {
-			me._sounds_on.userData.opacity = v;
-			v = v * me._sounds_on.userData.parentOpacity;
-			me._sounds_on.userData.setOpacityInternal(v);
-			for (let i = 0; i < me._sounds_on.children.length; i++) {
-				let child = me._sounds_on.children[i];
-				if (child.userData.setParentOpacity) {
-					child.userData.setParentOpacity(v);
-				}
-			};
-		}
-		el.userData.setParentOpacity = function(v) {
-			me._sounds_on.userData.parentOpacity = v;
-			v = v * me._sounds_on.userData.opacity
-			me._sounds_on.userData.setOpacityInternal(v);
-			for (let i = 0; i < me._sounds_on.children.length; i++) {
-				let child = me._sounds_on.children[i];
-				if (child.userData.setParentOpacity) {
-					child.userData.setParentOpacity(v);
-				}
-			};
-		}
-		el.visible = true;
-		el.userData.visible = true;
-		el.userData.opacity = 1.00;
-		el.userData.parentOpacity = 1.0;
-		el.userData.transitions = [];
-		me._sounds_on = el;
-		textureOver = loader.load('data:image/png;base64,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');
-		el.userData.materialOver = new THREE.MeshBasicMaterial( {map: textureOver, side: THREE.DoubleSide, transparent: true} );
-		el.userData.materialOver.name = 'sounds_on_materialOver';
-		el.userData.ggId="sounds_on";
-		me._sounds_on.userData.onclick=function (e) {
-			player.startAutoplayMedia();
-			player.setVariableValue('sounds_splashscreen_accepted', true);
-		}
-		me._sounds_on.userData.onmouseover=function (e) {
-			me._sounds_on.material = me._sounds_on.userData.materialOver;
-			me.elementMouseOver['sounds_on']=true;
-		}
-		me._sounds_on.userData.onmouseout=function (e) {
-			me._sounds_on.material = me._sounds_on.userData.materialNormal;
-			me.elementMouseOver['sounds_on']=false;
-		}
-		me._sounds_on.userData.ggUpdatePosition=function (useTransition) {
-		}
-		me._sounds_splashscreen_bg.add(me._sounds_on);
-		me._sounds_splashscreen.add(me._sounds_splashscreen_bg);
-		me.skinGroup.add(me._sounds_splashscreen);
 		width = 7.64571;
 		height = 5.55;
 		roundedRectShape = new THREE.Shape();
@@ -7393,8 +6975,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0.065;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 0;
-		el.translateZ(0.130);
-		el.renderOrder = 13;
+		el.translateZ(0.120);
+		el.renderOrder = 12;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
@@ -7486,8 +7068,8 @@ alert("The current view has been copied.");
 		el.userData.y = 2.615;
 		el.userData.hanchor = 2;
 		el.userData.vanchor = 0;
-		el.translateZ(0.140);
-		el.renderOrder = 14;
+		el.translateZ(0.130);
+		el.renderOrder = 13;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -7577,8 +7159,8 @@ alert("The current view has been copied.");
 		el.userData.y = -0.0620938;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 0;
-		el.translateZ(0.150);
-		el.renderOrder = 15;
+		el.translateZ(0.140);
+		el.renderOrder = 14;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -7691,8 +7273,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0.417094;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 0;
-		el.translateZ(0.160);
-		el.renderOrder = 16;
+		el.translateZ(0.150);
+		el.renderOrder = 15;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
@@ -7971,8 +7553,8 @@ alert("The current view has been copied.");
 		el.userData.y = 2.28709;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 0;
-		el.translateZ(0.170);
-		el.renderOrder = 17;
+		el.translateZ(0.160);
+		el.renderOrder = 16;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
@@ -8166,8 +7748,8 @@ alert("The current view has been copied.");
 		el.userData.y = -1.31;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 0;
-		el.translateZ(0.160);
-		el.renderOrder = 16;
+		el.translateZ(0.150);
+		el.renderOrder = 15;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -8256,8 +7838,8 @@ alert("The current view has been copied.");
 		el.userData.y = 2.945;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 0;
-		el.translateZ(0.170);
-		el.renderOrder = 17;
+		el.translateZ(0.160);
+		el.renderOrder = 16;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -8411,8 +7993,8 @@ alert("The current view has been copied.");
 		el.userData.y = -0.95;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 0;
-		el.translateZ(0.170);
-		el.renderOrder = 17;
+		el.translateZ(0.160);
+		el.renderOrder = 16;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
@@ -8497,8 +8079,8 @@ alert("The current view has been copied.");
 		el.userData.y = -0.95;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 0;
-		el.translateZ(0.180);
-		el.renderOrder = 18;
+		el.translateZ(0.170);
+		el.renderOrder = 17;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
@@ -8592,8 +8174,8 @@ alert("The current view has been copied.");
 		el.userData.y = -0.915;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 0;
-		el.translateZ(0.190);
-		el.renderOrder = 19;
+		el.translateZ(0.180);
+		el.renderOrder = 18;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
@@ -8755,8 +8337,8 @@ alert("The current view has been copied.");
 		el.userData.y = -2.375;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 2;
-		el.translateZ(0.210);
-		el.renderOrder = 21;
+		el.translateZ(0.200);
+		el.renderOrder = 20;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -8917,8 +8499,8 @@ alert("The current view has been copied.");
 		el.userData.y = -0.49;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 0;
-		el.translateZ(0.240);
-		el.renderOrder = 24;
+		el.translateZ(0.230);
+		el.renderOrder = 23;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -9093,8 +8675,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0.08;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 1;
-		el.translateZ(0.250);
-		el.renderOrder = 25;
+		el.translateZ(0.240);
+		el.renderOrder = 24;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -9212,8 +8794,8 @@ alert("The current view has been copied.");
 		el.userData.y = -0.51;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 0;
-		el.translateZ(0.260);
-		el.renderOrder = 26;
+		el.translateZ(0.250);
+		el.renderOrder = 25;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -9388,8 +8970,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0.08;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 1;
-		el.translateZ(0.270);
-		el.renderOrder = 27;
+		el.translateZ(0.260);
+		el.renderOrder = 26;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -9509,8 +9091,8 @@ alert("The current view has been copied.");
 		el.userData.y = -2.825;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 2;
-		el.translateZ(0.150);
-		el.renderOrder = 15;
+		el.translateZ(0.140);
+		el.renderOrder = 14;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -9621,8 +9203,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0.1;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 2;
-		el.translateZ(0.160);
-		el.renderOrder = 16;
+		el.translateZ(0.150);
+		el.renderOrder = 15;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
@@ -9692,8 +9274,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 2;
 		el.userData.vanchor = 1;
-		el.translateZ(0.170);
-		el.renderOrder = 17;
+		el.translateZ(0.160);
+		el.renderOrder = 16;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -9983,8 +9565,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 1;
-		el.translateZ(0.180);
-		el.renderOrder = 18;
+		el.translateZ(0.170);
+		el.renderOrder = 17;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
@@ -10033,14 +9615,12 @@ alert("The current view has been copied.");
 		geometry = new THREE.PlaneBufferGeometry(0.2, 0.2, 5, 5 );
 		geometry.name = 'pause_geometry';
 		loader = new THREE.TextureLoader();
-		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAC1klEQVRYhc2XT0gUYRjGn/eblXQJ3VkjqSAKQtpxbGcVEjqEh65RF+nSISgt0EsQUoSXLtLFS/8kCE9dIpLoWJQoEaTrTuvuTJQgBBFB62wF/t95O0SWs6u5uzOz+xzfed9nfjzf8H3fEBya2a02iVVpjED7ATyxIV1XrfgnZ59fEs5CYCVwiUCHAQQBnBXIpU052scFev1Q3ksZaHGUdjLolilrEzONbRGfuNaVD0hUv0nvMcm2E0YoNjCF9hqPudZV7LLtAPGNoGzHU43Ro54QOVTid8WtwqY3RkgbmtrTHnQXaaPK+fAFCJeDS7mU0Rg74RpR3kvK10HY/Dwd1kaSDa2yC34b5NrWQYxzAZLMdFjrcssTcHtvIzQR45Eha6Pvd8X2umHp1eZ72s'+
-	'6xYYa1bgaoHCMvT4cGZtw3Ze1lqr7tUKkmfhxfnUKyk4as9TO6pGKH/Tpf6wDcNOXZt6mQphUz6PMFgNsEYTItRwfnDnTWbmeiEjeUAIGuLmaz74xQ7Pj/mityhQIAEJpBPGbKseGP4Y7NLigVBPwtYvDFVV42TPnIyUINlQb8o30M8bTQklcLIAAQiHudxWoCLKhqAmSGfdtZrBbAzwT7VIuVnHA+qDQgAzxcQzuUiJV8Vqgh4DfRuhgfAOpWsvr4Vm2VSHCNgcG6UCiqZBNbwgG+J8hxm+mCmtV1WNub8CvBRQD9Eau5Q83qejGDnifIwCvOiR71x/QsUBQbAG8Bv4NwRZnXHxDApZp4A0gYhZB6lW/xL+VauQvI+GoL6lPnE4/dsnTvv5gwssa5iJtwgDsJzkFQTySTeOGCV57KSTDHTEMLtZKqeAQHlJwgzdiC'+
-	'z6uZxCSy7gI5VWyCy2AeWLBEu5rRJz0hcigvQULhTBh4bQvR3ZqZNr3H+qsCS8xxAGf+KfwEcE2x9LvlbLilKm+J7cDKPQDjAC8R8NCGpCqWfqcScADwCyF53ulGjKEUAAAAAElFTkSuQmCC');
+		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAA+0lEQVRYhe2YIQ7CQBBF/2xahwASJBJTAwTFAbhELwJHgIv0EhwARQCDQVaSUASuzQ4Ct+nAkjEV8+Tf9M/LTtUChg6SDq7D2Yo8Lb1jJ37sUaUNFZPX6d52fuvNR3XCOTsMpA7nybPjQ/Y476MFr4PpGqCtVBpUlGmNRSh5681HdYojwOO4Ht5k1WUXpsLt0CauFAB4XCech+kni5WTZ0rr68cXA20r/LbWf2aK/1dXMEEtJqjFBLWYoBYT1GKCWkxQiwlqMUEtJqjFBLWYoBYT1GKCWiTB5z8l5FHFZD9onSkIcuTjJQBQmTZUhOknozK+p31m55+ADS1vbcdVRpZ8EV0AAAAASUVORK5CYII=');
 		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true} );
 		material.name = 'pause_material';
 		el = new THREE.Mesh( geometry, material );
 		el.userData.materialNormal = material;
-		el.translateX(0.02);
+		el.translateX(0);
 		el.translateY(0);
 		el.scale.set(1.00, 1.00, 1.0);
 		el.userData.width = 20;
@@ -10049,12 +9629,12 @@ alert("The current view has been copied.");
 		el.userData.curScaleOffX = 0;
 		el.userData.curScaleOffY = 0;
 		el.name = 'pause';
-		el.userData.x = 0.02;
+		el.userData.x = 0;
 		el.userData.y = 0;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 1;
-		el.translateZ(0.190);
-		el.renderOrder = 19;
+		el.translateZ(0.180);
+		el.renderOrder = 18;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -10135,12 +9715,14 @@ alert("The current view has been copied.");
 		geometry = new THREE.PlaneBufferGeometry(0.2, 0.2, 5, 5 );
 		geometry.name = 'play_geometry';
 		loader = new THREE.TextureLoader();
-		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAA+0lEQVRYhe2YIQ7CQBBF/2xahwASJBJTAwTFAbhELwJHgIv0EhwARQCDQVaSUASuzQ4Ct+nAkjEV8+Tf9M/LTtUChg6SDq7D2Yo8Lb1jJ37sUaUNFZPX6d52fuvNR3XCOTsMpA7nybPjQ/Y476MFr4PpGqCtVBpUlGmNRSh5681HdYojwOO4Ht5k1WUXpsLt0CauFAB4XCech+kni5WTZ0rr68cXA20r/LbWf2aK/1dXMEEtJqjFBLWYoBYT1GKCWkxQiwlqMUEtJqjFBLWYoBYT1GKCWiTB5z8l5FHFZD9onSkIcuTjJQBQmTZUhOknozK+p31m55+ADS1vbcdVRpZ8EV0AAAAASUVORK5CYII=');
+		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAC1klEQVRYhc2XT0gUYRjGn/eblXQJ3VkjqSAKQtpxbGcVEjqEh65RF+nSISgt0EsQUoSXLtLFS/8kCE9dIpLoWJQoEaTrTuvuTJQgBBFB62wF/t95O0SWs6u5uzOz+xzfed9nfjzf8H3fEBya2a02iVVpjED7ATyxIV1XrfgnZ59fEs5CYCVwiUCHAQQBnBXIpU052scFev1Q3ksZaHGUdjLolilrEzONbRGfuNaVD0hUv0nvMcm2E0YoNjCF9hqPudZV7LLtAPGNoGzHU43Ro54QOVTid8WtwqY3RkgbmtrTHnQXaaPK+fAFCJeDS7mU0Rg74RpR3kvK10HY/Dwd1kaSDa2yC34b5NrWQYxzAZLMdFjrcssTcHtvIzQR45Eha6Pvd8X2umHp1eZ72s'+
+	'6xYYa1bgaoHCMvT4cGZtw3Ze1lqr7tUKkmfhxfnUKyk4as9TO6pGKH/Tpf6wDcNOXZt6mQphUz6PMFgNsEYTItRwfnDnTWbmeiEjeUAIGuLmaz74xQ7Pj/mityhQIAEJpBPGbKseGP4Y7NLigVBPwtYvDFVV42TPnIyUINlQb8o30M8bTQklcLIAAQiHudxWoCLKhqAmSGfdtZrBbAzwT7VIuVnHA+qDQgAzxcQzuUiJV8Vqgh4DfRuhgfAOpWsvr4Vm2VSHCNgcG6UCiqZBNbwgG+J8hxm+mCmtV1WNub8CvBRQD9Eau5Q83qejGDnifIwCvOiR71x/QsUBQbAG8Bv4NwRZnXHxDApZp4A0gYhZB6lW/xL+VauQvI+GoL6lPnE4/dsnTvv5gwssa5iJtwgDsJzkFQTySTeOGCV57KSTDHTEMLtZKqeAQHlJwgzdiC'+
+	'z6uZxCSy7gI5VWyCy2AeWLBEu5rRJz0hcigvQULhTBh4bQvR3ZqZNr3H+qsCS8xxAGf+KfwEcE2x9LvlbLilKm+J7cDKPQDjAC8R8NCGpCqWfqcScADwCyF53ulGjKEUAAAAAElFTkSuQmCC');
 		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true} );
 		material.name = 'play_material';
 		el = new THREE.Mesh( geometry, material );
 		el.userData.materialNormal = material;
-		el.translateX(0);
+		el.translateX(0.02);
 		el.translateY(0);
 		el.scale.set(1.00, 1.00, 1.0);
 		el.userData.width = 20;
@@ -10149,12 +9731,12 @@ alert("The current view has been copied.");
 		el.userData.curScaleOffX = 0;
 		el.userData.curScaleOffY = 0;
 		el.name = 'play';
-		el.userData.x = 0;
+		el.userData.x = 0.02;
 		el.userData.y = 0;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 1;
-		el.translateZ(0.200);
-		el.renderOrder = 20;
+		el.translateZ(0.190);
+		el.renderOrder = 19;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -10257,8 +9839,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 1;
-		el.translateZ(0.190);
-		el.renderOrder = 19;
+		el.translateZ(0.180);
+		el.renderOrder = 18;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -10466,8 +10048,8 @@ alert("The current view has been copied.");
 		el.userData.y = -2.75;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 2;
-		el.translateZ(0.160);
-		el.renderOrder = 16;
+		el.translateZ(0.150);
+		el.renderOrder = 15;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -10578,8 +10160,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 2;
-		el.translateZ(0.170);
-		el.renderOrder = 17;
+		el.translateZ(0.160);
+		el.renderOrder = 16;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
@@ -10640,8 +10222,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 2;
 		el.userData.vanchor = 1;
-		el.translateZ(0.180);
-		el.renderOrder = 18;
+		el.translateZ(0.170);
+		el.renderOrder = 17;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -10745,8 +10327,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 2;
 		el.userData.vanchor = 1;
-		el.translateZ(0.190);
-		el.renderOrder = 19;
+		el.translateZ(0.180);
+		el.renderOrder = 18;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -10891,8 +10473,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 2;
 		el.userData.vanchor = 1;
-		el.translateZ(0.200);
-		el.renderOrder = 20;
+		el.translateZ(0.190);
+		el.renderOrder = 19;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -11040,8 +10622,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 1;
-		el.translateZ(0.190);
-		el.renderOrder = 19;
+		el.translateZ(0.180);
+		el.renderOrder = 18;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -11193,8 +10775,8 @@ alert("The current view has been copied.");
 		el.userData.y = -1.75;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 2;
-		el.translateZ(0.170);
-		el.renderOrder = 17;
+		el.translateZ(0.160);
+		el.renderOrder = 16;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -11329,8 +10911,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 0;
-		el.translateZ(0.180);
-		el.renderOrder = 18;
+		el.translateZ(0.170);
+		el.renderOrder = 17;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
@@ -11391,8 +10973,8 @@ alert("The current view has been copied.");
 		el.userData.y = -0.49;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 0;
-		el.translateZ(0.190);
-		el.renderOrder = 19;
+		el.translateZ(0.180);
+		el.renderOrder = 18;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -11497,8 +11079,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 1;
-		el.translateZ(0.200);
-		el.renderOrder = 20;
+		el.translateZ(0.190);
+		el.renderOrder = 19;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -11645,8 +11227,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 1;
-		el.translateZ(0.210);
-		el.renderOrder = 21;
+		el.translateZ(0.200);
+		el.renderOrder = 20;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -11782,8 +11364,8 @@ alert("The current view has been copied.");
 		el.userData.y = -0.18;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 0;
-		el.translateZ(0.200);
-		el.renderOrder = 20;
+		el.translateZ(0.190);
+		el.renderOrder = 19;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -11886,8 +11468,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 1;
-		el.translateZ(0.210);
-		el.renderOrder = 21;
+		el.translateZ(0.200);
+		el.renderOrder = 20;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -12031,8 +11613,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 1;
-		el.translateZ(0.220);
-		el.renderOrder = 22;
+		el.translateZ(0.210);
+		el.renderOrder = 21;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -12176,8 +11758,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0.12;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 0;
-		el.translateZ(0.210);
-		el.renderOrder = 21;
+		el.translateZ(0.200);
+		el.renderOrder = 20;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -12299,8 +11881,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0.42;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 0;
-		el.translateZ(0.220);
-		el.renderOrder = 22;
+		el.translateZ(0.210);
+		el.renderOrder = 21;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -12416,8 +11998,8 @@ alert("The current view has been copied.");
 		el.userData.y = 2.725;
 		el.userData.hanchor = 2;
 		el.userData.vanchor = 0;
-		el.translateZ(0.180);
-		el.renderOrder = 18;
+		el.translateZ(0.170);
+		el.renderOrder = 17;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -12528,8 +12110,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 1;
-		el.translateZ(0.190);
-		el.renderOrder = 19;
+		el.translateZ(0.180);
+		el.renderOrder = 18;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
@@ -12636,8 +12218,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 2;
 		el.userData.vanchor = 1;
-		el.translateZ(0.200);
-		el.renderOrder = 20;
+		el.translateZ(0.190);
+		el.renderOrder = 19;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
@@ -12743,8 +12325,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 1;
-		el.translateZ(0.210);
-		el.renderOrder = 21;
+		el.translateZ(0.200);
+		el.renderOrder = 20;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -12857,8 +12439,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0.01;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 1;
-		el.translateZ(0.210);
-		el.renderOrder = 21;
+		el.translateZ(0.200);
+		el.renderOrder = 20;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
@@ -12926,6 +12508,10 @@ alert("The current view has been copied.");
 			}
 		}
 		me._bg_floorplan.logicBlock_backgroundcolor();
+		me._bg_floorplan.userData.onclick=function (e) {
+			player.setVariableValue('vis_floorplan', true);
+			player.setVariableValue('vis_floorplan_full', true);
+		}
 		me._bg_floorplan.userData.onmouseover=function (e) {
 			me.elementMouseOver['bg_floorplan']=true;
 			me._bg_floorplan.logicBlock_backgroundcolor();
@@ -12961,8 +12547,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 1;
-		el.translateZ(0.220);
-		el.renderOrder = 22;
+		el.translateZ(0.210);
+		el.renderOrder = 21;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -13075,8 +12661,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 1;
-		el.translateZ(0.220);
-		el.renderOrder = 22;
+		el.translateZ(0.210);
+		el.renderOrder = 21;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
@@ -13145,7 +12731,7 @@ alert("The current view has been copied.");
 		}
 		me._bg_home.logicBlock_backgroundcolor();
 		me._bg_home.userData.onclick=function (e) {
-			player.openNext("{node1}","");
+			player.openNext("{node15}","");
 		}
 		me._bg_home.userData.onmouseover=function (e) {
 			me.elementMouseOver['bg_home']=true;
@@ -13182,8 +12768,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 1;
-		el.translateZ(0.230);
-		el.renderOrder = 23;
+		el.translateZ(0.220);
+		el.renderOrder = 22;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -13239,21 +12825,21 @@ alert("The current view has been copied.");
 		me.skinGroup.add(me._controls_right_top);
 		el = new THREE.Group();
 		el.userData.setOpacityInternal = function(v) {};
-		el.translateX(-2.2);
+		el.translateX(-2.225);
 		el.translateY(-0.5);
 		el.scale.set(1.00, 1.00, 1.0);
-		el.userData.width = 340;
+		el.userData.width = 335;
 		el.userData.height = 400;
 		el.userData.scale = {x: 1.00, y: 1.00, z: 1.0};
 		el.userData.curScaleOffX = 0;
 		el.userData.curScaleOffY = 0;
 		el.name = 'information';
-		el.userData.x = -2.2;
+		el.userData.x = -2.225;
 		el.userData.y = -0.5;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 2;
-		el.translateZ(0.190);
-		el.renderOrder = 19;
+		el.translateZ(0.180);
+		el.renderOrder = 18;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -13327,12 +12913,12 @@ alert("The current view has been copied.");
 		me._information.logicBlock_visible();
 		me._information.userData.ggUpdatePosition=function (useTransition) {
 		}
-		geometry = new THREE.PlaneBufferGeometry(3.4, 4, 5, 5 );
+		geometry = new THREE.PlaneBufferGeometry(3.35, 4, 5, 5 );
 		geometry.name = 'Rectangle 3_geometry';
-		material = new THREE.MeshBasicMaterial( { color: new THREE.Color('rgba(255,255,255,0.588235)').convertSRGBToLinear(), side : THREE.DoubleSide, transparent : true } ); 
+		material = new THREE.MeshBasicMaterial( { color: new THREE.Color('rgba(255,255,255,1)').convertSRGBToLinear(), side : THREE.DoubleSide, transparent : true } ); 
 		material.name = 'Rectangle 3_material';
 		el = new THREE.Mesh( geometry, material );
-		el.userData.backgroundColorAlpha = 0.588235;
+		el.userData.backgroundColorAlpha = 1;
 		el.userData.borderColorAlpha = 1;
 		el.userData.setOpacityInternal = function(v) {
 			me._rectangle_3.material.opacity = v * me._rectangle_3.userData.backgroundColorAlpha;
@@ -13352,7 +12938,7 @@ alert("The current view has been copied.");
 		el.translateX(0);
 		el.translateY(0);
 		el.scale.set(1.00, 1.00, 1.0);
-		el.userData.width = 340;
+		el.userData.width = 335;
 		el.userData.height = 400;
 		el.userData.scale = {x: 1.00, y: 1.00, z: 1.0};
 		el.userData.curScaleOffX = 0;
@@ -13362,8 +12948,8 @@ alert("The current view has been copied.");
 		el.userData.y = 0;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 1;
-		el.translateZ(0.200);
-		el.renderOrder = 20;
+		el.translateZ(0.190);
+		el.renderOrder = 19;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
@@ -13409,7 +12995,7 @@ alert("The current view has been copied.");
 		el.userData.ggId="Rectangle 3";
 		me._rectangle_3.userData.ggUpdatePosition=function (useTransition) {
 		}
-		geometry = new THREE.PlaneBufferGeometry(3.06, 3.6, 5, 5 );
+		geometry = new THREE.PlaneBufferGeometry(3.015, 3.36, 5, 5 );
 		geometry.name = 'Text 2_geometry';
 		material = new THREE.MeshBasicMaterial( {side : THREE.DoubleSide, transparent : true } ); 
 		material.name = 'Text 2_material';
@@ -13436,20 +13022,20 @@ alert("The current view has been copied.");
 			me._text_2.userData.setOpacity(me._text_2.userData.opacity);
 		}
 		el.translateX(0);
-		el.translateY(-0.1);
+		el.translateY(-0.19);
 		el.scale.set(1.00, 1.00, 1.0);
-		el.userData.width = 306;
-		el.userData.height = 360;
+		el.userData.width = 301.5;
+		el.userData.height = 336;
 		el.userData.scale = {x: 1.00, y: 1.00, z: 1.0};
 		el.userData.curScaleOffX = 0;
 		el.userData.curScaleOffY = 0;
 		el.name = 'Text 2';
 		el.userData.x = 0;
-		el.userData.y = -0.1;
+		el.userData.y = -0.19;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 1;
-		el.translateZ(0.210);
-		el.renderOrder = 21;
+		el.translateZ(0.200);
+		el.renderOrder = 20;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
@@ -13497,8 +13083,8 @@ alert("The current view has been copied.");
 		el.userData.textColor = new THREE.Color(0, 0, 0);
 		el.userData.textColorAlpha = 1;
 		var canvas = document.createElement('canvas');
-		canvas.width = 306;
-		canvas.height = 360;
+		canvas.width = 302;
+		canvas.height = 336;
 		el.userData.textCanvas = canvas;
 		el.userData.textCanvasContext = canvas.getContext('2d');
 		el.userData.ggStripTags = function(text) {
@@ -13558,8 +13144,6 @@ alert("The current view has been copied.");
 			ctx.clearRect(0, 0, canv.width, canv.height);
 			ctx.fillStyle = 'rgba(' + me._text_2.userData.textColor.r * 255 + ', ' + me._text_2.userData.textColor.g * 255 + ', ' + me._text_2.userData.textColor.b * 255 + ', ' + me._text_2.userData.textColorAlpha + ')';
 			ctx.textBaseline = 'top';
-			var x = 0;
-			ctx.textAlign = 'left';
 			var y = 3;
 			y -= me._text_2.userData.scrollPosPercent * me._text_2.userData.totalHeight;
 			y += (canv.height - me._text_2.userData.totalHeight - 0) / 2;
@@ -13583,7 +13167,7 @@ alert("The current view has been copied.");
 			var canv = me._text_2.userData.textCanvas;
 			var ctx = me._text_2.userData.textCanvasContext;
 			ctx.font = '14px Verdana';
-			me._text_2.userData.lineHeight = 16.8;
+			me._text_2.userData.lineHeight = 14 * 1.2;
 			me._text_2.userData.ggWrapText(false);
 			me._text_2.userData.boxWidth = me._text_2.userData.width;
 			me._text_2.userData.boxHeight = me._text_2.userData.height;
@@ -13694,7 +13278,7 @@ alert("The current view has been copied.");
 		me._text_2.userData.ggUpdatePosition=function (useTransition) {
 		}
 		me._rectangle_3.add(me._text_2);
-		geometry = new THREE.PlaneBufferGeometry(3.4, 0.25, 5, 5 );
+		geometry = new THREE.PlaneBufferGeometry(3.35, 0.35, 5, 5 );
 		geometry.name = 'Text 1_geometry';
 		material = new THREE.MeshBasicMaterial( {side : THREE.DoubleSide, transparent : true } ); 
 		material.name = 'Text 1_material';
@@ -13721,20 +13305,20 @@ alert("The current view has been copied.");
 			me._text_1.userData.setOpacity(me._text_1.userData.opacity);
 		}
 		el.translateX(0);
-		el.translateY(1.875);
+		el.translateY(1.825);
 		el.scale.set(1.00, 1.00, 1.0);
-		el.userData.width = 340;
-		el.userData.height = 25;
+		el.userData.width = 335;
+		el.userData.height = 35;
 		el.userData.scale = {x: 1.00, y: 1.00, z: 1.0};
 		el.userData.curScaleOffX = 0;
 		el.userData.curScaleOffY = 0;
 		el.name = 'Text 1';
 		el.userData.x = 0;
-		el.userData.y = 1.875;
+		el.userData.y = 1.825;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 0;
-		el.translateZ(0.220);
-		el.renderOrder = 22;
+		el.translateZ(0.210);
+		el.renderOrder = 21;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
@@ -13782,8 +13366,8 @@ alert("The current view has been copied.");
 		el.userData.textColor = new THREE.Color(1, 1, 1);
 		el.userData.textColorAlpha = 1;
 		var canvas = document.createElement('canvas');
-		canvas.width = 340;
-		canvas.height = 25;
+		canvas.width = 335;
+		canvas.height = 35;
 		el.userData.textCanvas = canvas;
 		el.userData.textCanvasContext = canvas.getContext('2d');
 		el.userData.ggStripTags = function(text) {
@@ -13869,7 +13453,7 @@ alert("The current view has been copied.");
 			var canv = me._text_1.userData.textCanvas;
 			var ctx = me._text_1.userData.textCanvasContext;
 			ctx.font = '14px Verdana';
-			me._text_1.userData.lineHeight = 16.8;
+			me._text_1.userData.lineHeight = 14 * 1.2;
 			me._text_1.userData.textLines = [];
 			me._text_1.userData.textLines.push(me._text_1.userData.ggText);
 			me._text_1.userData.totalHeight = 3;
@@ -13913,16 +13497,13 @@ alert("The current view has been copied.");
 		geometry = new THREE.PlaneBufferGeometry(0.25, 0.25, 5, 5 );
 		geometry.name = 'Svg 1_geometry';
 		loader = new THREE.TextureLoader();
-		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEn0lEQVRoge1aPWgjVxD+5lmWU1hKDJLAlSAGKZAm5oyvMksuXIiin3MjfIq7CziNi1R3xUHKQK5Ik6sc7jojBzf2WooPDsdREyyIz40wWCiFa0GwZWOUyHqT4taHflbat6vVOSH+Ku3sm3nzafa9mZ23wA1uMBTQMI2n02lvrVYbBwC/33++vr7+97Dmco1ILBYb83g8dwDcAzANIALgvY5hJwDKRPQKwGaj0djd3t7+y435ByVCiUTiLhF9CSAGwGdT/wzANjM/y+VyLwGwY0ecKsbj8VtCiCcA7ji10YEdKeWjfD6/70TZNpF4PD4hhHgK4AsnE1qBiFaFEMsbGxsntvTsDE6lUlEAOjNHbHlnE0RUBpDSdf1IVUeoDkwmkzEpZXHYJACAmSNSym'+
-	'IqlfpMVUcpIslkMgYgBxvEXYIkoriu6y+sBloSSSQSHxBREYDfFddsgplPhRC3rR6zvv+wsbA3cU0kAICI3gWgz8/Pd+akNvQlMjIy8sPbWBNWMNbM035jej5aRp743X23nIOZb+VyuVdm93pFhIxkZ4lQKAQi5wUCESEUCqmOfYIef/6ImTCRSHxKRN9YGQ6FQnj8+DEmJiZQKpWUnOlwDIuLi1hYWMD+/j4uLi6sVN6PRCK/lcvlPzpvmEbEqJ0sUa1WUSwWoWkaMpmMrchckZibm8Pe3h6q1aqq3gMzeVdEYrHYmBDiRwBeFcOlUgk+nw+apsHn8ylFppXE7u4u1tbWVKa6Qnhqaur7SqXSbBV6OkcZpfi4qlVmRjabBQBomgYAyGazYDYvZAckAQC+0dHRjwG0JckuInj9PmELqmRcINHqoyWRaSeWrci4SAJS'+
-	'yi4fzYg4ToC9yABwjQQAEFG0S9Z6kU6nvfV6feBXTyJCJpOBpmkoFAoQQrhG4gqTk5PelZWVxtV1W0Rqtdq416u0WfWFWWTcJAEAx8fHPgB/Xl0PtSwXQrT9HqQCsEJbRPx+/3m9Xh/YaOfCFkIobc12EA6Hz1qv2xLi4eFhMxqNfg3gHacTmO1OTpKmBU6y2ey3rQKzXasMYNaJ9V5brN2kaQVm7nrJMiNyAAdErPKEm2SEEAedMjMimwC+smNYNdm5SGazU9BF5PLy8hePx3MOxXrLbsZ2gcxZo9HY7RR2Vb+VSqUZjUY/AvChlcVByo4BNoCNfD7/U6fQNI8w8zMVi8FgEDMzM46S3VVkCoUCZmdnEQgEVPWem8l7ZShKJpMvAXxiZTgYDCq/FJlORIRAIKBqY2dra+suTJrdvTI7SykfqVgehATwOjKqNpj5IX'+
-	'p07HuWKPl8fp+IVp255z6IaLVXBwWwqLWEEMtGQ/laQURlIcRy3zFWRlKpVFRKWTQ6fm8drrRMAUDX9SMhxH0A0jXv1CGFEPdVjheUynhd118QUZyZTwf3TQ3MfKraiQf+jwc9wJvH7PYwdzPj6M1yTXTpOZ3QaHJ/B4WkqYgdZn7Yb4vtB7eOpx8A+BzOjqd/Zubn13Y83YlYLDZmdADvSSmnjZZN1wcDzHwkhDhoNpsbUspf/y0fDPTF0tLSqNHtQDgcPmtt39zgBv8R/AMT7jO9jarFsAAAAABJRU5ErkJggg==');
+		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAyUlEQVRoge2YSwrDMAxEh24Muf8Rusuu9H7pRgOFmtAQqbGn88BbaV6cjyPAGGOMMf/NotDjDmADsAJoBfVb1N6iVwlLNOB6IFemRc33HmU7w6uVLdOTWBPqHmp4Vqai5s8bXyaRGeByiYwgw0icCTScBDkSbFgJ8k3A4SXIXtBpJEgv8DPWNBKkJzOdBGn43AXuTonEraKoChK3lsTDLvH6lfggShxRJA6NEsd4iR8riV9dmeGDxDhIakAnMTIlEkNsY4wxxozMCztY3dWK9P+FAAAAAElFTkSuQmCC');
 		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true} );
 		material.name = 'Svg 1_material';
 		el = new THREE.Mesh( geometry, material );
 		el.userData.materialNormal = material;
-		el.translateX(1.575);
-		el.translateY(0);
+		el.translateX(1.55);
+		el.translateY(0.05);
 		el.scale.set(1.00, 1.00, 1.0);
 		el.userData.width = 25;
 		el.userData.height = 25;
@@ -13930,12 +13511,12 @@ alert("The current view has been copied.");
 		el.userData.curScaleOffX = 0;
 		el.userData.curScaleOffY = 0;
 		el.name = 'Svg 1';
-		el.userData.x = 1.575;
-		el.userData.y = 0;
+		el.userData.x = 1.55;
+		el.userData.y = 0.05;
 		el.userData.hanchor = 2;
 		el.userData.vanchor = 0;
-		el.translateZ(0.230);
-		el.renderOrder = 23;
+		el.translateZ(0.220);
+		el.renderOrder = 22;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
@@ -14329,6 +13910,7 @@ alert("The current view has been copied.");
 		me._floorplan_fs_content.logicBlock_visible();
 		me._floorplan_fs_content.userData.setOpacity(1.00);
 		me._map_fs_close.userData.setOpacity(1.00);
+		me._map_fs_small.logicBlock_visible();
 		me._map_fs_small.userData.setOpacity(1.00);
 		me._thumbnails.logicBlock_visible();
 		me._thumbnails.userData.setOpacity(1.00);
@@ -14387,11 +13969,6 @@ alert("The current view has been copied.");
 		me._url_hs_popup_close.userData.setOpacity(1.00);
 		me._url_hs_popup_title.userData.setOpacity(1.00);
 		me._url_hs_popup_iframe.userData.setOpacity(1.00);
-		me._sounds_splashscreen.logicBlock_visible();
-		me._sounds_splashscreen.userData.setOpacity(1.00);
-		me._sounds_splashscreen_bg.userData.setOpacity(1.00);
-		me._sounds_off.userData.setOpacity(1.00);
-		me._sounds_on.userData.setOpacity(1.00);
 		me._popup_phone.logicBlock_visible();
 		me._popup_phone.userData.setOpacity(1.00);
 		me._close_popup_phone.userData.setOpacity(1.00);
@@ -14628,6 +14205,7 @@ alert("The current view has been copied.");
 			me._map_fullscreen.logicBlock_visible();
 			me._map_fs_content.logicBlock_visible();
 			me._floorplan_fs_content.logicBlock_visible();
+			me._map_fs_small.logicBlock_visible();
 			me._thumbnails.logicBlock_visible();
 			me._thumbnails_fullscreen.logicBlock_visible();
 			me._video_hs_popup.logicBlock_visible();
@@ -14642,7 +14220,6 @@ alert("The current view has been copied.");
 			me._image_hs_popup_fullscreen.logicBlock_visible();
 			me._image_hs_popup_fs_img.logicBlock_size();
 			me._url_hs_popup.logicBlock_visible();
-			me._sounds_splashscreen.logicBlock_visible();
 			me._popup_phone.logicBlock_visible();
 			me._info_popup_phone.logicBlock_visible();
 			me._thumbnail_scroller_phone.logicBlock_visible();
@@ -14772,6 +14349,7 @@ alert("The current view has been copied.");
 			me._map_fullscreen.logicBlock_visible();
 			me._map_fs_content.logicBlock_visible();
 			me._floorplan_fs_content.logicBlock_visible();
+			me._map_fs_small.logicBlock_visible();
 			me._thumbnails.logicBlock_visible();
 			me._thumbnails_fullscreen.logicBlock_visible();
 			me._video_hs_popup.logicBlock_visible();
@@ -14786,7 +14364,6 @@ alert("The current view has been copied.");
 			me._image_hs_popup_fullscreen.logicBlock_visible();
 			me._image_hs_popup_fs_img.logicBlock_size();
 			me._url_hs_popup.logicBlock_visible();
-			me._sounds_splashscreen.logicBlock_visible();
 			me._popup_phone.logicBlock_visible();
 			me._info_popup_phone.logicBlock_visible();
 			me._thumbnail_scroller_phone.logicBlock_visible();
@@ -14856,8 +14433,12 @@ alert("The current view has been copied.");
 			me._twitter.logicBlock_visible();
 			me._variable_opt_share.logicBlock();
 		});
+		player.addListener('varchanged_resp_desktop', function() {
+			me._map.logicBlock_visible();
+		});
 		player.addListener('varchanged_resp_phone', function() {
 			me._share.logicBlock_position();
+			me._map_fs_small.logicBlock_visible();
 			me._variable_vis_controls_left.logicBlock();
 		});
 		player.addListener('varchanged_sounds_splashscreen_accepted', function() {
@@ -15003,19 +14584,8 @@ alert("The current view has been copied.");
 					hotspotTemplates['ht_node'][i].ggEvent_varchanged_vis_skin();
 				}
 			}
-			if (hotspotTemplates.hasOwnProperty('ht_url')) {
-				for(var i = 0; i < hotspotTemplates['ht_url'].length; i++) {
-					hotspotTemplates['ht_url'][i].ggEvent_varchanged_vis_skin();
-				}
-			}
-			if (hotspotTemplates.hasOwnProperty('floor_hotspot')) {
-				for(var i = 0; i < hotspotTemplates['floor_hotspot'].length; i++) {
-					hotspotTemplates['floor_hotspot'][i].ggEvent_varchanged_vis_skin();
-				}
-			}
 		});
 		player.addListener('varchanged_vis_sounds_splashscreen', function() {
-			me._sounds_splashscreen.logicBlock_visible();
 			me._variable_vis_skin.logicBlock();
 		});
 		player.addListener('varchanged_vis_thumbnails', function() {
@@ -17219,8 +16789,8 @@ alert("The current view has been copied.");
 				}
 			};
 		}
-		el.visible = false;
-		el.userData.visible = false;
+		el.visible = true;
+		el.userData.visible = true;
 		el.userData.opacity = 1.00;
 		el.userData.parentOpacity = 1.0;
 		el.userData.transitions = [];
@@ -17237,30 +16807,6 @@ alert("The current view has been copied.");
 				}
 			}
 		}
-		me._floor_hotspot.logicBlock_visible = function() {
-			var newLogicStateVisible;
-			if (
-				((player.getVariableValue('vis_skin') == true))
-			)
-			{
-				newLogicStateVisible = 0;
-			}
-			else {
-				newLogicStateVisible = -1;
-			}
-			if (me._floor_hotspot.ggCurrentLogicStateVisible != newLogicStateVisible) {
-				me._floor_hotspot.ggCurrentLogicStateVisible = newLogicStateVisible;
-				if (me._floor_hotspot.ggCurrentLogicStateVisible == 0) {
-			me._floor_hotspot.visible=((!me._floor_hotspot.material && Number(me._floor_hotspot.userData.opacity>0)) || Number(me._floor_hotspot.material.opacity)>0)?true:false;
-			me._floor_hotspot.userData.visible=true;
-				}
-				else {
-			me._floor_hotspot.visible=false;
-			me._floor_hotspot.userData.visible=false;
-				}
-			}
-		}
-		me._floor_hotspot.logicBlock_visible();
 		me._floor_hotspot.userData.onclick=function (e) {
 			player.openNext(player._(me.hotspot.url),player._(me.hotspot.target));
 			player.triggerEvent('hsproxyclick', {'id': me.hotspot.id, 'url': me.hotspot.url});
@@ -18009,7 +17555,6 @@ alert("The current view has been copied.");
 			img.geometry.name = 'ht_node_custom_image_imgGeometry';
 		}
 		me._floor_hotspot.add(me._ht_node_custom_image);
-		me._floor_hotspot.logicBlock_visible();
 		me._floor_hotspot.userData.setOpacity(1.00);
 		me._ht_node_bg.logicBlock_scaling();
 		me._ht_node_bg.logicBlock_visible();
@@ -18025,21 +17570,16 @@ alert("The current view has been copied.");
 				me._ht_node_custom_image.logicBlock_visible();
 			};
 			me.ggEvent_changenode=function() {
-				me._floor_hotspot.logicBlock_visible();
 				me._ht_node_bg.logicBlock_visible();
 				me._ht_node_custom_image.logicBlock_visible();
 			};
 			me.ggEvent_configloaded=function() {
-				me._floor_hotspot.logicBlock_visible();
 				me._ht_node_bg.logicBlock_visible();
 				me._ht_node_title.logicBlock_position();
 				me._ht_node_custom_image.logicBlock_visible();
 			};
 			me.ggEvent_hastouch=function() {
 				me._ht_node_title.logicBlock_position();
-			};
-			me.ggEvent_varchanged_vis_skin=function() {
-				me._floor_hotspot.logicBlock_visible();
 			};
 			me.__obj = me._floor_hotspot;
 			me.__obj.userData.hotspot = hotspot;
@@ -18130,15 +17670,15 @@ alert("The current view has been copied.");
 		width = 0.16;
 		height = 0.16;
 		roundedRectShape = new THREE.Shape();
-		roundedRectShape.moveTo((-width / 2.0) + 0.06, (height / 2.0));
-		roundedRectShape.lineTo((width / 2.0) - 0.06, (height / 2.0));
-		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.06);
-		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.06);
-		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.06, (-height / 2.0));
-		roundedRectShape.lineTo((-width / 2.0) + 0.06, (-height / 2.0));
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.06);
-		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.06);
-		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.06, (height / 2.0));
+		roundedRectShape.moveTo((-width / 2.0) + 0.08, (height / 2.0));
+		roundedRectShape.lineTo((width / 2.0) - 0.08, (height / 2.0));
+		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.08);
+		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.08);
+		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.08, (-height / 2.0));
+		roundedRectShape.lineTo((-width / 2.0) + 0.08, (-height / 2.0));
+		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.08);
+		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.08);
+		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.08, (height / 2.0));
 		geometry = new THREE.ShapeGeometry(roundedRectShape);
 		geometry.name = 'map_pin_active_geometry';
 		geometry.computeBoundingBox();
@@ -18155,44 +17695,13 @@ alert("The current view has been copied.");
 			vertexUVs.setY(i, (v2 + offset.y) / range.y);
 		}
 		geometry.uvsNeedUpdate = true;
-		material = new THREE.MeshBasicMaterial( { color: new THREE.Color('rgba(141,141,141,1)').convertSRGBToLinear(), side : THREE.DoubleSide, transparent : true } ); 
+		material = new THREE.MeshBasicMaterial( { color: new THREE.Color('rgba(214,17,48,1)').convertSRGBToLinear(), side : THREE.DoubleSide, transparent : true } ); 
 		material.name = 'map_pin_active_material';
 		el = new THREE.Mesh( geometry, material );
-		width = 0.16;
-		height = 0.16;
-		borderShape = new THREE.Shape();
-		borderShape.moveTo((width / 2.0) - 0.02 + 0.08, (height / 2.0) + 0.02);
-		borderShape.lineTo((width / 2.0) + 0.02 - 0.08, (height / 2.0) + 0.02);
-		borderShape.quadraticCurveTo((width / 2.0) + 0.02, (height / 2.0) + 0.02, (width / 2.0) + 0.02, (height / 2.0) + 0.02 - 0.08);
-		borderShape.lineTo((width / 2.0) + 0.02, (-height / 2.0) - 0.02 + 0.08);
-		borderShape.quadraticCurveTo((width / 2.0) + 0.02, (-height / 2.0) - 0.02, (width / 2.0) + 0.02 - 0.08, (-height / 2.0) - 0.02);
-		borderShape.lineTo((-width / 2.0) - 0.02 + 0.08, (-height / 2.0) - 0.02);
-		borderShape.quadraticCurveTo((-width / 2.0) - 0.02, (-height / 2.0) - 0.02, (-width / 2.0) - 0.02, (-height / 2.0) - 0.02 + 0.08);
-		borderShape.lineTo((-width / 2.0) - 0.02, (height / 2.0) + 0.02 - 0.08);
-		borderShape.quadraticCurveTo((-width / 2.0) - 0.02, (height / 2.0) + 0.02, (-width / 2.0) - 0.02 + 0.08, (height / 2.0) + 0.02);
-		innerShape = new THREE.Path();
-		innerShape.moveTo((-width / 2.0) + 0.06, (height / 2.0));
-		innerShape.lineTo((width / 2.0) - 0.06, (height / 2.0));
-		innerShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.06);
-		innerShape.lineTo((width / 2.0), (-height / 2.0) + 0.06);
-		innerShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.06, (-height / 2.0));
-		innerShape.lineTo((-width / 2.0) + 0.06, (-height / 2.0));
-		innerShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.06);
-		innerShape.lineTo((-width / 2.0), (height / 2.0) - 0.06);
-		innerShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.06, (height / 2.0));
-		borderShape.holes.push(innerShape);
-		borderGeometry = new THREE.ShapeGeometry(borderShape);
-		borderGeometry.name = 'map_pin_active_borderGeometry';
-		borderMaterial = new THREE.MeshBasicMaterial( {color: new THREE.Color('rgba(20,20,20,1)').convertSRGBToLinear() , side: THREE.DoubleSide, transparent: true } );
-		borderMaterial.name = 'map_pin_active_borderMaterial';
-		el.userData.border = new THREE.Mesh( borderGeometry, borderMaterial );
-		el.userData.border.name = 'map_pin_active_borderMesh';
-		el.add(el.userData.border);
 		el.userData.backgroundColorAlpha = 1;
 		el.userData.borderColorAlpha = 1;
 		el.userData.setOpacityInternal = function(v) {
 			me._map_pin_active.material.opacity = v * me._map_pin_active.userData.backgroundColorAlpha;
-			me._map_pin_active.userData.border.material.opacity = v * me._map_pin_active.userData.borderColorAlpha;
 			if (me._map_pin_active.userData.ggSubElement) {
 				me._map_pin_active.userData.ggSubElement.material.opacity = v
 				me._map_pin_active.userData.ggSubElement.visible = (v>0 && me._map_pin_active.userData.visible);
@@ -18204,13 +17713,6 @@ alert("The current view has been copied.");
 		}
 		el.userData.setBackgroundColorAlpha = function(v) {
 			me._map_pin_active.userData.backgroundColorAlpha = v;
-			me._map_pin_active.userData.setOpacity(me._map_pin_active.userData.opacity);
-		}
-		el.userData.setBorderColor = function(v) {
-			me._map_pin_active.userData.border.material.color = v;
-		}
-		el.userData.setBorderColorAlpha = function(v) {
-			me._map_pin_active.userData.borderColorAlpha = v;
 			me._map_pin_active.userData.setOpacity(me._map_pin_active.userData.opacity);
 		}
 		el.translateX(0);
@@ -18299,7 +17801,7 @@ alert("The current view has been copied.");
 		}
 		me._map_pin.add(me._map_pin_active);
 		geometry = new THREE.PlaneBufferGeometry(0.31, 0.3, 5, 5 );
-		geometry.name = 'map_pin_inactive_geometry';
+		geometry.name = 'map_pin_inactive_bk_geometry';
 		loader = new THREE.TextureLoader();
 		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAA8CAYAAAA+CQlPAAAJDUlEQVRogeVbbUxU2Rl+znwQOsQVhwHHdUXNBkEhqbSr1UgzGBqbtujWJrrlB9BUYkgzionZHxoJafyh22xUEtiQgKJDUNfUxlYkm5VdsEIs1o8RHERBMUrlY+4Mjrh3CjN3Tn/Mh/cOM8z9mMEffX7N+97zPud95tyPc897LvB/CrJA/SRlZGRspZQWUkrXAlgO4IPAsTcA/kMIeUQI6ZqcnOwEMJvohBIpXGUwGIoB7AZQDGCxyDgXgDYAlxiGaQPgS0RyCRFuMBhMAL4E8IlCqjuEkIN2u/2fcUhLgLgKNxgMHwL4CsCnsdqmpqYCAF6/fi2G+u8A/sQwzCsl+fERN+EGg+ET+BP8MPzY6tWrUVhYiIKCAmRmZkKv10Or1QIAPB4PnE4nXrx4ge'+
 	'7ubnR2duL58+eRungF4FOGYe7EI9+4CE9PT/+MUnoWQDLfbzKZYDabkZ2dLYnv8ePHqKurw40bN8IPuQkhf7Db7ZcUJYw4CE9PT99NKf2a78vKykJ1dTXWr1+viNtqteLo0aMYGhoS+AkhnykVr1YSHDi9/wFAE/QVFRWhrq4OK1asUEINADAajdi+fTtGRkYwMjLCP1Ss0+m+YVl2TC63bOGBG9n3AJYEfeXl5aipqUFSUpJc2jnQarXYtm0b3G43Hjx4EHLDL/4iy7LTcnhlC9fpdC0ANgTtoqIi1NTUQKVSyaWMCkIINm3ahKGhIf7ILwLwMcuyX88TGp1TTlDgOd0VtLOystDS0gKdTieHTjRYlkVpaangmieEmOQ85+UMjwr+yUkI1dXVCRcNADqdDkeOHBH4KKVfQoYOyQGBaWhoRmYymRTfvaUgPz8fJpOJ'+
@@ -18310,7 +17812,7 @@ alert("The current view has been copied.");
 	'vmt8dna2eGZmxh0tRi4SIpxl2bcpKSnPwdub0t/fj6VLl2Lt2shl7IsXL86poQP4/dTUVF8ickyIcABgWdam0+mWA/hp0NfT04ONGzdi2bJlgra9vb04dOhQ+FT3JMMwdYnKL9GfZiQZDIYOAD8POpYsWQKLxYKVK1cC8L/OlpeX482bN++SIuRbu93+GySwLJ3wb1KMRmO61+v9N4CVQZ/BYEBjYyM4jkNFRUV4uXfI4/H8zOVyiSvFysSCfIyTkZHxY5/P1wMgJUbTN5TSTQ6H41GMdooR/x23ETA5OfnA5/P9DsB/52nGAvjtQogGFkg4ADidzm8B/Bp+geH4gRDyK4ZhOiMcSwgWTDgAMAzTqVKptgHg7zGfVqlUv0zEl0bzYaE+uBMgLS1tAyGkDQChlG53OBy97yOP9wKj0bjKaDSuel/9/w9QImCcV+Qb+w'+
 	'AAAABJRU5ErkJggg==');
 		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true} );
-		material.name = 'map_pin_inactive_material';
+		material.name = 'map_pin_inactive_bk_material';
 		el = new THREE.Mesh( geometry, material );
 		el.userData.materialNormal = material;
 		el.translateX(0);
@@ -18321,7 +17823,7 @@ alert("The current view has been copied.");
 		el.userData.scale = {x: 1.00, y: 1.00, z: 1.0};
 		el.userData.curScaleOffX = 0;
 		el.userData.curScaleOffY = 0;
-		el.name = 'map_pin_inactive';
+		el.name = 'map_pin_inactive_bk';
 		el.userData.x = 0;
 		el.userData.y = 0.15;
 		el.userData.hanchor = 1;
@@ -18331,9 +17833,259 @@ alert("The current view has been copied.");
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.setOpacityInternal = function(v) {
-			if (me._map_pin_inactive.material) me._map_pin_inactive.material.opacity = v;
+			if (me._map_pin_inactive_bk.material) me._map_pin_inactive_bk.material.opacity = v;
+			me._map_pin_inactive_bk.visible = (v>0 && me._map_pin_inactive_bk.userData.visible);
+		}
+		el.userData.isVisible = function() {
+			let vis = me._map_pin_inactive_bk.visible
+			let parentEl = me._map_pin_inactive_bk.parent;
+			while (vis && parentEl) {
+				if (!parentEl.visible) {
+					vis = false;
+					break;
+				}
+				parentEl = parentEl.parent;
+			}
+			return vis;
+		}
+		el.userData.setOpacity = function(v) {
+			me._map_pin_inactive_bk.userData.opacity = v;
+			v = v * me._map_pin_inactive_bk.userData.parentOpacity;
+			me._map_pin_inactive_bk.userData.setOpacityInternal(v);
+			for (let i = 0; i < me._map_pin_inactive_bk.children.length; i++) {
+				let child = me._map_pin_inactive_bk.children[i];
+				if (child.userData.setParentOpacity) {
+					child.userData.setParentOpacity(v);
+				}
+			};
+		}
+		el.userData.setParentOpacity = function(v) {
+			me._map_pin_inactive_bk.userData.parentOpacity = v;
+			v = v * me._map_pin_inactive_bk.userData.opacity
+			me._map_pin_inactive_bk.userData.setOpacityInternal(v);
+			for (let i = 0; i < me._map_pin_inactive_bk.children.length; i++) {
+				let child = me._map_pin_inactive_bk.children[i];
+				if (child.userData.setParentOpacity) {
+					child.userData.setParentOpacity(v);
+				}
+			};
+		}
+		el.visible = false;
+		el.userData.visible = false;
+		el.userData.opacity = 1.00;
+		el.userData.parentOpacity = 1.0;
+		el.userData.transitions = [];
+		me._map_pin_inactive_bk = el;
+		el.userData.ggId="map_pin_inactive_bk";
+		me._map_pin_inactive_bk.logicBlock_scaling = function() {
+			var newLogicStateScaling;
+			if (
+				((me.elementMouseOver['map_pin_inactive_bk'] == true))
+			)
+			{
+				newLogicStateScaling = 0;
+			}
+			else {
+				newLogicStateScaling = -1;
+			}
+			if (me._map_pin_inactive_bk.ggCurrentLogicStateScaling != newLogicStateScaling) {
+				me._map_pin_inactive_bk.ggCurrentLogicStateScaling = newLogicStateScaling;
+				if (me._map_pin_inactive_bk.ggCurrentLogicStateScaling == 0) {
+					me._map_pin_inactive_bk.userData.transitionValue_scale = {x: 1.2, y: 1.2, z: 1.0};
+					for (var i = 0; i < me._map_pin_inactive_bk.userData.transitions.length; i++) {
+						if (me._map_pin_inactive_bk.userData.transitions[i].property == 'scale') {
+							clearInterval(me._map_pin_inactive_bk.userData.transitions[i].interval);
+							me._map_pin_inactive_bk.userData.transitions.splice(i, 1);
+							break;
+						}
+					}
+					let transition_scale = {};
+					transition_scale.property = 'scale';
+					transition_scale.startTime = Date.now();
+					transition_scale.startScale = me._map_pin_inactive_bk.scale;
+					transition_scale.interval = setInterval(() => {
+						let currentTime = Date.now() - 0;
+						let percentDone = 1.0 * (currentTime - transition_scale.startTime) / 200;
+						percentDone = Math.max(percentDone, 0.0);
+						percentDone = Math.min(percentDone, 1.0);
+						let tfval = -(Math.cos(Math.PI * percentDone) - 1) / 2;
+						me._map_pin_inactive_bk.scale.set(transition_scale.startScale.x + (me._map_pin_inactive_bk.userData.transitionValue_scale.x - transition_scale.startScale.x) * tfval, transition_scale.startScale.y + (me._map_pin_inactive_bk.userData.transitionValue_scale.y - transition_scale.startScale.y) * tfval, 1.0);
+					var scaleOffX = 0;
+					var scaleOffY = 0;
+						me._map_pin_inactive_bk.position.x = (me._map_pin_inactive_bk.position.x - me._map_pin_inactive_bk.userData.curScaleOffX) + scaleOffX;
+						me._map_pin_inactive_bk.userData.curScaleOffX = scaleOffX;
+						me._map_pin_inactive_bk.position.y = (me._map_pin_inactive_bk.position.y - me._map_pin_inactive_bk.userData.curScaleOffY) + scaleOffY;
+						me._map_pin_inactive_bk.userData.curScaleOffY = scaleOffY;
+						if (percentDone >= 1.0) {
+							clearInterval(transition_scale.interval);
+							me._map_pin_inactive_bk.userData.transitions.splice(me._map_pin_inactive_bk.userData.transitions.indexOf(transition_scale), 1);
+						}
+					}, 20);
+					me._map_pin_inactive_bk.userData.transitions.push(transition_scale);
+				}
+				else {
+					me._map_pin_inactive_bk.userData.transitionValue_scale = {x: 1, y: 1, z: 1.0};
+					for (var i = 0; i < me._map_pin_inactive_bk.userData.transitions.length; i++) {
+						if (me._map_pin_inactive_bk.userData.transitions[i].property == 'scale') {
+							clearInterval(me._map_pin_inactive_bk.userData.transitions[i].interval);
+							me._map_pin_inactive_bk.userData.transitions.splice(i, 1);
+							break;
+						}
+					}
+					let transition_scale = {};
+					transition_scale.property = 'scale';
+					transition_scale.startTime = Date.now();
+					transition_scale.startScale = me._map_pin_inactive_bk.scale;
+					transition_scale.interval = setInterval(() => {
+						let currentTime = Date.now() - 0;
+						let percentDone = 1.0 * (currentTime - transition_scale.startTime) / 200;
+						percentDone = Math.max(percentDone, 0.0);
+						percentDone = Math.min(percentDone, 1.0);
+						let tfval = -(Math.cos(Math.PI * percentDone) - 1) / 2;
+						me._map_pin_inactive_bk.scale.set(transition_scale.startScale.x + (me._map_pin_inactive_bk.userData.transitionValue_scale.x - transition_scale.startScale.x) * tfval, transition_scale.startScale.y + (me._map_pin_inactive_bk.userData.transitionValue_scale.y - transition_scale.startScale.y) * tfval, 1.0);
+					var scaleOffX = 0;
+					var scaleOffY = 0;
+						me._map_pin_inactive_bk.position.x = (me._map_pin_inactive_bk.position.x - me._map_pin_inactive_bk.userData.curScaleOffX) + scaleOffX;
+						me._map_pin_inactive_bk.userData.curScaleOffX = scaleOffX;
+						me._map_pin_inactive_bk.position.y = (me._map_pin_inactive_bk.position.y - me._map_pin_inactive_bk.userData.curScaleOffY) + scaleOffY;
+						me._map_pin_inactive_bk.userData.curScaleOffY = scaleOffY;
+						if (percentDone >= 1.0) {
+							clearInterval(transition_scale.interval);
+							me._map_pin_inactive_bk.userData.transitions.splice(me._map_pin_inactive_bk.userData.transitions.indexOf(transition_scale), 1);
+						}
+					}, 20);
+					me._map_pin_inactive_bk.userData.transitions.push(transition_scale);
+				}
+			}
+		}
+		me._map_pin_inactive_bk.logicBlock_scaling();
+		me._map_pin_inactive_bk.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((me._map_pin_inactive_bk.userData.ggIsActive() == false))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._map_pin_inactive_bk.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._map_pin_inactive_bk.ggCurrentLogicStateVisible = newLogicStateVisible;
+				if (me._map_pin_inactive_bk.ggCurrentLogicStateVisible == 0) {
+			me._map_pin_inactive_bk.visible=false;
+			me._map_pin_inactive_bk.userData.visible=false;
+				}
+				else {
+			me._map_pin_inactive_bk.visible=false;
+			me._map_pin_inactive_bk.userData.visible=false;
+				}
+			}
+		}
+		me._map_pin_inactive_bk.logicBlock_visible();
+		me._map_pin_inactive_bk.userData.onclick=function (e) {
+			player.openNext("{"+me.ggNodeId+"}","");
+			if (
+				(
+					((player.getVariableValue('resp_phone') == true))
+				)
+			) {
+				player.setVariableValue('vis_phone_map', false);
+			}
+			if (
+				(
+					((player.getVariableValue('resp_phone') == true))
+				)
+			) {
+				player.setVariableValue('vis_phone_floorplan', false);
+			}
+			if (
+				(
+					((player.getVariableValue('resp_phone') == true))
+				)
+			) {
+				player.setVariableValue('vis_phone_popup', false);
+			}
+		}
+		me._map_pin_inactive_bk.userData.onmouseover=function (e) {
+			me.elementMouseOver['map_pin_inactive_bk']=true;
+			me._map_pin_inactive_bk.logicBlock_scaling();
+		}
+		me._map_pin_inactive_bk.userData.ontouchend=function (e) {
+			me._map_pin_inactive_bk.logicBlock_scaling();
+		}
+		me._map_pin_inactive_bk.userData.onmouseout=function (e) {
+			me.elementMouseOver['map_pin_inactive_bk']=false;
+			me._map_pin_inactive_bk.logicBlock_scaling();
+		}
+		me._map_pin_inactive_bk.userData.ggUpdatePosition=function (useTransition) {
+		}
+		me._map_pin.add(me._map_pin_inactive_bk);
+		width = 0.16;
+		height = 0.16;
+		roundedRectShape = new THREE.Shape();
+		roundedRectShape.moveTo((-width / 2.0) + 0.08, (height / 2.0));
+		roundedRectShape.lineTo((width / 2.0) - 0.08, (height / 2.0));
+		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.08);
+		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.08);
+		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.08, (-height / 2.0));
+		roundedRectShape.lineTo((-width / 2.0) + 0.08, (-height / 2.0));
+		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.08);
+		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.08);
+		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.08, (height / 2.0));
+		geometry = new THREE.ShapeGeometry(roundedRectShape);
+		geometry.name = 'map_pin_inactive_geometry';
+		geometry.computeBoundingBox();
+		var min = geometry.boundingBox.min;
+		var max = geometry.boundingBox.max;
+		var offset = new THREE.Vector2(0 - min.x, 0 - min.y);
+		var range = new THREE.Vector2(max.x - min.x, max.y - min.y);
+		var vertexPositions = geometry.getAttribute('position');
+		var vertexUVs = geometry.getAttribute('uv');
+		for (var i = 0; i < vertexPositions.count; i++) {
+			var v1 = vertexPositions.getX(i);
+			var	v2 = vertexPositions.getY(i);
+			vertexUVs.setX(i, (v1 + offset.x) / range.x);
+			vertexUVs.setY(i, (v2 + offset.y) / range.y);
+		}
+		geometry.uvsNeedUpdate = true;
+		material = new THREE.MeshBasicMaterial( { color: new THREE.Color('rgba(255,255,255,1)').convertSRGBToLinear(), side : THREE.DoubleSide, transparent : true } ); 
+		material.name = 'map_pin_inactive_material';
+		el = new THREE.Mesh( geometry, material );
+		el.userData.backgroundColorAlpha = 1;
+		el.userData.borderColorAlpha = 1;
+		el.userData.setOpacityInternal = function(v) {
+			me._map_pin_inactive.material.opacity = v * me._map_pin_inactive.userData.backgroundColorAlpha;
+			if (me._map_pin_inactive.userData.ggSubElement) {
+				me._map_pin_inactive.userData.ggSubElement.material.opacity = v
+				me._map_pin_inactive.userData.ggSubElement.visible = (v>0 && me._map_pin_inactive.userData.visible);
+			}
 			me._map_pin_inactive.visible = (v>0 && me._map_pin_inactive.userData.visible);
 		}
+		el.userData.setBackgroundColor = function(v) {
+			me._map_pin_inactive.material.color = v;
+		}
+		el.userData.setBackgroundColorAlpha = function(v) {
+			me._map_pin_inactive.userData.backgroundColorAlpha = v;
+			me._map_pin_inactive.userData.setOpacity(me._map_pin_inactive.userData.opacity);
+		}
+		el.translateX(0);
+		el.translateY(0);
+		el.scale.set(1.00, 1.00, 1.0);
+		el.userData.width = 16;
+		el.userData.height = 16;
+		el.userData.scale = {x: 1.00, y: 1.00, z: 1.0};
+		el.userData.curScaleOffX = 0;
+		el.userData.curScaleOffY = 0;
+		el.name = 'map_pin_inactive';
+		el.userData.x = 0;
+		el.userData.y = 0;
+		el.userData.hanchor = 1;
+		el.userData.vanchor = 1;
+		el.translateZ(0.030);
+		el.renderOrder = 3;
+		el.rotateZ(0.00);
+		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
 			let vis = me._map_pin_inactive.visible
 			let parentEl = me._map_pin_inactive.parent;
@@ -18389,70 +18141,22 @@ alert("The current view has been copied.");
 			if (me._map_pin_inactive.ggCurrentLogicStateScaling != newLogicStateScaling) {
 				me._map_pin_inactive.ggCurrentLogicStateScaling = newLogicStateScaling;
 				if (me._map_pin_inactive.ggCurrentLogicStateScaling == 0) {
-					me._map_pin_inactive.userData.transitionValue_scale = {x: 1.2, y: 1.2, z: 1.0};
-					for (var i = 0; i < me._map_pin_inactive.userData.transitions.length; i++) {
-						if (me._map_pin_inactive.userData.transitions[i].property == 'scale') {
-							clearInterval(me._map_pin_inactive.userData.transitions[i].interval);
-							me._map_pin_inactive.userData.transitions.splice(i, 1);
-							break;
-						}
-					}
-					let transition_scale = {};
-					transition_scale.property = 'scale';
-					transition_scale.startTime = Date.now();
-					transition_scale.startScale = me._map_pin_inactive.scale;
-					transition_scale.interval = setInterval(() => {
-						let currentTime = Date.now() - 0;
-						let percentDone = 1.0 * (currentTime - transition_scale.startTime) / 200;
-						percentDone = Math.max(percentDone, 0.0);
-						percentDone = Math.min(percentDone, 1.0);
-						let tfval = -(Math.cos(Math.PI * percentDone) - 1) / 2;
-						me._map_pin_inactive.scale.set(transition_scale.startScale.x + (me._map_pin_inactive.userData.transitionValue_scale.x - transition_scale.startScale.x) * tfval, transition_scale.startScale.y + (me._map_pin_inactive.userData.transitionValue_scale.y - transition_scale.startScale.y) * tfval, 1.0);
+					me._map_pin_inactive.scale.set(1.2, 1.2, 1.0);
 					var scaleOffX = 0;
 					var scaleOffY = 0;
-						me._map_pin_inactive.position.x = (me._map_pin_inactive.position.x - me._map_pin_inactive.userData.curScaleOffX) + scaleOffX;
-						me._map_pin_inactive.userData.curScaleOffX = scaleOffX;
-						me._map_pin_inactive.position.y = (me._map_pin_inactive.position.y - me._map_pin_inactive.userData.curScaleOffY) + scaleOffY;
-						me._map_pin_inactive.userData.curScaleOffY = scaleOffY;
-						if (percentDone >= 1.0) {
-							clearInterval(transition_scale.interval);
-							me._map_pin_inactive.userData.transitions.splice(me._map_pin_inactive.userData.transitions.indexOf(transition_scale), 1);
-						}
-					}, 20);
-					me._map_pin_inactive.userData.transitions.push(transition_scale);
+					me._map_pin_inactive.position.x = (me._map_pin_inactive.position.x - me._map_pin_inactive.userData.curScaleOffX) + scaleOffX;
+					me._map_pin_inactive.userData.curScaleOffX = scaleOffX;
+					me._map_pin_inactive.position.y = (me._map_pin_inactive.position.y - me._map_pin_inactive.userData.curScaleOffY) + scaleOffY;
+					me._map_pin_inactive.userData.curScaleOffY = scaleOffY;
 				}
 				else {
-					me._map_pin_inactive.userData.transitionValue_scale = {x: 1, y: 1, z: 1.0};
-					for (var i = 0; i < me._map_pin_inactive.userData.transitions.length; i++) {
-						if (me._map_pin_inactive.userData.transitions[i].property == 'scale') {
-							clearInterval(me._map_pin_inactive.userData.transitions[i].interval);
-							me._map_pin_inactive.userData.transitions.splice(i, 1);
-							break;
-						}
-					}
-					let transition_scale = {};
-					transition_scale.property = 'scale';
-					transition_scale.startTime = Date.now();
-					transition_scale.startScale = me._map_pin_inactive.scale;
-					transition_scale.interval = setInterval(() => {
-						let currentTime = Date.now() - 0;
-						let percentDone = 1.0 * (currentTime - transition_scale.startTime) / 200;
-						percentDone = Math.max(percentDone, 0.0);
-						percentDone = Math.min(percentDone, 1.0);
-						let tfval = -(Math.cos(Math.PI * percentDone) - 1) / 2;
-						me._map_pin_inactive.scale.set(transition_scale.startScale.x + (me._map_pin_inactive.userData.transitionValue_scale.x - transition_scale.startScale.x) * tfval, transition_scale.startScale.y + (me._map_pin_inactive.userData.transitionValue_scale.y - transition_scale.startScale.y) * tfval, 1.0);
+					me._map_pin_inactive.scale.set(1, 1, 1.0);
 					var scaleOffX = 0;
 					var scaleOffY = 0;
-						me._map_pin_inactive.position.x = (me._map_pin_inactive.position.x - me._map_pin_inactive.userData.curScaleOffX) + scaleOffX;
-						me._map_pin_inactive.userData.curScaleOffX = scaleOffX;
-						me._map_pin_inactive.position.y = (me._map_pin_inactive.position.y - me._map_pin_inactive.userData.curScaleOffY) + scaleOffY;
-						me._map_pin_inactive.userData.curScaleOffY = scaleOffY;
-						if (percentDone >= 1.0) {
-							clearInterval(transition_scale.interval);
-							me._map_pin_inactive.userData.transitions.splice(me._map_pin_inactive.userData.transitions.indexOf(transition_scale), 1);
-						}
-					}, 20);
-					me._map_pin_inactive.userData.transitions.push(transition_scale);
+					me._map_pin_inactive.position.x = (me._map_pin_inactive.position.x - me._map_pin_inactive.userData.curScaleOffX) + scaleOffX;
+					me._map_pin_inactive.userData.curScaleOffX = scaleOffX;
+					me._map_pin_inactive.position.y = (me._map_pin_inactive.position.y - me._map_pin_inactive.userData.curScaleOffY) + scaleOffY;
+					me._map_pin_inactive.userData.curScaleOffY = scaleOffY;
 				}
 			}
 		}
@@ -18522,11 +18226,15 @@ alert("The current view has been copied.");
 		me._map_pin.userData.setOpacity(1.00);
 		me._map_pin_active.logicBlock_visible();
 		me._map_pin_active.userData.setOpacity(1.00);
+		me._map_pin_inactive_bk.logicBlock_scaling();
+		me._map_pin_inactive_bk.logicBlock_visible();
+		me._map_pin_inactive_bk.userData.setOpacity(1.00);
 		me._map_pin_inactive.logicBlock_scaling();
 		me._map_pin_inactive.logicBlock_visible();
 		me._map_pin_inactive.userData.setOpacity(1.00);
 			me.ggEvent_changenode=function() {
 				me._map_pin_active.logicBlock_visible();
+				me._map_pin_inactive_bk.logicBlock_visible();
 				me._map_pin_inactive.logicBlock_visible();
 			};
 	};
@@ -18552,8 +18260,8 @@ alert("The current view has been copied.");
 		el.userData.y = 1.14;
 		el.userData.hanchor = 0;
 		el.userData.vanchor = 0;
-		el.translateZ(0.020);
-		el.renderOrder = 2;
+		el.translateZ(0.030);
+		el.renderOrder = 3;
 		el.rotateZ(0.00);
 		el.userData.angle = 0.00;
 		el.userData.isVisible = function() {
@@ -18590,8 +18298,8 @@ alert("The current view has been copied.");
 				}
 			};
 		}
-		el.visible = false;
-		el.userData.visible = false;
+		el.visible = true;
+		el.userData.visible = true;
 		el.userData.opacity = 1.00;
 		el.userData.parentOpacity = 1.0;
 		el.userData.transitions = [];
@@ -18608,64 +18316,18 @@ alert("The current view has been copied.");
 				}
 			}
 		}
-		me._ht_url.logicBlock_visible = function() {
-			var newLogicStateVisible;
-			if (
-				((player.getVariableValue('vis_skin') == true))
-			)
-			{
-				newLogicStateVisible = 0;
-			}
-			else {
-				newLogicStateVisible = -1;
-			}
-			if (me._ht_url.ggCurrentLogicStateVisible != newLogicStateVisible) {
-				me._ht_url.ggCurrentLogicStateVisible = newLogicStateVisible;
-				if (me._ht_url.ggCurrentLogicStateVisible == 0) {
-			me._ht_url.visible=((!me._ht_url.material && Number(me._ht_url.userData.opacity>0)) || Number(me._ht_url.material.opacity)>0)?true:false;
-			me._ht_url.userData.visible=true;
-				}
-				else {
-			me._ht_url.visible=false;
-			me._ht_url.userData.visible=false;
-				}
-			}
-		}
-		me._ht_url.logicBlock_visible();
 		me._ht_url.userData.onclick=function (e) {
-			if (
-				(
-					((player.getVariableValue('opt_url_popup') == false)) || 
-					((player.getVariableValue('resp_phone') == true))
-				)
-			) {
-				player.openUrl(player._(me.hotspot.url),"_blank");
-			}
-			if (
-				(
-					((player.getVariableValue('opt_url_popup') == true)) && 
-					((player.getVariableValue('resp_phone') == false))
-				)
-			) {
-					skin._url_hs_popup_iframe.userData.ggUpdateText=function(force) {
-						var params = [];
-						params.push(player._(String(player._(me.hotspot.title))));
-						var hs = player._("<iframe src=\".\/loadModel\/index.html?id=%1\" width=\"100%\" height=\"100%\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\" frameborder= \"0\" ><\/iframe>", params);
-						if (hs!=this.ggText || force) {
-							this.ggText=skin._url_hs_popup_iframe.userData.ggStripTags(hs);
-							this.ggRenderText();
-						}
+				skin._url_hs_popup_iframe.userData.ggUpdateText=function(force) {
+					var params = [];
+					params.push(player._(String(player._(me.hotspot.title))));
+					var hs = player._("<iframe src=\".\/loadModel\/index.html?id=%1\" width=\"100%\" height=\"100%\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\" frameborder= \"0\" ><\/iframe>", params);
+					if (hs!=this.ggText || force) {
+						this.ggText=skin._url_hs_popup_iframe.userData.ggStripTags(hs);
+						this.ggRenderText();
 					}
-				skin._url_hs_popup_iframe.userData.ggUpdateText();
-			}
-			if (
-				(
-					((player.getVariableValue('opt_url_popup') == true)) && 
-					((player.getVariableValue('resp_phone') == false))
-				)
-			) {
-				player.setVariableValue('vis_url_hs_popup', true);
-			}
+				}
+			skin._url_hs_popup_iframe.userData.ggUpdateText();
+			player.setVariableValue('vis_url_hs_popup', true);
 			player.triggerEvent('hsproxyclick', {'id': me.hotspot.id, 'url': me.hotspot.url});
 		}
 		me._ht_url.userData.ondblclick=function (e) {
@@ -19077,7 +18739,6 @@ alert("The current view has been copied.");
 			img.geometry.name = 'ht_url_custom_image_imgGeometry';
 		}
 		me._ht_url.add(me._ht_url_custom_image);
-		me._ht_url.logicBlock_visible();
 		me._ht_url.userData.setOpacity(1.00);
 		me._ht_url_bg.logicBlock_scaling();
 		me._ht_url_bg.logicBlock_visible();
@@ -19090,17 +18751,12 @@ alert("The current view has been copied.");
 				me._ht_url_custom_image.logicBlock_visible();
 			};
 			me.ggEvent_changenode=function() {
-				me._ht_url.logicBlock_visible();
 				me._ht_url_bg.logicBlock_visible();
 				me._ht_url_custom_image.logicBlock_visible();
 			};
 			me.ggEvent_configloaded=function() {
-				me._ht_url.logicBlock_visible();
 				me._ht_url_bg.logicBlock_visible();
 				me._ht_url_custom_image.logicBlock_visible();
-			};
-			me.ggEvent_varchanged_vis_skin=function() {
-				me._ht_url.logicBlock_visible();
 			};
 			me.__obj = me._ht_url;
 			me.__obj.userData.hotspot = hotspot;

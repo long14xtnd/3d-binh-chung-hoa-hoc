@@ -71,12 +71,12 @@
           </div>
         </div>
         <div class="col-md-4 col-12">
-          <h1 class="text-danger name_vn">Lựu đạn CS M25-A2</h1>
+          <h3 class="text-danger name_vn">Lựu đạn CS M25-A2</h3>
           <p class="desc_vn">
             Bộ đội Hóa học thu được của địch tại đèo Cù Mông tỉnh Bình Định khi
             tham gia xử lý bom đạn hóa học của Mỹ sau chiến tranh, năm 1995
           </p>
-          <h1 class="text-danger name_en">CS M25 A2 Grenade</h1>
+          <h3 class="text-danger name_en">CS M25 A2 Grenade</h3>
           <p class="desc_en">
             Chemical Corps captured enemy equipment at Cu Mong pass, Binh Dinh
             province during the post-war cleanup of American chemical ordnance,
@@ -96,7 +96,7 @@
       //xử lý load model theo id
       const searchParams = new URLSearchParams(window.location.search);
       if (searchParams.has("id")) {
-        console.log(searchParams.get("id")); // price_descending
+       
         async function getDataById() {
           const id = searchParams.get("id"); // Get ID from URL
           try {
@@ -107,9 +107,7 @@
             const item = data.find((element) => element.id == id);
 
             if (item) {
-              console.log(item); // Output the item to the console
               // You can also display the data on your page
-
               const modelViewer = document.getElementById("sphere");
               modelViewer.setAttribute("src", `./models/${item.model}`);
               document.querySelector(".name_vn").textContent = item.name;
