@@ -63,7 +63,7 @@
                 <img
                   width="30px"
                   height="30px"
-                  src="https://static-00.iconduck.com/assets.00/fullscreen-icon-512x512-qymo2y3f.png"
+                  src="./icons/fullscreen.png"
                   alt=""
                 />
               </div>
@@ -96,7 +96,6 @@
       //xử lý load model theo id
       const searchParams = new URLSearchParams(window.location.search);
       if (searchParams.has("id")) {
-       
         async function getDataById() {
           const id = searchParams.get("id"); // Get ID from URL
           try {

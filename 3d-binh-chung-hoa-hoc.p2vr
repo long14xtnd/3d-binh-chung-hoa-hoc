@@ -3,28 +3,32 @@
 <pano2vrconfig rev="20024" version="7.0.9">
   <tour>
     <panorama>
-      <id>node1</id>
+      <projectsettings>
+        <userdata>
+          <customprops/>
+        </userdata>
+      </projectsettings>
       <input>
         <patch/>
         <type>auto</type>
-        <filename>D:/Viettech/3D-binh-chung-hoa-hoc/30-11/1.png</filename>
+        <filename>D:/Viettech/3D-binh-chung-hoa-hoc/30-11/1(new).png</filename>
         <videotype>equi</videotype>
         <levelpitch>0</levelpitch>
         <levelroll>0</levelroll>
       </input>
       <viewingparameter>
         <pan>
-          <start>-0.0492678</start>
+          <start>-0.927801</start>
           <min>0</min>
           <max>360</max>
         </pan>
         <tilt>
-          <start>0</start>
+          <start>-21.0355</start>
           <min>-90</min>
           <max>90</max>
         </tilt>
         <fov>
-          <start>164.187</start>
+          <start>140.312</start>
           <minunit>pixels</minunit>
           <minpixels>2</minpixels>
           <max>140</max>
@@ -36,42 +40,29 @@
           <tilt>-90</tilt>
           <fov>170</fov>
         </flyinstart>
-        <pannorth>-87.7522</pannorth>
+        <pannorth>-93.3928</pannorth>
         <scaletofit>1</scaletofit>
         <projection>rectilinear</projection>
         <flyinprojection>stereo</flyinprojection>
-        <defaultviewtimestamp>2024-08-14T11:45:48</defaultviewtimestamp>
+        <defaultviewtimestamp>2024-08-16T09:01:40</defaultviewtimestamp>
       </viewingparameter>
       <userdata>
-        <capturedatetime>2023-11-30T10:29:12</capturedatetime>
-        <tags>30-11</tags>
         <customprops/>
+        <capturedatetime>2023-11-30T10:29:04+07:00</capturedatetime>
+        <datetime>11/30/2023 10:29 AM</datetime>
+        <tags>30-11</tags>
         <floorplancoordinates>
           <floorplanid>FloorPlan01</floorplanid>
-          <x>680</x>
-          <y>448</y>
+          <x>668</x>
+          <y>472</y>
         </floorplancoordinates>
       </userdata>
-      <projectsettings>
-        <userdata>
-          <customprops/>
-        </userdata>
-        <translationsavailable>
-          <value id="Project">en-US</value>
-        </translationsavailable>
-        <translationsnames>
-          <value id="Project">American English</value>
-        </translationsnames>
-        <translationsenabled>
-          <value id="Project">true</value>
-        </translationsenabled>
-      </projectsettings>
       <floorplans/>
       <hotspots>
         <hotspot>
           <position>
-            <pan>-275.02</pan>
-            <tilt>-21.84</tilt>
+            <pan>-280.9</pan>
+            <tilt>-22.83</tilt>
             <fov>10</fov>
           </position>
           <next>
@@ -97,8 +88,8 @@
         </hotspot>
         <hotspot>
           <position>
-            <pan>-81.12</pan>
-            <tilt>-23.83</tilt>
+            <pan>-317.29</pan>
+            <tilt>-17.81</tilt>
             <fov>10</fov>
           </position>
           <next>
@@ -112,7 +103,7 @@
           <title>$(ut)</title>
           <linktype>node</linktype>
           <linksubtype>unknown</linksubtype>
-          <url>{node13}</url>
+          <url>{node3}</url>
           <skinid>floor_hotspot</skinid>
           <type>point</type>
           <distance>0</distance>
@@ -124,8 +115,8 @@
         </hotspot>
         <hotspot>
           <position>
-            <pan>-335.69</pan>
-            <tilt>-11.02</tilt>
+            <pan>-331.08</pan>
+            <tilt>-11.38</tilt>
             <fov>10</fov>
           </position>
           <next>
@@ -151,8 +142,8 @@
         </hotspot>
         <hotspot>
           <position>
-            <pan>-23.6</pan>
-            <tilt>-11.83</tilt>
+            <pan>-25.5</pan>
+            <tilt>-11.55</tilt>
             <fov>10</fov>
           </position>
           <next>
@@ -178,8 +169,8 @@
         </hotspot>
         <hotspot>
           <position>
-            <pan>-314.38</pan>
-            <tilt>-18.57</tilt>
+            <pan>-42.61</pan>
+            <tilt>-17.11</tilt>
             <fov>10</fov>
           </position>
           <next>
@@ -193,7 +184,7 @@
           <title>$(ut)</title>
           <linktype>node</linktype>
           <linksubtype>unknown</linksubtype>
-          <url>{node3}</url>
+          <url>{node7}</url>
           <skinid>floor_hotspot</skinid>
           <type>point</type>
           <distance>0</distance>
@@ -205,8 +196,8 @@
         </hotspot>
         <hotspot>
           <position>
-            <pan>-45.54</pan>
-            <tilt>-18.25</tilt>
+            <pan>-88.14</pan>
+            <tilt>-21.51</tilt>
             <fov>10</fov>
           </position>
           <next>
@@ -220,7 +211,34 @@
           <title>$(ut)</title>
           <linktype>node</linktype>
           <linksubtype>unknown</linksubtype>
-          <url>{node7}</url>
+          <url>{node13}</url>
+          <skinid>floor_hotspot</skinid>
+          <type>point</type>
+          <distance>0</distance>
+          <distanceauto>1</distanceauto>
+          <autoplace>0</autoplace>
+          <use3d>0</use3d>
+          <width>0</width>
+          <height>0</height>
+        </hotspot>
+        <hotspot>
+          <position>
+            <pan>-0.2</pan>
+            <tilt>-27.23</tilt>
+            <fov>10</fov>
+          </position>
+          <next>
+            <pan>0</pan>
+            <tilt>0</tilt>
+            <fov>0</fov>
+          </next>
+          <customprops/>
+          <polygon/>
+          <id>Point07</id>
+          <title>$(ut)</title>
+          <linktype>node</linktype>
+          <linksubtype>unknown</linksubtype>
+          <url>{node9}</url>
           <skinid>floor_hotspot</skinid>
           <type>point</type>
           <distance>0</distance>
@@ -236,9 +254,7 @@
       <streetviewproject/>
       <ggloudproject/>
       <sounds/>
-      <animation>
-        <sequence/>
-      </animation>
+      <id>node15</id>
     </panorama>
     <panorama>
       <projectsettings>
@@ -313,7 +329,7 @@
           <title>$(ut)</title>
           <linktype>node</linktype>
           <linksubtype>unknown</linksubtype>
-          <url>{node1}</url>
+          <url>{node15}</url>
           <skinid>floor_hotspot</skinid>
           <type>point</type>
           <distance>0</distance>
@@ -2295,7 +2311,7 @@
           <title>$(ut)</title>
           <linktype>node</linktype>
           <linksubtype>unknown</linksubtype>
-          <url>{node1}</url>
+          <url>{node15}</url>
           <skinid>floor_hotspot</skinid>
           <type>point</type>
           <distance>0</distance>
@@ -2878,6 +2894,87 @@
           <width>0</width>
           <height>0</height>
         </hotspot>
+        <hotspot>
+          <position>
+            <pan>-180</pan>
+            <tilt>-27.45</tilt>
+            <fov>10</fov>
+          </position>
+          <next>
+            <pan>0</pan>
+            <tilt>0</tilt>
+            <fov>0</fov>
+          </next>
+          <customprops/>
+          <polygon/>
+          <id>Point02</id>
+          <title>$(ut)</title>
+          <linktype>node</linktype>
+          <linksubtype>unknown</linksubtype>
+          <url>{node15}</url>
+          <skinid>floor_hotspot</skinid>
+          <type>point</type>
+          <distance>0</distance>
+          <distanceauto>1</distanceauto>
+          <autoplace>0</autoplace>
+          <use3d>0</use3d>
+          <width>0</width>
+          <height>0</height>
+        </hotspot>
+        <hotspot>
+          <position>
+            <pan>-239.96</pan>
+            <tilt>-18.26</tilt>
+            <fov>10</fov>
+          </position>
+          <next>
+            <pan>0</pan>
+            <tilt>0</tilt>
+            <fov>0</fov>
+          </next>
+          <customprops/>
+          <polygon/>
+          <id>Point03</id>
+          <title>$(ut)</title>
+          <linktype>node</linktype>
+          <linksubtype>unknown</linksubtype>
+          <url>{node14}</url>
+          <skinid>floor_hotspot</skinid>
+          <type>point</type>
+          <distance>0</distance>
+          <distanceauto>1</distanceauto>
+          <autoplace>0</autoplace>
+          <use3d>0</use3d>
+          <width>0</width>
+          <height>0</height>
+        </hotspot>
+        <hotspot>
+          <position>
+            <pan>-320.95</pan>
+            <tilt>-14.63</tilt>
+            <fov>10</fov>
+          </position>
+          <next>
+            <pan>0</pan>
+            <tilt>0</tilt>
+            <fov>0</fov>
+          </next>
+          <customprops/>
+          <polygon/>
+          <id>Point04</id>
+          <title>$(ut)</title>
+          <linktype>node</linktype>
+          <linksubtype>unknown</linksubtype>
+          <url>{node4}</url>
+          <skinid>floor_hotspot</skinid>
+          <type>point</type>
+          <distance>0</distance>
+          <distanceauto>1</distanceauto>
+          <autoplace>0</autoplace>
+          <use3d>0</use3d>
+          <width>0</width>
+          <height>0</height>
+        </hotspot>
       </hotspots>
       <output/>
       <streetview/>
@@ -2960,6 +3057,60 @@
           <linktype>node</linktype>
           <linksubtype>unknown</linksubtype>
           <url>{node4}</url>
+          <skinid>floor_hotspot</skinid>
+          <type>point</type>
+          <distance>0</distance>
+          <distanceauto>1</distanceauto>
+          <autoplace>0</autoplace>
+          <use3d>0</use3d>
+          <width>0</width>
+          <height>0</height>
+        </hotspot>
+        <hotspot>
+          <position>
+            <pan>-124.9</pan>
+            <tilt>-14.58</tilt>
+            <fov>10</fov>
+          </position>
+          <next>
+            <pan>0</pan>
+            <tilt>0</tilt>
+            <fov>0</fov>
+          </next>
+          <customprops/>
+          <polygon/>
+          <id>Point01</id>
+          <title>$(ut)</title>
+          <linktype>node</linktype>
+          <linksubtype>unknown</linksubtype>
+          <url>{node13}</url>
+          <skinid>floor_hotspot</skinid>
+          <type>point</type>
+          <distance>0</distance>
+          <distanceauto>1</distanceauto>
+          <autoplace>0</autoplace>
+          <use3d>0</use3d>
+          <width>0</width>
+          <height>0</height>
+        </hotspot>
+        <hotspot>
+          <position>
+            <pan>-221.39</pan>
+            <tilt>-18.11</tilt>
+            <fov>10</fov>
+          </position>
+          <next>
+            <pan>0</pan>
+            <tilt>0</tilt>
+            <fov>0</fov>
+          </next>
+          <customprops/>
+          <polygon/>
+          <id>Point03</id>
+          <title>$(ut)</title>
+          <linktype>node</linktype>
+          <linksubtype>unknown</linksubtype>
+          <url>{node14}</url>
           <skinid>floor_hotspot</skinid>
           <type>point</type>
           <distance>0</distance>
@@ -3060,6 +3211,60 @@
           <width>0</width>
           <height>0</height>
         </hotspot>
+        <hotspot>
+          <position>
+            <pan>-54.04</pan>
+            <tilt>-18.17</tilt>
+            <fov>10</fov>
+          </position>
+          <next>
+            <pan>0</pan>
+            <tilt>0</tilt>
+            <fov>0</fov>
+          </next>
+          <customprops/>
+          <polygon/>
+          <id>Point02</id>
+          <title>$(ut)</title>
+          <linktype>node</linktype>
+          <linksubtype>unknown</linksubtype>
+          <url>{node6}</url>
+          <skinid>floor_hotspot</skinid>
+          <type>point</type>
+          <distance>0</distance>
+          <distanceauto>1</distanceauto>
+          <autoplace>0</autoplace>
+          <use3d>0</use3d>
+          <width>0</width>
+          <height>0</height>
+        </hotspot>
+        <hotspot>
+          <position>
+            <pan>-136.83</pan>
+            <tilt>-15.06</tilt>
+            <fov>10</fov>
+          </position>
+          <next>
+            <pan>0</pan>
+            <tilt>0</tilt>
+            <fov>0</fov>
+          </next>
+          <customprops/>
+          <polygon/>
+          <id>Point03</id>
+          <title>$(ut)</title>
+          <linktype>node</linktype>
+          <linksubtype>unknown</linksubtype>
+          <url>{node13}</url>
+          <skinid>floor_hotspot</skinid>
+          <type>point</type>
+          <distance>0</distance>
+          <distanceauto>1</distanceauto>
+          <autoplace>0</autoplace>
+          <use3d>0</use3d>
+          <width>0</width>
+          <height>0</height>
+        </hotspot>
       </hotspots>
       <output/>
       <streetview/>
@@ -3142,6 +3347,87 @@
           <linktype>node</linktype>
           <linksubtype>unknown</linksubtype>
           <url>{node7}</url>
+          <skinid>floor_hotspot</skinid>
+          <type>point</type>
+          <distance>0</distance>
+          <distanceauto>1</distanceauto>
+          <autoplace>0</autoplace>
+          <use3d>0</use3d>
+          <width>0</width>
+          <height>0</height>
+        </hotspot>
+        <hotspot>
+          <position>
+            <pan>-138.76</pan>
+            <tilt>-17.89</tilt>
+            <fov>10</fov>
+          </position>
+          <next>
+            <pan>0</pan>
+            <tilt>0</tilt>
+            <fov>0</fov>
+          </next>
+          <customprops/>
+          <polygon/>
+          <id>Point02</id>
+          <title>$(ut)</title>
+          <linktype>node</linktype>
+          <linksubtype>unknown</linksubtype>
+          <url>{node13}</url>
+          <skinid>floor_hotspot</skinid>
+          <type>point</type>
+          <distance>0</distance>
+          <distanceauto>1</distanceauto>
+          <autoplace>0</autoplace>
+          <use3d>0</use3d>
+          <width>0</width>
+          <height>0</height>
+        </hotspot>
+        <hotspot>
+          <position>
+            <pan>-32.81</pan>
+            <tilt>-17.18</tilt>
+            <fov>10</fov>
+          </position>
+          <next>
+            <pan>0</pan>
+            <tilt>0</tilt>
+            <fov>0</fov>
+          </next>
+          <customprops/>
+          <polygon/>
+          <id>Point03</id>
+          <title>$(ut)</title>
+          <linktype>node</linktype>
+          <linksubtype>unknown</linksubtype>
+          <url>{node6}</url>
+          <skinid>floor_hotspot</skinid>
+          <type>point</type>
+          <distance>0</distance>
+          <distanceauto>1</distanceauto>
+          <autoplace>0</autoplace>
+          <use3d>0</use3d>
+          <width>0</width>
+          <height>0</height>
+        </hotspot>
+        <hotspot>
+          <position>
+            <pan>-312.87</pan>
+            <tilt>-15.3</tilt>
+            <fov>10</fov>
+          </position>
+          <next>
+            <pan>0</pan>
+            <tilt>0</tilt>
+            <fov>0</fov>
+          </next>
+          <customprops/>
+          <polygon/>
+          <id>Point04</id>
+          <title>$(ut)</title>
+          <linktype>node</linktype>
+          <linksubtype>unknown</linksubtype>
+          <url>{node4}</url>
           <skinid>floor_hotspot</skinid>
           <type>point</type>
           <distance>0</distance>
