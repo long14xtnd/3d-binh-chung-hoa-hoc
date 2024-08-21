@@ -88,33 +88,6 @@
         </hotspot>
         <hotspot>
           <position>
-            <pan>-317.29</pan>
-            <tilt>-17.81</tilt>
-            <fov>10</fov>
-          </position>
-          <next>
-            <pan>0</pan>
-            <tilt>0</tilt>
-            <fov>0</fov>
-          </next>
-          <customprops/>
-          <polygon/>
-          <id>Point02</id>
-          <title>$(ut)</title>
-          <linktype>node</linktype>
-          <linksubtype>unknown</linksubtype>
-          <url>{node3}</url>
-          <skinid>floor_hotspot</skinid>
-          <type>point</type>
-          <distance>0</distance>
-          <distanceauto>1</distanceauto>
-          <autoplace>0</autoplace>
-          <use3d>0</use3d>
-          <width>0</width>
-          <height>0</height>
-        </hotspot>
-        <hotspot>
-          <position>
             <pan>-331.08</pan>
             <tilt>-11.38</tilt>
             <fov>10</fov>
@@ -356,7 +329,7 @@
           <title>$(ut)</title>
           <linktype>node</linktype>
           <linksubtype>unknown</linksubtype>
-          <url>{node3}</url>
+          <url>{node16}</url>
           <skinid>floor_hotspot</skinid>
           <type>point</type>
           <distance>0</distance>
@@ -767,24 +740,24 @@
       <input>
         <patch/>
         <type>auto</type>
-        <filename>D:/Viettech/3D-binh-chung-hoa-hoc/30-11/3.png</filename>
+        <filename>D:/Viettech/3D-binh-chung-hoa-hoc/30-11/3(new).png</filename>
         <videotype>equi</videotype>
         <levelpitch>0</levelpitch>
         <levelroll>0</levelroll>
       </input>
       <viewingparameter>
         <pan>
-          <start>-92.352</start>
+          <start>179.963</start>
           <min>0</min>
           <max>360</max>
         </pan>
         <tilt>
-          <start>0</start>
+          <start>-22.4031</start>
           <min>-90</min>
           <max>90</max>
         </tilt>
         <fov>
-          <start>164.187</start>
+          <start>140.312</start>
           <minunit>pixels</minunit>
           <minpixels>2</minpixels>
           <max>140</max>
@@ -796,28 +769,28 @@
           <tilt>-90</tilt>
           <fov>170</fov>
         </flyinstart>
-        <pannorth>-86.1622</pannorth>
+        <pannorth>179.006</pannorth>
         <scaletofit>1</scaletofit>
         <projection>rectilinear</projection>
         <flyinprojection>stereo</flyinprojection>
-        <defaultviewtimestamp>2024-08-14T11:46:28</defaultviewtimestamp>
+        <defaultviewtimestamp>2024-08-21T16:25:32</defaultviewtimestamp>
       </viewingparameter>
       <userdata>
         <customprops/>
-        <capturedatetime>2023-11-30T10:38:30</capturedatetime>
+        <capturedatetime>2024-08-21T16:21:33</capturedatetime>
         <tags>30-11</tags>
         <floorplancoordinates>
           <floorplanid>FloorPlan01</floorplanid>
-          <x>376</x>
-          <y>672</y>
+          <x>388</x>
+          <y>703</y>
         </floorplancoordinates>
       </userdata>
       <floorplans/>
       <hotspots>
         <hotspot>
           <position>
-            <pan>-10.04</pan>
-            <tilt>-24.88</tilt>
+            <pan>-78.84</pan>
+            <tilt>-26.82</tilt>
             <fov>10</fov>
           </position>
           <next>
@@ -827,7 +800,7 @@
           </next>
           <customprops/>
           <polygon/>
-          <id>Point02</id>
+          <id>Point01</id>
           <title>$(ut)</title>
           <linktype>node</linktype>
           <linksubtype>unknown</linksubtype>
@@ -843,8 +816,8 @@
         </hotspot>
         <hotspot>
           <position>
-            <pan>-94.34</pan>
-            <tilt>-26.16</tilt>
+            <pan>-181.24</pan>
+            <tilt>-45.67</tilt>
             <fov>10</fov>
           </position>
           <next>
@@ -854,7 +827,7 @@
           </next>
           <customprops/>
           <polygon/>
-          <id>Point03</id>
+          <id>Point02</id>
           <title>$(ut)</title>
           <linktype>node</linktype>
           <linksubtype>unknown</linksubtype>
@@ -870,8 +843,8 @@
         </hotspot>
         <hotspot>
           <position>
-            <pan>-163.99</pan>
-            <tilt>-19.73</tilt>
+            <pan>-284.51</pan>
+            <tilt>-27.36</tilt>
             <fov>10</fov>
           </position>
           <next>
@@ -881,7 +854,7 @@
           </next>
           <customprops/>
           <polygon/>
-          <id>Point01</id>
+          <id>Point03</id>
           <title>$(ut)</title>
           <linktype>node</linktype>
           <linksubtype>unknown</linksubtype>
@@ -903,22 +876,22 @@
       <sounds>
         <sound>
           <position>
-            <pan>87.6928</pan>
-            <tilt>34.6848</tilt>
+            <pan>0.379999</pan>
+            <tilt>7.39059</tilt>
           </position>
           <videorect>
-            <rotx>34.802</rotx>
-            <roty>0.57203</roty>
-            <rotz>3.57406</rotz>
-            <fov>92.1081</fov>
-            <stretch>100.715</stretch>
+            <rotx>7.06792</rotx>
+            <roty>-0.303263</roty>
+            <rotz>-0.0678917</rotz>
+            <fov>33.0023</fov>
+            <stretch>100.013</stretch>
             <dimx>1920</dimx>
             <dimy>1080</dimy>
           </videorect>
           <type>video</type>
           <id>Element01</id>
           <filename>media/video3.mp4</filename>
-          <urlsafefilename>video3-8.mp4</urlsafefilename>
+          <urlsafefilename>video3.mp4</urlsafefilename>
           <mode>1</mode>
           <nodechangekeep>0</nodechangekeep>
           <locked>0</locked>
@@ -936,7 +909,7 @@
           <handcursor>1</handcursor>
         </sound>
       </sounds>
-      <id>node3</id>
+      <id>node16</id>
     </panorama>
     <panorama>
       <projectsettings>
@@ -1011,7 +984,7 @@
           <title>$(ut)</title>
           <linktype>node</linktype>
           <linksubtype>unknown</linksubtype>
-          <url>{node3}</url>
+          <url>{node16}</url>
           <skinid>floor_hotspot</skinid>
           <type>point</type>
           <distance>0</distance>
@@ -1490,7 +1463,7 @@
           </videorect>
           <type>video</type>
           <id>Element01</id>
-          <filename>C:/Users/Admin/Desktop/video3.mp4</filename>
+          <filename>media/video3.mp4</filename>
           <urlsafefilename>video3.mp4</urlsafefilename>
           <mode>1</mode>
           <nodechangekeep>0</nodechangekeep>
