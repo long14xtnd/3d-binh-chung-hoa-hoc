@@ -1,7 +1,7 @@
 // Garden Gnome Software - VR - Skin
 // Pano2VR 7.0.9/20024
 // Filename: venis.ggsk
-// Generated 2024-08-21T16:35:54
+// Generated 2024-10-02T14:23:28
 
 function pano2vrVrSkin(player,base) {
 	player.addVariable('vis_sounds_splashscreen', 2, false, { ignoreInState: 1  });
