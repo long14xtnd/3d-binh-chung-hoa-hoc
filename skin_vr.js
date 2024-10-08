@@ -1,7 +1,7 @@
 // Garden Gnome Software - VR - Skin
 // Pano2VR 7.0.9/20024
 // Filename: venis.ggsk
-// Generated 2024-10-02T14:23:28
+// Generated 2024-10-08T11:55:05
 
 function pano2vrVrSkin(player,base) {
 	player.addVariable('vis_sounds_splashscreen', 2, false, { ignoreInState: 1  });
@@ -13618,6 +13618,950 @@ alert("The current view has been copied.");
 		me._rectangle_3.add(me._text_1);
 		me._information.add(me._rectangle_3);
 		me.skinGroup.add(me._information);
+		el = new THREE.Group();
+		width = 8;
+		height = 6;
+		borderShape = new THREE.Shape();
+		borderShape.moveTo((width / 2.0) - 0.01 + 0, (height / 2.0) + 0.01);
+		borderShape.lineTo((width / 2.0) + 0.01 - 0, (height / 2.0) + 0.01);
+		borderShape.lineTo((width / 2.0) + 0.01, (-height / 2.0) - 0.01 + 0);
+		borderShape.lineTo((-width / 2.0) - 0.01 + 0, (-height / 2.0) - 0.01);
+		borderShape.lineTo((-width / 2.0) - 0.01, (height / 2.0) + 0.01 - 0);
+		innerShape = new THREE.Path();
+		innerShape.moveTo((-width / 2.0), (height / 2.0));
+		innerShape.lineTo((width / 2.0), (height / 2.0));
+		innerShape.lineTo((width / 2.0), (-height / 2.0));
+		innerShape.lineTo((-width / 2.0), (-height / 2.0));
+		borderShape.holes.push(innerShape);
+		borderGeometry = new THREE.ShapeGeometry(borderShape);
+		borderGeometry.name = 'intro_borderGeometry';
+		borderMaterial = new THREE.MeshBasicMaterial( {color: new THREE.Color('rgba(0,0,0,1)').convertSRGBToLinear() , side: THREE.DoubleSide, transparent: true } );
+		borderMaterial.name = 'intro_borderMaterial';
+		el.userData.border = new THREE.Mesh( borderGeometry, borderMaterial );
+		el.userData.border.name = 'intro_borderMesh';
+		el.add(el.userData.border);
+		el.userData.backgroundColorAlpha = 1;
+		el.userData.borderColorAlpha = 1;
+		el.userData.setOpacityInternal = function(v) {
+			me._intro.userData.border.material.opacity = v * me._intro.userData.borderColorAlpha;
+			if (me._intro.userData.ggSubElement) {
+				me._intro.userData.ggSubElement.material.opacity = v
+				me._intro.userData.ggSubElement.visible = (v>0 && me._intro.userData.visible);
+			}
+			me._intro.visible = (v>0 && me._intro.userData.visible);
+		}
+		el.userData.setBorderColor = function(v) {
+			me._intro.userData.border.material.color = v;
+		}
+		el.userData.setBorderColorAlpha = function(v) {
+			me._intro.userData.borderColorAlpha = v;
+			me._intro.userData.setOpacity(me._intro.userData.opacity);
+		}
+		el.translateX(0.01);
+		el.translateY(-0.01);
+		el.scale.set(1.00, 1.00, 1.0);
+		el.userData.width = 800;
+		el.userData.height = 600;
+		el.userData.scale = {x: 1.00, y: 1.00, z: 1.0};
+		el.userData.curScaleOffX = 0;
+		el.userData.curScaleOffY = 0;
+		el.name = 'intro';
+		el.userData.x = 0.01;
+		el.userData.y = -0.01;
+		el.userData.hanchor = 0;
+		el.userData.vanchor = 0;
+		el.translateZ(0.190);
+		el.renderOrder = 19;
+		el.rotateZ(0.00);
+		el.userData.angle = 0.00;
+		el.userData.isVisible = function() {
+			let vis = me._intro.visible
+			let parentEl = me._intro.parent;
+			while (vis && parentEl) {
+				if (!parentEl.visible) {
+					vis = false;
+					break;
+				}
+				parentEl = parentEl.parent;
+			}
+			return vis;
+		}
+		el.userData.setOpacity = function(v) {
+			me._intro.userData.opacity = v;
+			v = v * me._intro.userData.parentOpacity;
+			me._intro.userData.setOpacityInternal(v);
+			for (let i = 0; i < me._intro.children.length; i++) {
+				let child = me._intro.children[i];
+				if (child.userData.setParentOpacity) {
+					child.userData.setParentOpacity(v);
+				}
+			};
+		}
+		el.userData.setParentOpacity = function(v) {
+			me._intro.userData.parentOpacity = v;
+			v = v * me._intro.userData.opacity
+			me._intro.userData.setOpacityInternal(v);
+			for (let i = 0; i < me._intro.children.length; i++) {
+				let child = me._intro.children[i];
+				if (child.userData.setParentOpacity) {
+					child.userData.setParentOpacity(v);
+				}
+			};
+		}
+		el.visible = true;
+		el.userData.visible = true;
+		el.userData.opacity = 1.00;
+		el.userData.parentOpacity = 1.0;
+		el.userData.transitions = [];
+		me._intro = el;
+		el.userData.ggId="intro";
+		me._intro.userData.ggUpdatePosition=function (useTransition) {
+		}
+		geometry = new THREE.PlaneBufferGeometry(8, 6, 5, 5 );
+		geometry.name = 'default_image_intro_geometry';
+		loader = new THREE.TextureLoader();
+		texture = loader.load(basePath + 'images_vr/default_image_intro.png');
+		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true} );
+		material.name = 'default_image_intro_material';
+		el = new THREE.Mesh( geometry, material );
+		el.translateX(0);
+		el.translateY(0);
+		el.scale.set(1.00, 1.00, 1.0);
+		el.userData.width = 800;
+		el.userData.height = 600;
+		el.userData.scale = {x: 1.00, y: 1.00, z: 1.0};
+		el.userData.curScaleOffX = 0;
+		el.userData.curScaleOffY = 0;
+		el.name = 'default_image_intro';
+		el.userData.x = 0;
+		el.userData.y = 0;
+		el.userData.hanchor = 0;
+		el.userData.vanchor = 0;
+		el.translateZ(0.200);
+		el.renderOrder = 20;
+		el.rotateZ(0.00);
+		el.userData.angle = 0.00;
+		el.userData.setOpacityInternal = function(v) {
+			if (me._default_image_intro.material) me._default_image_intro.material.opacity = v;
+			me._default_image_intro.visible = (v>0 && me._default_image_intro.userData.visible);
+		}
+		el.userData.isVisible = function() {
+			let vis = me._default_image_intro.visible
+			let parentEl = me._default_image_intro.parent;
+			while (vis && parentEl) {
+				if (!parentEl.visible) {
+					vis = false;
+					break;
+				}
+				parentEl = parentEl.parent;
+			}
+			return vis;
+		}
+		el.userData.setOpacity = function(v) {
+			me._default_image_intro.userData.opacity = v;
+			v = v * me._default_image_intro.userData.parentOpacity;
+			me._default_image_intro.userData.setOpacityInternal(v);
+			for (let i = 0; i < me._default_image_intro.children.length; i++) {
+				let child = me._default_image_intro.children[i];
+				if (child.userData.setParentOpacity) {
+					child.userData.setParentOpacity(v);
+				}
+			};
+		}
+		el.userData.setParentOpacity = function(v) {
+			me._default_image_intro.userData.parentOpacity = v;
+			v = v * me._default_image_intro.userData.opacity
+			me._default_image_intro.userData.setOpacityInternal(v);
+			for (let i = 0; i < me._default_image_intro.children.length; i++) {
+				let child = me._default_image_intro.children[i];
+				if (child.userData.setParentOpacity) {
+					child.userData.setParentOpacity(v);
+				}
+			};
+		}
+		el.visible = true;
+		el.userData.visible = true;
+		el.userData.opacity = 1.00;
+		el.userData.parentOpacity = 1.0;
+		el.userData.transitions = [];
+		me._default_image_intro = el;
+		el.userData.ggId="default_image_intro";
+		me._default_image_intro.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getVariableValue('resp_phone') == false))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._default_image_intro.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._default_image_intro.ggCurrentLogicStateVisible = newLogicStateVisible;
+				if (me._default_image_intro.ggCurrentLogicStateVisible == 0) {
+			me._default_image_intro.visible=((!me._default_image_intro.material && Number(me._default_image_intro.userData.opacity>0)) || Number(me._default_image_intro.material.opacity)>0)?true:false;
+			me._default_image_intro.userData.visible=true;
+				}
+				else {
+			me._default_image_intro.visible=((!me._default_image_intro.material && Number(me._default_image_intro.userData.opacity>0)) || Number(me._default_image_intro.material.opacity)>0)?true:false;
+			me._default_image_intro.userData.visible=true;
+				}
+			}
+		}
+		me._default_image_intro.logicBlock_visible();
+		me._default_image_intro.userData.ggUpdatePosition=function (useTransition) {
+		}
+		width = 1.3;
+		height = 0.4;
+		roundedRectShape = new THREE.Shape();
+		roundedRectShape.moveTo((-width / 2.0) + 0.09, (height / 2.0));
+		roundedRectShape.lineTo((width / 2.0) - 0.09, (height / 2.0));
+		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.09);
+		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.09);
+		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.09, (-height / 2.0));
+		roundedRectShape.lineTo((-width / 2.0) + 0.09, (-height / 2.0));
+		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.09);
+		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.09);
+		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.09, (height / 2.0));
+		geometry = new THREE.ShapeGeometry(roundedRectShape);
+		geometry.name = 'start_tour_geometry';
+		geometry.computeBoundingBox();
+		var min = geometry.boundingBox.min;
+		var max = geometry.boundingBox.max;
+		var offset = new THREE.Vector2(0 - min.x, 0 - min.y);
+		var range = new THREE.Vector2(max.x - min.x, max.y - min.y);
+		var vertexPositions = geometry.getAttribute('position');
+		var vertexUVs = geometry.getAttribute('uv');
+		for (var i = 0; i < vertexPositions.count; i++) {
+			var v1 = vertexPositions.getX(i);
+			var	v2 = vertexPositions.getY(i);
+			vertexUVs.setX(i, (v1 + offset.x) / range.x);
+			vertexUVs.setY(i, (v2 + offset.y) / range.y);
+		}
+		geometry.uvsNeedUpdate = true;
+		material = new THREE.MeshBasicMaterial( {side : THREE.DoubleSide, transparent : true } ); 
+		material.name = 'start_tour_material';
+		el = new THREE.Mesh( geometry, material );
+		width = 1.3;
+		height = 0.4;
+		borderShape = new THREE.Shape();
+		borderShape.moveTo((width / 2.0) - 0.01 + 0.1, (height / 2.0) + 0.01);
+		borderShape.lineTo((width / 2.0) + 0.01 - 0.1, (height / 2.0) + 0.01);
+		borderShape.quadraticCurveTo((width / 2.0) + 0.01, (height / 2.0) + 0.01, (width / 2.0) + 0.01, (height / 2.0) + 0.01 - 0.1);
+		borderShape.lineTo((width / 2.0) + 0.01, (-height / 2.0) - 0.01 + 0.1);
+		borderShape.quadraticCurveTo((width / 2.0) + 0.01, (-height / 2.0) - 0.01, (width / 2.0) + 0.01 - 0.1, (-height / 2.0) - 0.01);
+		borderShape.lineTo((-width / 2.0) - 0.01 + 0.1, (-height / 2.0) - 0.01);
+		borderShape.quadraticCurveTo((-width / 2.0) - 0.01, (-height / 2.0) - 0.01, (-width / 2.0) - 0.01, (-height / 2.0) - 0.01 + 0.1);
+		borderShape.lineTo((-width / 2.0) - 0.01, (height / 2.0) + 0.01 - 0.1);
+		borderShape.quadraticCurveTo((-width / 2.0) - 0.01, (height / 2.0) + 0.01, (-width / 2.0) - 0.01 + 0.1, (height / 2.0) + 0.01);
+		innerShape = new THREE.Path();
+		innerShape.moveTo((-width / 2.0) + 0.09, (height / 2.0));
+		innerShape.lineTo((width / 2.0) - 0.09, (height / 2.0));
+		innerShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.09);
+		innerShape.lineTo((width / 2.0), (-height / 2.0) + 0.09);
+		innerShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.09, (-height / 2.0));
+		innerShape.lineTo((-width / 2.0) + 0.09, (-height / 2.0));
+		innerShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.09);
+		innerShape.lineTo((-width / 2.0), (height / 2.0) - 0.09);
+		innerShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.09, (height / 2.0));
+		borderShape.holes.push(innerShape);
+		borderGeometry = new THREE.ShapeGeometry(borderShape);
+		borderGeometry.name = 'start_tour_borderGeometry';
+		borderMaterial = new THREE.MeshBasicMaterial( {color: new THREE.Color('rgba(255,255,255,1)').convertSRGBToLinear() , side: THREE.DoubleSide, transparent: true } );
+		borderMaterial.name = 'start_tour_borderMaterial';
+		el.userData.border = new THREE.Mesh( borderGeometry, borderMaterial );
+		el.userData.border.name = 'start_tour_borderMesh';
+		el.add(el.userData.border);
+		el.userData.backgroundColorAlpha = 1;
+		el.userData.borderColorAlpha = 1;
+		el.userData.setOpacityInternal = function(v) {
+			me._start_tour.material.opacity = v;
+			if (me._start_tour.userData.hasScrollbar) {
+				me._start_tour.userData.scrollbar.material.opacity = v;
+				me._start_tour.userData.scrollbarBg.material.opacity = v;
+			}
+			me._start_tour.userData.border.material.opacity = v * me._start_tour.userData.borderColorAlpha;
+			if (me._start_tour.userData.ggSubElement) {
+				me._start_tour.userData.ggSubElement.material.opacity = v
+				me._start_tour.userData.ggSubElement.visible = (v>0 && me._start_tour.userData.visible);
+			}
+			me._start_tour.visible = (v>0 && me._start_tour.userData.visible);
+		}
+		el.userData.setBackgroundColor = function(v) {
+			me._start_tour.material.color = v;
+		}
+		el.userData.setBackgroundColorAlpha = function(v) {
+			me._start_tour.userData.backgroundColorAlpha = v;
+			me._start_tour.userData.setOpacity(me._start_tour.userData.opacity);
+		}
+		el.userData.setBorderColor = function(v) {
+			me._start_tour.userData.border.material.color = v;
+		}
+		el.userData.setBorderColorAlpha = function(v) {
+			me._start_tour.userData.borderColorAlpha = v;
+			me._start_tour.userData.setOpacity(me._start_tour.userData.opacity);
+		}
+		el.translateX(0);
+		el.translateY(-1.98);
+		el.scale.set(1.00, 1.00, 1.0);
+		el.userData.width = 130;
+		el.userData.height = 40;
+		el.userData.scale = {x: 1.00, y: 1.00, z: 1.0};
+		el.userData.curScaleOffX = 0;
+		el.userData.curScaleOffY = 0;
+		el.name = 'start_tour';
+		el.userData.x = 0;
+		el.userData.y = -1.98;
+		el.userData.hanchor = 1;
+		el.userData.vanchor = 1;
+		el.translateZ(0.210);
+		el.renderOrder = 21;
+		el.rotateZ(0.00);
+		el.userData.angle = 0.00;
+		el.userData.isVisible = function() {
+			let vis = me._start_tour.visible
+			let parentEl = me._start_tour.parent;
+			while (vis && parentEl) {
+				if (!parentEl.visible) {
+					vis = false;
+					break;
+				}
+				parentEl = parentEl.parent;
+			}
+			return vis;
+		}
+		el.userData.setOpacity = function(v) {
+			me._start_tour.userData.opacity = v;
+			v = v * me._start_tour.userData.parentOpacity;
+			me._start_tour.userData.setOpacityInternal(v);
+			for (let i = 0; i < me._start_tour.children.length; i++) {
+				let child = me._start_tour.children[i];
+				if (child.userData.setParentOpacity) {
+					child.userData.setParentOpacity(v);
+				}
+			};
+		}
+		el.userData.setParentOpacity = function(v) {
+			me._start_tour.userData.parentOpacity = v;
+			v = v * me._start_tour.userData.opacity
+			me._start_tour.userData.setOpacityInternal(v);
+			for (let i = 0; i < me._start_tour.children.length; i++) {
+				let child = me._start_tour.children[i];
+				if (child.userData.setParentOpacity) {
+					child.userData.setParentOpacity(v);
+				}
+			};
+		}
+		el.visible = true;
+		el.userData.visible = true;
+		el.userData.opacity = 1.00;
+		el.userData.parentOpacity = 1.0;
+		el.userData.transitions = [];
+		me._start_tour = el;
+		el.userData.textLines = [];
+		el.userData.backgroundColor = new THREE.Color(0.988235, 0.654902, 0.270588);
+		el.userData.textColor = new THREE.Color(1, 1, 1);
+		el.userData.textColorAlpha = 1;
+		var canvas = document.createElement('canvas');
+		canvas.width = 130;
+		canvas.height = 40;
+		el.userData.textCanvas = canvas;
+		el.userData.textCanvasContext = canvas.getContext('2d');
+		el.userData.ggStripTags = function(text) {
+			let doc = new DOMParser().parseFromString(text, 'text/html');
+			return doc.body.textContent || '';
+		}
+		el.userData.ggWrapText = function(scrollbar) {
+			me._start_tour.userData.totalHeight = 7;
+			me._start_tour.userData.textLines = [];
+			var ctx = me._start_tour.userData.textCanvasContext;
+			var words = [];
+			let tmpText = String(me._start_tour.userData.ggText);
+			let whiteSpaceIndex = -1;
+			do {
+				whiteSpaceIndex = tmpText.search(/[\s]/);
+				if (whiteSpaceIndex != -1) {
+					words.push(tmpText.substr(0, whiteSpaceIndex));
+					tmpText = tmpText.substr(whiteSpaceIndex);
+					if (tmpText.charAt(0) == '\n') {
+						words.push('\n');
+					}
+					tmpText = tmpText.substr(1);
+				} else {
+					words.push(tmpText);
+				}
+			} while (whiteSpaceIndex != -1);
+			var line = '';
+			for (var i = 0; i < words.length; i++) {
+				if (words[i] == '\n') {
+					me._start_tour.userData.textLines.push(line);
+					line = '';
+					me._start_tour.userData.totalHeight += me._start_tour.userData.lineHeight;
+					continue;
+				}
+				var testLine;
+				if (line == '') {
+					testLine = words[i]
+				} else {
+					testLine = line + ' ' + words[i];
+				}
+				var metrics = ctx.measureText(testLine);
+				var testWidth = metrics.width;
+				if (testWidth > (me._start_tour.userData.width - 4 - (scrollbar ? 25 : 0)) && i > 0) {
+					me._start_tour.userData.textLines.push(line);
+					line = words[i];
+					me._start_tour.userData.totalHeight += me._start_tour.userData.lineHeight;
+				} else {
+					line = testLine;
+				}
+			}
+			me._start_tour.userData.textLines.push(line);
+			me._start_tour.userData.totalHeight += me._start_tour.userData.lineHeight;
+		}
+		el.userData.ggPaintCanvasText = function() {
+			var canv = me._start_tour.userData.textCanvas;
+			var ctx = me._start_tour.userData.textCanvasContext;
+			ctx.clearRect(0, 0, canv.width, canv.height);
+			ctx.fillStyle = 'rgba(' + me._start_tour.userData.backgroundColor.r * 255 + ', ' + me._start_tour.userData.backgroundColor.g * 255 + ', ' + me._start_tour.userData.backgroundColor.b * 255 + ', ' + me._start_tour.userData.backgroundColorAlpha + ')';
+			ctx.fillRect(0, 0, canv.width, canv.height);
+			ctx.fillStyle = 'rgba(' + me._start_tour.userData.textColor.r * 255 + ', ' + me._start_tour.userData.textColor.g * 255 + ', ' + me._start_tour.userData.textColor.b * 255 + ', ' + me._start_tour.userData.textColorAlpha + ')';
+			ctx.textBaseline = 'top';
+			var x = (me._start_tour.userData.boxWidth - (me._start_tour.userData.hasScrollbar ? 25 : 0)) / 2;
+			ctx.textAlign = 'center';
+			var y = 5;
+			y += (canv.height - me._start_tour.userData.totalHeight - 2) / 2;
+			for (var i = 0; i < me._start_tour.userData.textLines.length; i++) {
+				ctx.fillText(me._start_tour.userData.textLines[i], x, y);
+				y += me._start_tour.userData.lineHeight;
+			}
+			var textTexture = new THREE.CanvasTexture(canv);
+			textTexture.name = 'start_tour_texture';
+			textTexture.minFilter = THREE.LinearFilter;
+			textTexture.encoding = THREE.sRGBEncoding;
+			textTexture.wrapS = THREE.ClampToEdgeWrapping;
+			textTexture.wrapT = THREE.ClampToEdgeWrapping;
+			if (me._start_tour.material.map) {
+				me._start_tour.material.map.dispose();
+			}
+			me._start_tour.material.map = textTexture;
+		}
+		el.userData.ggRenderText = function() {
+			me._start_tour.remove(...me._start_tour.children);
+			var canv = me._start_tour.userData.textCanvas;
+			var ctx = me._start_tour.userData.textCanvasContext;
+			ctx.font = '15px Verdana';
+			me._start_tour.userData.lineHeight = 15 * 1.2;
+			me._start_tour.userData.textLines = [];
+			me._start_tour.userData.textLines.push(me._start_tour.userData.ggText);
+			me._start_tour.userData.totalHeight = 7;
+			me._start_tour.userData.totalHeight += me._start_tour.userData.lineHeight;
+			me._start_tour.userData.boxWidth = me._start_tour.userData.width;
+			me._start_tour.userData.boxHeight = me._start_tour.userData.height;
+			me._start_tour.userData.hasScrollbar = false;
+			canv.width = me._start_tour.userData.boxWidth;
+			canv.height = me._start_tour.userData.boxHeight;
+			ctx.font = '15px Verdana';
+			me._start_tour.userData.ggPaintCanvasText();
+		}
+		me._start_tour.userData.ggUpdateText=function(force) {
+			var params = [];
+			var hs = player._("B\u1eaeT \u0110\u1ea6U", params);
+			if (hs!=this.ggText || force) {
+				this.ggText=me._start_tour.userData.ggStripTags(hs);
+				this.ggRenderText();
+			}
+		}
+		me._start_tour.userData.ggUpdateText();
+		el.userData.setBackgroundColor = function(v) {
+			me._start_tour.userData.backgroundColor = v;
+		}
+		el.userData.setBackgroundColorAlpha = function(v) {
+			me._start_tour.userData.backgroundColorAlpha = v;
+		}
+		el.userData.setTextColor = function(v) {
+			me._start_tour.userData.textColor = v;
+		}
+		el.userData.setTextColorAlpha = function(v) {
+			me._start_tour.userData.textColorAlpha = v;
+		}
+		el.userData.ggId="start_tour";
+		me._start_tour.logicBlock_textcolor = function() {
+			var newLogicStateTextColor;
+			if (
+				((me.elementMouseOver['start_tour'] == true))
+			)
+			{
+				newLogicStateTextColor = 0;
+			}
+			else {
+				newLogicStateTextColor = -1;
+			}
+			if (me._start_tour.ggCurrentLogicStateTextColor != newLogicStateTextColor) {
+				me._start_tour.ggCurrentLogicStateTextColor = newLogicStateTextColor;
+				if (me._start_tour.ggCurrentLogicStateTextColor == 0) {
+					me._start_tour.userData.setTextColor(new THREE.Color('#2c2c41'));
+					me._start_tour.userData.setTextColorAlpha(1);
+					me._start_tour.userData.ggUpdateText(true);
+				}
+				else {
+					me._start_tour.userData.setTextColor(new THREE.Color('#ffffff'));
+					me._start_tour.userData.setTextColorAlpha(1);
+					me._start_tour.userData.ggUpdateText(true);
+				}
+			}
+		}
+		me._start_tour.logicBlock_textcolor();
+		me._start_tour.userData.onclick=function (e) {
+			player.openNext("{node15}","");
+			me._intro.visible=false;
+			me._intro.userData.visible=false;
+		}
+		me._start_tour.userData.onmouseover=function (e) {
+			me.elementMouseOver['start_tour']=true;
+			me._start_tour.logicBlock_textcolor();
+		}
+		me._start_tour.userData.ontouchend=function (e) {
+			me._start_tour.logicBlock_textcolor();
+		}
+		me._start_tour.userData.onmouseout=function (e) {
+			if (e && e.toElement) {
+				var current = e.toElement;
+				while (current = current.parentNode) {
+				if (current == me._start_tour__text)
+					return;
+				}
+			}
+			me.elementMouseOver['start_tour']=false;
+			me._start_tour.logicBlock_textcolor();
+		}
+		me._start_tour.userData.ggUpdatePosition=function (useTransition) {
+		}
+		me._default_image_intro.add(me._start_tour);
+		me._intro.add(me._default_image_intro);
+		geometry = new THREE.PlaneBufferGeometry(8, 6, 5, 5 );
+		geometry.name = 'mobile_image_intro_geometry';
+		loader = new THREE.TextureLoader();
+		texture = loader.load(basePath + 'images_vr/mobile_image_intro.png');
+		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true} );
+		material.name = 'mobile_image_intro_material';
+		el = new THREE.Mesh( geometry, material );
+		el.translateX(0);
+		el.translateY(0);
+		el.scale.set(1.00, 1.00, 1.0);
+		el.userData.width = 800;
+		el.userData.height = 600;
+		el.userData.scale = {x: 1.00, y: 1.00, z: 1.0};
+		el.userData.curScaleOffX = 0;
+		el.userData.curScaleOffY = 0;
+		el.name = 'mobile_image_intro';
+		el.userData.x = 0;
+		el.userData.y = 0;
+		el.userData.hanchor = 0;
+		el.userData.vanchor = 0;
+		el.translateZ(0.210);
+		el.renderOrder = 21;
+		el.rotateZ(0.00);
+		el.userData.angle = 0.00;
+		el.userData.setOpacityInternal = function(v) {
+			if (me._mobile_image_intro.material) me._mobile_image_intro.material.opacity = v;
+			me._mobile_image_intro.visible = (v>0 && me._mobile_image_intro.userData.visible);
+		}
+		el.userData.isVisible = function() {
+			let vis = me._mobile_image_intro.visible
+			let parentEl = me._mobile_image_intro.parent;
+			while (vis && parentEl) {
+				if (!parentEl.visible) {
+					vis = false;
+					break;
+				}
+				parentEl = parentEl.parent;
+			}
+			return vis;
+		}
+		el.userData.setOpacity = function(v) {
+			me._mobile_image_intro.userData.opacity = v;
+			v = v * me._mobile_image_intro.userData.parentOpacity;
+			me._mobile_image_intro.userData.setOpacityInternal(v);
+			for (let i = 0; i < me._mobile_image_intro.children.length; i++) {
+				let child = me._mobile_image_intro.children[i];
+				if (child.userData.setParentOpacity) {
+					child.userData.setParentOpacity(v);
+				}
+			};
+		}
+		el.userData.setParentOpacity = function(v) {
+			me._mobile_image_intro.userData.parentOpacity = v;
+			v = v * me._mobile_image_intro.userData.opacity
+			me._mobile_image_intro.userData.setOpacityInternal(v);
+			for (let i = 0; i < me._mobile_image_intro.children.length; i++) {
+				let child = me._mobile_image_intro.children[i];
+				if (child.userData.setParentOpacity) {
+					child.userData.setParentOpacity(v);
+				}
+			};
+		}
+		el.visible = false;
+		el.userData.visible = false;
+		el.userData.opacity = 1.00;
+		el.userData.parentOpacity = 1.0;
+		el.userData.transitions = [];
+		me._mobile_image_intro = el;
+		el.userData.ggId="mobile_image_intro";
+		me._mobile_image_intro.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getVariableValue('resp_phone') == true))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._mobile_image_intro.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._mobile_image_intro.ggCurrentLogicStateVisible = newLogicStateVisible;
+				if (me._mobile_image_intro.ggCurrentLogicStateVisible == 0) {
+			me._mobile_image_intro.visible=((!me._mobile_image_intro.material && Number(me._mobile_image_intro.userData.opacity>0)) || Number(me._mobile_image_intro.material.opacity)>0)?true:false;
+			me._mobile_image_intro.userData.visible=true;
+				}
+				else {
+			me._mobile_image_intro.visible=false;
+			me._mobile_image_intro.userData.visible=false;
+				}
+			}
+		}
+		me._mobile_image_intro.logicBlock_visible();
+		me._mobile_image_intro.userData.ggUpdatePosition=function (useTransition) {
+		}
+		width = 1.3;
+		height = 0.4;
+		roundedRectShape = new THREE.Shape();
+		roundedRectShape.moveTo((-width / 2.0) + 0.09, (height / 2.0));
+		roundedRectShape.lineTo((width / 2.0) - 0.09, (height / 2.0));
+		roundedRectShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.09);
+		roundedRectShape.lineTo((width / 2.0), (-height / 2.0) + 0.09);
+		roundedRectShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.09, (-height / 2.0));
+		roundedRectShape.lineTo((-width / 2.0) + 0.09, (-height / 2.0));
+		roundedRectShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.09);
+		roundedRectShape.lineTo((-width / 2.0), (height / 2.0) - 0.09);
+		roundedRectShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.09, (height / 2.0));
+		geometry = new THREE.ShapeGeometry(roundedRectShape);
+		geometry.name = 'mobile_start_tour_geometry';
+		geometry.computeBoundingBox();
+		var min = geometry.boundingBox.min;
+		var max = geometry.boundingBox.max;
+		var offset = new THREE.Vector2(0 - min.x, 0 - min.y);
+		var range = new THREE.Vector2(max.x - min.x, max.y - min.y);
+		var vertexPositions = geometry.getAttribute('position');
+		var vertexUVs = geometry.getAttribute('uv');
+		for (var i = 0; i < vertexPositions.count; i++) {
+			var v1 = vertexPositions.getX(i);
+			var	v2 = vertexPositions.getY(i);
+			vertexUVs.setX(i, (v1 + offset.x) / range.x);
+			vertexUVs.setY(i, (v2 + offset.y) / range.y);
+		}
+		geometry.uvsNeedUpdate = true;
+		material = new THREE.MeshBasicMaterial( {side : THREE.DoubleSide, transparent : true } ); 
+		material.name = 'mobile_start_tour_material';
+		el = new THREE.Mesh( geometry, material );
+		width = 1.3;
+		height = 0.4;
+		borderShape = new THREE.Shape();
+		borderShape.moveTo((width / 2.0) - 0.01 + 0.1, (height / 2.0) + 0.01);
+		borderShape.lineTo((width / 2.0) + 0.01 - 0.1, (height / 2.0) + 0.01);
+		borderShape.quadraticCurveTo((width / 2.0) + 0.01, (height / 2.0) + 0.01, (width / 2.0) + 0.01, (height / 2.0) + 0.01 - 0.1);
+		borderShape.lineTo((width / 2.0) + 0.01, (-height / 2.0) - 0.01 + 0.1);
+		borderShape.quadraticCurveTo((width / 2.0) + 0.01, (-height / 2.0) - 0.01, (width / 2.0) + 0.01 - 0.1, (-height / 2.0) - 0.01);
+		borderShape.lineTo((-width / 2.0) - 0.01 + 0.1, (-height / 2.0) - 0.01);
+		borderShape.quadraticCurveTo((-width / 2.0) - 0.01, (-height / 2.0) - 0.01, (-width / 2.0) - 0.01, (-height / 2.0) - 0.01 + 0.1);
+		borderShape.lineTo((-width / 2.0) - 0.01, (height / 2.0) + 0.01 - 0.1);
+		borderShape.quadraticCurveTo((-width / 2.0) - 0.01, (height / 2.0) + 0.01, (-width / 2.0) - 0.01 + 0.1, (height / 2.0) + 0.01);
+		innerShape = new THREE.Path();
+		innerShape.moveTo((-width / 2.0) + 0.09, (height / 2.0));
+		innerShape.lineTo((width / 2.0) - 0.09, (height / 2.0));
+		innerShape.quadraticCurveTo((width / 2.0), (height / 2.0), (width / 2.0), (height / 2.0) - 0.09);
+		innerShape.lineTo((width / 2.0), (-height / 2.0) + 0.09);
+		innerShape.quadraticCurveTo((width / 2.0), (-height / 2.0), (width / 2.0) - 0.09, (-height / 2.0));
+		innerShape.lineTo((-width / 2.0) + 0.09, (-height / 2.0));
+		innerShape.quadraticCurveTo((-width / 2.0), (-height / 2.0), (-width / 2.0), (-height / 2.0) + 0.09);
+		innerShape.lineTo((-width / 2.0), (height / 2.0) - 0.09);
+		innerShape.quadraticCurveTo((-width / 2.0), (height / 2.0), (-width / 2.0) + 0.09, (height / 2.0));
+		borderShape.holes.push(innerShape);
+		borderGeometry = new THREE.ShapeGeometry(borderShape);
+		borderGeometry.name = 'mobile_start_tour_borderGeometry';
+		borderMaterial = new THREE.MeshBasicMaterial( {color: new THREE.Color('rgba(255,255,0,1)').convertSRGBToLinear() , side: THREE.DoubleSide, transparent: true } );
+		borderMaterial.name = 'mobile_start_tour_borderMaterial';
+		el.userData.border = new THREE.Mesh( borderGeometry, borderMaterial );
+		el.userData.border.name = 'mobile_start_tour_borderMesh';
+		el.add(el.userData.border);
+		el.userData.backgroundColorAlpha = 1;
+		el.userData.borderColorAlpha = 1;
+		el.userData.setOpacityInternal = function(v) {
+			me._mobile_start_tour.material.opacity = v;
+			if (me._mobile_start_tour.userData.hasScrollbar) {
+				me._mobile_start_tour.userData.scrollbar.material.opacity = v;
+				me._mobile_start_tour.userData.scrollbarBg.material.opacity = v;
+			}
+			me._mobile_start_tour.userData.border.material.opacity = v * me._mobile_start_tour.userData.borderColorAlpha;
+			if (me._mobile_start_tour.userData.ggSubElement) {
+				me._mobile_start_tour.userData.ggSubElement.material.opacity = v
+				me._mobile_start_tour.userData.ggSubElement.visible = (v>0 && me._mobile_start_tour.userData.visible);
+			}
+			me._mobile_start_tour.visible = (v>0 && me._mobile_start_tour.userData.visible);
+		}
+		el.userData.setBackgroundColor = function(v) {
+			me._mobile_start_tour.material.color = v;
+		}
+		el.userData.setBackgroundColorAlpha = function(v) {
+			me._mobile_start_tour.userData.backgroundColorAlpha = v;
+			me._mobile_start_tour.userData.setOpacity(me._mobile_start_tour.userData.opacity);
+		}
+		el.userData.setBorderColor = function(v) {
+			me._mobile_start_tour.userData.border.material.color = v;
+		}
+		el.userData.setBorderColorAlpha = function(v) {
+			me._mobile_start_tour.userData.borderColorAlpha = v;
+			me._mobile_start_tour.userData.setOpacity(me._mobile_start_tour.userData.opacity);
+		}
+		el.translateX(0);
+		el.translateY(-1.38);
+		el.scale.set(1.00, 1.00, 1.0);
+		el.userData.width = 130;
+		el.userData.height = 40;
+		el.userData.scale = {x: 1.00, y: 1.00, z: 1.0};
+		el.userData.curScaleOffX = 0;
+		el.userData.curScaleOffY = 0;
+		el.name = 'mobile_start_tour';
+		el.userData.x = 0;
+		el.userData.y = -1.38;
+		el.userData.hanchor = 1;
+		el.userData.vanchor = 1;
+		el.translateZ(0.220);
+		el.renderOrder = 22;
+		el.rotateZ(0.00);
+		el.userData.angle = 0.00;
+		el.userData.isVisible = function() {
+			let vis = me._mobile_start_tour.visible
+			let parentEl = me._mobile_start_tour.parent;
+			while (vis && parentEl) {
+				if (!parentEl.visible) {
+					vis = false;
+					break;
+				}
+				parentEl = parentEl.parent;
+			}
+			return vis;
+		}
+		el.userData.setOpacity = function(v) {
+			me._mobile_start_tour.userData.opacity = v;
+			v = v * me._mobile_start_tour.userData.parentOpacity;
+			me._mobile_start_tour.userData.setOpacityInternal(v);
+			for (let i = 0; i < me._mobile_start_tour.children.length; i++) {
+				let child = me._mobile_start_tour.children[i];
+				if (child.userData.setParentOpacity) {
+					child.userData.setParentOpacity(v);
+				}
+			};
+		}
+		el.userData.setParentOpacity = function(v) {
+			me._mobile_start_tour.userData.parentOpacity = v;
+			v = v * me._mobile_start_tour.userData.opacity
+			me._mobile_start_tour.userData.setOpacityInternal(v);
+			for (let i = 0; i < me._mobile_start_tour.children.length; i++) {
+				let child = me._mobile_start_tour.children[i];
+				if (child.userData.setParentOpacity) {
+					child.userData.setParentOpacity(v);
+				}
+			};
+		}
+		el.visible = true;
+		el.userData.visible = true;
+		el.userData.opacity = 1.00;
+		el.userData.parentOpacity = 1.0;
+		el.userData.transitions = [];
+		me._mobile_start_tour = el;
+		el.userData.textLines = [];
+		el.userData.backgroundColor = new THREE.Color(1, 0.737255, 0.223529);
+		el.userData.textColor = new THREE.Color(1, 1, 1);
+		el.userData.textColorAlpha = 1;
+		var canvas = document.createElement('canvas');
+		canvas.width = 130;
+		canvas.height = 40;
+		el.userData.textCanvas = canvas;
+		el.userData.textCanvasContext = canvas.getContext('2d');
+		el.userData.ggStripTags = function(text) {
+			let doc = new DOMParser().parseFromString(text, 'text/html');
+			return doc.body.textContent || '';
+		}
+		el.userData.ggWrapText = function(scrollbar) {
+			me._mobile_start_tour.userData.totalHeight = 7;
+			me._mobile_start_tour.userData.textLines = [];
+			var ctx = me._mobile_start_tour.userData.textCanvasContext;
+			var words = [];
+			let tmpText = String(me._mobile_start_tour.userData.ggText);
+			let whiteSpaceIndex = -1;
+			do {
+				whiteSpaceIndex = tmpText.search(/[\s]/);
+				if (whiteSpaceIndex != -1) {
+					words.push(tmpText.substr(0, whiteSpaceIndex));
+					tmpText = tmpText.substr(whiteSpaceIndex);
+					if (tmpText.charAt(0) == '\n') {
+						words.push('\n');
+					}
+					tmpText = tmpText.substr(1);
+				} else {
+					words.push(tmpText);
+				}
+			} while (whiteSpaceIndex != -1);
+			var line = '';
+			for (var i = 0; i < words.length; i++) {
+				if (words[i] == '\n') {
+					me._mobile_start_tour.userData.textLines.push(line);
+					line = '';
+					me._mobile_start_tour.userData.totalHeight += me._mobile_start_tour.userData.lineHeight;
+					continue;
+				}
+				var testLine;
+				if (line == '') {
+					testLine = words[i]
+				} else {
+					testLine = line + ' ' + words[i];
+				}
+				var metrics = ctx.measureText(testLine);
+				var testWidth = metrics.width;
+				if (testWidth > (me._mobile_start_tour.userData.width - 4 - (scrollbar ? 25 : 0)) && i > 0) {
+					me._mobile_start_tour.userData.textLines.push(line);
+					line = words[i];
+					me._mobile_start_tour.userData.totalHeight += me._mobile_start_tour.userData.lineHeight;
+				} else {
+					line = testLine;
+				}
+			}
+			me._mobile_start_tour.userData.textLines.push(line);
+			me._mobile_start_tour.userData.totalHeight += me._mobile_start_tour.userData.lineHeight;
+		}
+		el.userData.ggPaintCanvasText = function() {
+			var canv = me._mobile_start_tour.userData.textCanvas;
+			var ctx = me._mobile_start_tour.userData.textCanvasContext;
+			ctx.clearRect(0, 0, canv.width, canv.height);
+			ctx.fillStyle = 'rgba(' + me._mobile_start_tour.userData.backgroundColor.r * 255 + ', ' + me._mobile_start_tour.userData.backgroundColor.g * 255 + ', ' + me._mobile_start_tour.userData.backgroundColor.b * 255 + ', ' + me._mobile_start_tour.userData.backgroundColorAlpha + ')';
+			ctx.fillRect(0, 0, canv.width, canv.height);
+			ctx.fillStyle = 'rgba(' + me._mobile_start_tour.userData.textColor.r * 255 + ', ' + me._mobile_start_tour.userData.textColor.g * 255 + ', ' + me._mobile_start_tour.userData.textColor.b * 255 + ', ' + me._mobile_start_tour.userData.textColorAlpha + ')';
+			ctx.textBaseline = 'top';
+			var x = (me._mobile_start_tour.userData.boxWidth - (me._mobile_start_tour.userData.hasScrollbar ? 25 : 0)) / 2;
+			ctx.textAlign = 'center';
+			var y = 5;
+			y += (canv.height - me._mobile_start_tour.userData.totalHeight - 2) / 2;
+			for (var i = 0; i < me._mobile_start_tour.userData.textLines.length; i++) {
+				ctx.fillText(me._mobile_start_tour.userData.textLines[i], x, y);
+				y += me._mobile_start_tour.userData.lineHeight;
+			}
+			var textTexture = new THREE.CanvasTexture(canv);
+			textTexture.name = 'mobile_start_tour_texture';
+			textTexture.minFilter = THREE.LinearFilter;
+			textTexture.encoding = THREE.sRGBEncoding;
+			textTexture.wrapS = THREE.ClampToEdgeWrapping;
+			textTexture.wrapT = THREE.ClampToEdgeWrapping;
+			if (me._mobile_start_tour.material.map) {
+				me._mobile_start_tour.material.map.dispose();
+			}
+			me._mobile_start_tour.material.map = textTexture;
+		}
+		el.userData.ggRenderText = function() {
+			me._mobile_start_tour.remove(...me._mobile_start_tour.children);
+			var canv = me._mobile_start_tour.userData.textCanvas;
+			var ctx = me._mobile_start_tour.userData.textCanvasContext;
+			ctx.font = '15px Verdana';
+			me._mobile_start_tour.userData.lineHeight = 15 * 1.2;
+			me._mobile_start_tour.userData.textLines = [];
+			me._mobile_start_tour.userData.textLines.push(me._mobile_start_tour.userData.ggText);
+			me._mobile_start_tour.userData.totalHeight = 7;
+			me._mobile_start_tour.userData.totalHeight += me._mobile_start_tour.userData.lineHeight;
+			me._mobile_start_tour.userData.boxWidth = me._mobile_start_tour.userData.width;
+			me._mobile_start_tour.userData.boxHeight = me._mobile_start_tour.userData.height;
+			me._mobile_start_tour.userData.hasScrollbar = false;
+			canv.width = me._mobile_start_tour.userData.boxWidth;
+			canv.height = me._mobile_start_tour.userData.boxHeight;
+			ctx.font = '15px Verdana';
+			me._mobile_start_tour.userData.ggPaintCanvasText();
+		}
+		me._mobile_start_tour.userData.ggUpdateText=function(force) {
+			var params = [];
+			var hs = player._("B\u1eaeT \u0110\u1ea6U", params);
+			if (hs!=this.ggText || force) {
+				this.ggText=me._mobile_start_tour.userData.ggStripTags(hs);
+				this.ggRenderText();
+			}
+		}
+		me._mobile_start_tour.userData.ggUpdateText();
+		el.userData.setBackgroundColor = function(v) {
+			me._mobile_start_tour.userData.backgroundColor = v;
+		}
+		el.userData.setBackgroundColorAlpha = function(v) {
+			me._mobile_start_tour.userData.backgroundColorAlpha = v;
+		}
+		el.userData.setTextColor = function(v) {
+			me._mobile_start_tour.userData.textColor = v;
+		}
+		el.userData.setTextColorAlpha = function(v) {
+			me._mobile_start_tour.userData.textColorAlpha = v;
+		}
+		el.userData.ggId="mobile_start_tour";
+		me._mobile_start_tour.logicBlock_textcolor = function() {
+			var newLogicStateTextColor;
+			if (
+				((me.elementMouseOver['mobile_start_tour'] == true))
+			)
+			{
+				newLogicStateTextColor = 0;
+			}
+			else {
+				newLogicStateTextColor = -1;
+			}
+			if (me._mobile_start_tour.ggCurrentLogicStateTextColor != newLogicStateTextColor) {
+				me._mobile_start_tour.ggCurrentLogicStateTextColor = newLogicStateTextColor;
+				if (me._mobile_start_tour.ggCurrentLogicStateTextColor == 0) {
+					me._mobile_start_tour.userData.setTextColor(new THREE.Color('#2c2c41'));
+					me._mobile_start_tour.userData.setTextColorAlpha(1);
+					me._mobile_start_tour.userData.ggUpdateText(true);
+				}
+				else {
+					me._mobile_start_tour.userData.setTextColor(new THREE.Color('#ffffff'));
+					me._mobile_start_tour.userData.setTextColorAlpha(1);
+					me._mobile_start_tour.userData.ggUpdateText(true);
+				}
+			}
+		}
+		me._mobile_start_tour.logicBlock_textcolor();
+		me._mobile_start_tour.userData.onclick=function (e) {
+			player.openNext("{node15}","");
+			me._intro.visible=false;
+			me._intro.userData.visible=false;
+		}
+		me._mobile_start_tour.userData.onmouseover=function (e) {
+			me.elementMouseOver['mobile_start_tour']=true;
+			me._mobile_start_tour.logicBlock_textcolor();
+		}
+		me._mobile_start_tour.userData.ontouchend=function (e) {
+			me._mobile_start_tour.logicBlock_textcolor();
+		}
+		me._mobile_start_tour.userData.onmouseout=function (e) {
+			if (e && e.toElement) {
+				var current = e.toElement;
+				while (current = current.parentNode) {
+				if (current == me._mobile_start_tour__text)
+					return;
+				}
+			}
+			me.elementMouseOver['mobile_start_tour']=false;
+			me._mobile_start_tour.logicBlock_textcolor();
+		}
+		me._mobile_start_tour.userData.ggUpdatePosition=function (useTransition) {
+		}
+		me._mobile_image_intro.add(me._mobile_start_tour);
+		me._intro.add(me._mobile_image_intro);
+		me.skinGroup.add(me._intro);
 		me._variable_vis_sounds_splashscreen = {};
 		me._variable_vis_sounds_splashscreen.ggCurrentLogicState = -1;
 		me._variable_vis_sounds_splashscreen.logicBlock = function() {
@@ -14075,6 +15019,15 @@ alert("The current view has been copied.");
 		me._text_1.userData.setOpacity(1.00);
 		me._svg_1.logicBlock_scaling();
 		me._svg_1.userData.setOpacity(1.00);
+		me._intro.userData.setOpacity(1.00);
+		me._default_image_intro.logicBlock_visible();
+		me._default_image_intro.userData.setOpacity(1.00);
+		me._start_tour.logicBlock_textcolor();
+		me._start_tour.userData.setOpacity(1.00);
+		me._mobile_image_intro.logicBlock_visible();
+		me._mobile_image_intro.userData.setOpacity(1.00);
+		me._mobile_start_tour.logicBlock_textcolor();
+		me._mobile_start_tour.userData.setOpacity(1.00);
 		player.addListener('activehotspotchanged', function() {
 			if (hotspotTemplates.hasOwnProperty('ht_video_youtube')) {
 				for(var i = 0; i < hotspotTemplates['ht_video_youtube'].length; i++) {
@@ -14244,6 +15197,8 @@ alert("The current view has been copied.");
 			me._rotate_off.logicBlock_visible();
 			me._rotate_on.logicBlock_visible();
 			me._information.logicBlock_visible();
+			me._default_image_intro.logicBlock_visible();
+			me._mobile_image_intro.logicBlock_visible();
 			me._variable_vis_sounds_splashscreen.logicBlock();
 			me._variable_vis_skin.logicBlock();
 			me._variable_vis_controls_left.logicBlock();
@@ -14389,6 +15344,8 @@ alert("The current view has been copied.");
 			me._rotate_off.logicBlock_visible();
 			me._rotate_on.logicBlock_visible();
 			me._information.logicBlock_visible();
+			me._default_image_intro.logicBlock_visible();
+			me._mobile_image_intro.logicBlock_visible();
 			me._variable_vis_sounds_splashscreen.logicBlock();
 			me._variable_vis_skin.logicBlock();
 			me._variable_vis_controls_left.logicBlock();
@@ -14439,6 +15396,8 @@ alert("The current view has been copied.");
 		player.addListener('varchanged_resp_phone', function() {
 			me._share.logicBlock_position();
 			me._map_fs_small.logicBlock_visible();
+			me._default_image_intro.logicBlock_visible();
+			me._mobile_image_intro.logicBlock_visible();
 			me._variable_vis_controls_left.logicBlock();
 		});
 		player.addListener('varchanged_sounds_splashscreen_accepted', function() {
