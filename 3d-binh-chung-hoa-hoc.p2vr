@@ -2122,22 +2122,22 @@
       <sounds>
         <sound>
           <position>
-            <pan>-84.3974</pan>
-            <tilt>30.9194</tilt>
+            <pan>-84.4</pan>
+            <tilt>30.92</tilt>
           </position>
           <videorect>
-            <rotx>31.0397</rotx>
-            <roty>4.53355</roty>
-            <rotz>-2.98097</rotz>
-            <fov>90.7419</fov>
-            <stretch>99.2537</stretch>
+            <rotx>31.04</rotx>
+            <roty>4.53</roty>
+            <rotz>-2.98</rotz>
+            <fov>90.74</fov>
+            <stretch>99.25</stretch>
             <dimx>1920</dimx>
             <dimy>1080</dimy>
           </videorect>
           <type>video</type>
           <id>Element01</id>
-          <filename>media/video3.mp4</filename>
-          <urlsafefilename>video3-8.mp4</urlsafefilename>
+          <filename>media/video-bchh.mp4</filename>
+          <urlsafefilename>video-bchh.mp4</urlsafefilename>
           <mode>1</mode>
           <nodechangekeep>0</nodechangekeep>
           <locked>0</locked>
