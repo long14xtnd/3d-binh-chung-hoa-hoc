@@ -1,7 +1,7 @@
 // Garden Gnome Software - VR - Skin
 // Pano2VR 7.0.9/20024
 // Filename: venis.ggsk
-// Generated 2024-10-25T10:20:34
+// Generated 2024-10-25T10:34:38
 
 function pano2vrVrSkin(player,base) {
 	player.addVariable('vis_sounds_splashscreen', 2, false, { ignoreInState: 1  });
@@ -9323,145 +9323,53 @@ alert("The current view has been copied.");
 		el.userData.transitions = [];
 		me._next = el;
 		el.userData.ggId="next";
-		me._next.logicBlock_position = function() {
-			var newLogicStatePosition;
+		me._next.logicBlock_scaling = function() {
+			var newLogicStateScaling;
 			if (
 				((me.elementMouseOver['next'] == true))
 			)
 			{
-				newLogicStatePosition = 0;
+				newLogicStateScaling = 0;
 			}
 			else {
-				newLogicStatePosition = -1;
+				newLogicStateScaling = -1;
 			}
-			if (me._next.ggCurrentLogicStatePosition != newLogicStatePosition) {
-				me._next.ggCurrentLogicStatePosition = newLogicStatePosition;
-				if (me._next.ggCurrentLogicStatePosition == 0) {
-					var newPos = skin.getElementVrPosition(me._next, 15, 0);
-					var deltaX = (newPos.x - me._next.position.x) * 100.0;
-					me._next.userData.transitionValue_posx = deltaX;
-					for (var i = 0; i < me._next.userData.transitions.length; i++) {
-						if (me._next.userData.transitions[i].property == 'posx') {
-							clearInterval(me._next.userData.transitions[i].interval);
-							me._next.userData.transitions.splice(i, 1);
-							break;
-						}
-					}
-					let transition_posx = {};
-					transition_posx.property = 'posx';
-					transition_posx.startTime = Date.now();
-					transition_posx.startX = me._next.position.x;
-					transition_posx.interval = setInterval(() => {
-						let currentTime = Date.now() - 0;
-						let percentDone = 1.0 * (currentTime - transition_posx.startTime) / 100;
-						percentDone = Math.max(percentDone, 0.0);
-						percentDone = Math.min(percentDone, 1.0);
-						let tfval = -(Math.cos(Math.PI * percentDone) - 1) / 2;
-						me._next.position.x = transition_posx.startX + ((me._next.userData.transitionValue_posx / 100.0) * tfval);
-						if (percentDone >= 1.0) {
-							clearInterval(transition_posx.interval);
-							me._next.userData.transitions.splice(me._next.userData.transitions.indexOf(transition_posx), 1);
-						}
-					}, 20);
-					me._next.userData.transitions.push(transition_posx);
-					var deltaY = (newPos.y - me._next.position.y) * 100.0;
-					me._next.userData.transitionValue_posy = deltaY;
-					for (var i = 0; i < me._next.userData.transitions.length; i++) {
-						if (me._next.userData.transitions[i].property == 'posy') {
-							clearInterval(me._next.userData.transitions[i].interval);
-							me._next.userData.transitions.splice(i, 1);
-							break;
-						}
-					}
-					let transition_posy = {};
-					transition_posy.property = 'posy';
-					transition_posy.startTime = Date.now();
-					transition_posy.startY = me._next.position.y;
-					transition_posy.interval = setInterval(() => {
-						let currentTime = Date.now() - 0;
-						let percentDone = 1.0 * (currentTime - transition_posy.startTime) / 100;
-						percentDone = Math.max(percentDone, 0.0);
-						percentDone = Math.min(percentDone, 1.0);
-						let tfval = -(Math.cos(Math.PI * percentDone) - 1) / 2;
-						me._next.position.y = transition_posy.startY + ((me._next.userData.transitionValue_posy / 100.0) * tfval);
-						if (percentDone >= 1.0) {
-							clearInterval(transition_posy.interval);
-							me._next.userData.transitions.splice(me._next.userData.transitions.indexOf(transition_posy), 1);
-						}
-					}, 20);
-					me._next.userData.transitions.push(transition_posy);
+			if (me._next.ggCurrentLogicStateScaling != newLogicStateScaling) {
+				me._next.ggCurrentLogicStateScaling = newLogicStateScaling;
+				if (me._next.ggCurrentLogicStateScaling == 0) {
+					me._next.scale.set(1.2, 1.2, 1.0);
+					var scaleOffX = 0;
+					var scaleOffY = 0;
+					me._next.position.x = (me._next.position.x - me._next.userData.curScaleOffX) + scaleOffX;
+					me._next.userData.curScaleOffX = scaleOffX;
+					me._next.position.y = (me._next.position.y - me._next.userData.curScaleOffY) + scaleOffY;
+					me._next.userData.curScaleOffY = scaleOffY;
 				}
 				else {
-					var elPos = skin.getElementVrPosition(me._next, 20, 0);
-					var deltaX = (elPos.x - me._next.position.x) * 100.0;
-					me._next.userData.transitionValue_posx = deltaX;
-					for (var i = 0; i < me._next.userData.transitions.length; i++) {
-						if (me._next.userData.transitions[i].property == 'posx') {
-							clearInterval(me._next.userData.transitions[i].interval);
-							me._next.userData.transitions.splice(i, 1);
-							break;
-						}
-					}
-					let transition_posx = {};
-					transition_posx.property = 'posx';
-					transition_posx.startTime = Date.now();
-					transition_posx.startX = me._next.position.x;
-					transition_posx.interval = setInterval(() => {
-						let currentTime = Date.now() - 0;
-						let percentDone = 1.0 * (currentTime - transition_posx.startTime) / 100;
-						percentDone = Math.max(percentDone, 0.0);
-						percentDone = Math.min(percentDone, 1.0);
-						let tfval = -(Math.cos(Math.PI * percentDone) - 1) / 2;
-						me._next.position.x = transition_posx.startX + ((me._next.userData.transitionValue_posx / 100.0) * tfval);
-						if (percentDone >= 1.0) {
-							clearInterval(transition_posx.interval);
-							me._next.userData.transitions.splice(me._next.userData.transitions.indexOf(transition_posx), 1);
-						}
-					}, 20);
-					me._next.userData.transitions.push(transition_posx);
-					var deltaY = (elPos.y - me._next.position.y) * 100.0;
-					me._next.userData.transitionValue_posy = deltaY;
-					for (var i = 0; i < me._next.userData.transitions.length; i++) {
-						if (me._next.userData.transitions[i].property == 'posy') {
-							clearInterval(me._next.userData.transitions[i].interval);
-							me._next.userData.transitions.splice(i, 1);
-							break;
-						}
-					}
-					let transition_posy = {};
-					transition_posy.property = 'posy';
-					transition_posy.startTime = Date.now();
-					transition_posy.startY = me._next.position.y;
-					transition_posy.interval = setInterval(() => {
-						let currentTime = Date.now() - 0;
-						let percentDone = 1.0 * (currentTime - transition_posy.startTime) / 100;
-						percentDone = Math.max(percentDone, 0.0);
-						percentDone = Math.min(percentDone, 1.0);
-						let tfval = -(Math.cos(Math.PI * percentDone) - 1) / 2;
-						me._next.position.y = transition_posy.startY + ((me._next.userData.transitionValue_posy / 100.0) * tfval);
-						if (percentDone >= 1.0) {
-							clearInterval(transition_posy.interval);
-							me._next.userData.transitions.splice(me._next.userData.transitions.indexOf(transition_posy), 1);
-						}
-					}, 20);
-					me._next.userData.transitions.push(transition_posy);
+					me._next.scale.set(1, 1, 1.0);
+					var scaleOffX = 0;
+					var scaleOffY = 0;
+					me._next.position.x = (me._next.position.x - me._next.userData.curScaleOffX) + scaleOffX;
+					me._next.userData.curScaleOffX = scaleOffX;
+					me._next.position.y = (me._next.position.y - me._next.userData.curScaleOffY) + scaleOffY;
+					me._next.userData.curScaleOffY = scaleOffY;
 				}
 			}
 		}
-		me._next.logicBlock_position();
+		me._next.logicBlock_scaling();
 		me._next.userData.onclick=function (e) {
 			player.openNext("{"+player.getNextNode()+"}","");
 		}
 		me._next.userData.onmouseover=function (e) {
 			me.elementMouseOver['next']=true;
-			me._next.logicBlock_position();
+			me._next.logicBlock_scaling();
 		}
 		me._next.userData.ontouchend=function (e) {
-			me._next.logicBlock_position();
+			me._next.logicBlock_scaling();
 		}
 		me._next.userData.onmouseout=function (e) {
 			me.elementMouseOver['next']=false;
-			me._next.logicBlock_position();
+			me._next.logicBlock_scaling();
 		}
 		me._next.userData.ggUpdatePosition=function (useTransition) {
 		}
@@ -9610,6 +9518,51 @@ alert("The current view has been copied.");
 		el.userData.transitions = [];
 		me._rectangle_1 = el;
 		el.userData.ggId="Rectangle 1";
+		me._rectangle_1.logicBlock_scaling = function() {
+			var newLogicStateScaling;
+			if (
+				((me.elementMouseOver['rectangle_1'] == true))
+			)
+			{
+				newLogicStateScaling = 0;
+			}
+			else {
+				newLogicStateScaling = -1;
+			}
+			if (me._rectangle_1.ggCurrentLogicStateScaling != newLogicStateScaling) {
+				me._rectangle_1.ggCurrentLogicStateScaling = newLogicStateScaling;
+				if (me._rectangle_1.ggCurrentLogicStateScaling == 0) {
+					me._rectangle_1.scale.set(1.2, 1.2, 1.0);
+					var scaleOffX = 0;
+					var scaleOffY = 0;
+					me._rectangle_1.position.x = (me._rectangle_1.position.x - me._rectangle_1.userData.curScaleOffX) + scaleOffX;
+					me._rectangle_1.userData.curScaleOffX = scaleOffX;
+					me._rectangle_1.position.y = (me._rectangle_1.position.y - me._rectangle_1.userData.curScaleOffY) + scaleOffY;
+					me._rectangle_1.userData.curScaleOffY = scaleOffY;
+				}
+				else {
+					me._rectangle_1.scale.set(1, 1, 1.0);
+					var scaleOffX = 0;
+					var scaleOffY = 0;
+					me._rectangle_1.position.x = (me._rectangle_1.position.x - me._rectangle_1.userData.curScaleOffX) + scaleOffX;
+					me._rectangle_1.userData.curScaleOffX = scaleOffX;
+					me._rectangle_1.position.y = (me._rectangle_1.position.y - me._rectangle_1.userData.curScaleOffY) + scaleOffY;
+					me._rectangle_1.userData.curScaleOffY = scaleOffY;
+				}
+			}
+		}
+		me._rectangle_1.logicBlock_scaling();
+		me._rectangle_1.userData.onmouseover=function (e) {
+			me.elementMouseOver['rectangle_1']=true;
+			me._rectangle_1.logicBlock_scaling();
+		}
+		me._rectangle_1.userData.ontouchend=function (e) {
+			me._rectangle_1.logicBlock_scaling();
+		}
+		me._rectangle_1.userData.onmouseout=function (e) {
+			me.elementMouseOver['rectangle_1']=false;
+			me._rectangle_1.logicBlock_scaling();
+		}
 		me._rectangle_1.userData.ggUpdatePosition=function (useTransition) {
 		}
 		geometry = new THREE.PlaneBufferGeometry(0.2, 0.2, 5, 5 );
@@ -9888,145 +9841,53 @@ alert("The current view has been copied.");
 		el.userData.transitions = [];
 		me._prev = el;
 		el.userData.ggId="prev";
-		me._prev.logicBlock_position = function() {
-			var newLogicStatePosition;
+		me._prev.logicBlock_scaling = function() {
+			var newLogicStateScaling;
 			if (
 				((me.elementMouseOver['prev'] == true))
 			)
 			{
-				newLogicStatePosition = 0;
+				newLogicStateScaling = 0;
 			}
 			else {
-				newLogicStatePosition = -1;
+				newLogicStateScaling = -1;
 			}
-			if (me._prev.ggCurrentLogicStatePosition != newLogicStatePosition) {
-				me._prev.ggCurrentLogicStatePosition = newLogicStatePosition;
-				if (me._prev.ggCurrentLogicStatePosition == 0) {
-					var newPos = skin.getElementVrPosition(me._prev, 15, 0);
-					var deltaX = (newPos.x - me._prev.position.x) * 100.0;
-					me._prev.userData.transitionValue_posx = deltaX;
-					for (var i = 0; i < me._prev.userData.transitions.length; i++) {
-						if (me._prev.userData.transitions[i].property == 'posx') {
-							clearInterval(me._prev.userData.transitions[i].interval);
-							me._prev.userData.transitions.splice(i, 1);
-							break;
-						}
-					}
-					let transition_posx = {};
-					transition_posx.property = 'posx';
-					transition_posx.startTime = Date.now();
-					transition_posx.startX = me._prev.position.x;
-					transition_posx.interval = setInterval(() => {
-						let currentTime = Date.now() - 0;
-						let percentDone = 1.0 * (currentTime - transition_posx.startTime) / 100;
-						percentDone = Math.max(percentDone, 0.0);
-						percentDone = Math.min(percentDone, 1.0);
-						let tfval = -(Math.cos(Math.PI * percentDone) - 1) / 2;
-						me._prev.position.x = transition_posx.startX + ((me._prev.userData.transitionValue_posx / 100.0) * tfval);
-						if (percentDone >= 1.0) {
-							clearInterval(transition_posx.interval);
-							me._prev.userData.transitions.splice(me._prev.userData.transitions.indexOf(transition_posx), 1);
-						}
-					}, 20);
-					me._prev.userData.transitions.push(transition_posx);
-					var deltaY = (newPos.y - me._prev.position.y) * 100.0;
-					me._prev.userData.transitionValue_posy = deltaY;
-					for (var i = 0; i < me._prev.userData.transitions.length; i++) {
-						if (me._prev.userData.transitions[i].property == 'posy') {
-							clearInterval(me._prev.userData.transitions[i].interval);
-							me._prev.userData.transitions.splice(i, 1);
-							break;
-						}
-					}
-					let transition_posy = {};
-					transition_posy.property = 'posy';
-					transition_posy.startTime = Date.now();
-					transition_posy.startY = me._prev.position.y;
-					transition_posy.interval = setInterval(() => {
-						let currentTime = Date.now() - 0;
-						let percentDone = 1.0 * (currentTime - transition_posy.startTime) / 100;
-						percentDone = Math.max(percentDone, 0.0);
-						percentDone = Math.min(percentDone, 1.0);
-						let tfval = -(Math.cos(Math.PI * percentDone) - 1) / 2;
-						me._prev.position.y = transition_posy.startY + ((me._prev.userData.transitionValue_posy / 100.0) * tfval);
-						if (percentDone >= 1.0) {
-							clearInterval(transition_posy.interval);
-							me._prev.userData.transitions.splice(me._prev.userData.transitions.indexOf(transition_posy), 1);
-						}
-					}, 20);
-					me._prev.userData.transitions.push(transition_posy);
+			if (me._prev.ggCurrentLogicStateScaling != newLogicStateScaling) {
+				me._prev.ggCurrentLogicStateScaling = newLogicStateScaling;
+				if (me._prev.ggCurrentLogicStateScaling == 0) {
+					me._prev.scale.set(1.2, 1.2, 1.0);
+					var scaleOffX = 0;
+					var scaleOffY = 0;
+					me._prev.position.x = (me._prev.position.x - me._prev.userData.curScaleOffX) + scaleOffX;
+					me._prev.userData.curScaleOffX = scaleOffX;
+					me._prev.position.y = (me._prev.position.y - me._prev.userData.curScaleOffY) + scaleOffY;
+					me._prev.userData.curScaleOffY = scaleOffY;
 				}
 				else {
-					var elPos = skin.getElementVrPosition(me._prev, 20, 0);
-					var deltaX = (elPos.x - me._prev.position.x) * 100.0;
-					me._prev.userData.transitionValue_posx = deltaX;
-					for (var i = 0; i < me._prev.userData.transitions.length; i++) {
-						if (me._prev.userData.transitions[i].property == 'posx') {
-							clearInterval(me._prev.userData.transitions[i].interval);
-							me._prev.userData.transitions.splice(i, 1);
-							break;
-						}
-					}
-					let transition_posx = {};
-					transition_posx.property = 'posx';
-					transition_posx.startTime = Date.now();
-					transition_posx.startX = me._prev.position.x;
-					transition_posx.interval = setInterval(() => {
-						let currentTime = Date.now() - 0;
-						let percentDone = 1.0 * (currentTime - transition_posx.startTime) / 100;
-						percentDone = Math.max(percentDone, 0.0);
-						percentDone = Math.min(percentDone, 1.0);
-						let tfval = -(Math.cos(Math.PI * percentDone) - 1) / 2;
-						me._prev.position.x = transition_posx.startX + ((me._prev.userData.transitionValue_posx / 100.0) * tfval);
-						if (percentDone >= 1.0) {
-							clearInterval(transition_posx.interval);
-							me._prev.userData.transitions.splice(me._prev.userData.transitions.indexOf(transition_posx), 1);
-						}
-					}, 20);
-					me._prev.userData.transitions.push(transition_posx);
-					var deltaY = (elPos.y - me._prev.position.y) * 100.0;
-					me._prev.userData.transitionValue_posy = deltaY;
-					for (var i = 0; i < me._prev.userData.transitions.length; i++) {
-						if (me._prev.userData.transitions[i].property == 'posy') {
-							clearInterval(me._prev.userData.transitions[i].interval);
-							me._prev.userData.transitions.splice(i, 1);
-							break;
-						}
-					}
-					let transition_posy = {};
-					transition_posy.property = 'posy';
-					transition_posy.startTime = Date.now();
-					transition_posy.startY = me._prev.position.y;
-					transition_posy.interval = setInterval(() => {
-						let currentTime = Date.now() - 0;
-						let percentDone = 1.0 * (currentTime - transition_posy.startTime) / 100;
-						percentDone = Math.max(percentDone, 0.0);
-						percentDone = Math.min(percentDone, 1.0);
-						let tfval = -(Math.cos(Math.PI * percentDone) - 1) / 2;
-						me._prev.position.y = transition_posy.startY + ((me._prev.userData.transitionValue_posy / 100.0) * tfval);
-						if (percentDone >= 1.0) {
-							clearInterval(transition_posy.interval);
-							me._prev.userData.transitions.splice(me._prev.userData.transitions.indexOf(transition_posy), 1);
-						}
-					}, 20);
-					me._prev.userData.transitions.push(transition_posy);
+					me._prev.scale.set(1, 1, 1.0);
+					var scaleOffX = 0;
+					var scaleOffY = 0;
+					me._prev.position.x = (me._prev.position.x - me._prev.userData.curScaleOffX) + scaleOffX;
+					me._prev.userData.curScaleOffX = scaleOffX;
+					me._prev.position.y = (me._prev.position.y - me._prev.userData.curScaleOffY) + scaleOffY;
+					me._prev.userData.curScaleOffY = scaleOffY;
 				}
 			}
 		}
-		me._prev.logicBlock_position();
+		me._prev.logicBlock_scaling();
 		me._prev.userData.onclick=function (e) {
 			player.openNext("{"+player.getPrevNode()+"}","");
 		}
 		me._prev.userData.onmouseover=function (e) {
 			me.elementMouseOver['prev']=true;
-			me._prev.logicBlock_position();
+			me._prev.logicBlock_scaling();
 		}
 		me._prev.userData.ontouchend=function (e) {
-			me._prev.logicBlock_position();
+			me._prev.logicBlock_scaling();
 		}
 		me._prev.userData.onmouseout=function (e) {
 			me.elementMouseOver['prev']=false;
-			me._prev.logicBlock_position();
+			me._prev.logicBlock_scaling();
 		}
 		me._prev.userData.ggUpdatePosition=function (useTransition) {
 		}
@@ -14957,14 +14818,15 @@ alert("The current view has been copied.");
 		me._local_fonts.userData.setOpacity(1.00);
 		me._controls_center.userData.setOpacity(1.00);
 		me._controls_center_bg.userData.setOpacity(1.00);
-		me._next.logicBlock_position();
+		me._next.logicBlock_scaling();
 		me._next.userData.setOpacity(1.00);
+		me._rectangle_1.logicBlock_scaling();
 		me._rectangle_1.userData.setOpacity(1.00);
 		me._pause.logicBlock_visible();
 		me._pause.userData.setOpacity(1.00);
 		me._play.logicBlock_visible();
 		me._play.userData.setOpacity(1.00);
-		me._prev.logicBlock_position();
+		me._prev.logicBlock_scaling();
 		me._prev.userData.setOpacity(1.00);
 		me._controls_left.userData.setOpacity(1.00);
 		me._controls_left_bg.userData.setOpacity(1.00);
