@@ -574,8 +574,8 @@
           </videorect>
           <type>image</type>
           <id>Element02</id>
-          <filename>D:\Viettech\3D-binh-chung-hoa-hoc\ANH TREO TUONG\10.webp</filename>
-          <urlsafefilename>10.webp</urlsafefilename>
+          <filename>media/14.jpg</filename>
+          <urlsafefilename>14.jpg</urlsafefilename>
           <mode>0</mode>
           <nodechangekeep>0</nodechangekeep>
           <locked>1</locked>
@@ -676,8 +676,8 @@
           </videorect>
           <type>image</type>
           <id>Element05</id>
-          <filename>D:\Viettech\3D-binh-chung-hoa-hoc\ANH TREO TUONG\13.webp</filename>
-          <urlsafefilename>13.webp</urlsafefilename>
+          <filename>media/15.webp</filename>
+          <urlsafefilename>15.webp</urlsafefilename>
           <mode>0</mode>
           <nodechangekeep>0</nodechangekeep>
           <locked>1</locked>
@@ -3539,7 +3539,7 @@ Phần này giới thiệu các hoạt động của bộ đội hoá học tron
         <rubberband>0</rubberband>
         <locked>0</locked>
         <speedwheel>1</speedwheel>
-        <vrskinfile>$d/venis.ggsk</vrskinfile>
+        <vrskinfile>feather_vr.ggsk</vrskinfile>
       </htmlcss>
     </output>
     <streetview/>
