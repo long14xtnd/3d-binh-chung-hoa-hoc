@@ -91,6 +91,23 @@
       src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
     ></script>
     <script>
+      //Chặn user ctrl u và f12
+      document.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (
+          (e.ctrlKey &&
+            (e.key === "u" ||
+              e.key === "U" ||
+              e.key === "s" ||
+              e.key === "S")) ||
+          e.key === "F12"
+        ) {
+          e.preventDefault();
+        }
+      });
+
       // Call the function to get the data
 
       //xử lý load model theo id
