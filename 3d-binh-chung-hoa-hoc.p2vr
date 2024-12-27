@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!-- Pano2VR project file  -->
-<pano2vrconfig rev="20024" version="7.0.9">
+<pano2vrconfig version="7.0.9" rev="20024">
   <tour>
     <panorama>
       <projectsettings>
@@ -3358,15 +3358,12 @@ Phần này giới thiệu các hoạt động của bộ đội hoá học tron
       </backgroundsound>
       <translationsavailable>
         <value id="Project">en-US</value>
-        <value id="de.po">de</value>
       </translationsavailable>
       <translationsnames>
         <value id="Project">American English</value>
-        <value id="de.po">Deutsch</value>
       </translationsnames>
       <translationsenabled>
         <value id="Project">true</value>
-        <value id="de.po">true</value>
       </translationsenabled>
     </projectsettings>
     <floorplans>
@@ -3427,6 +3424,7 @@ Phần này giới thiệu các hoạt động của bộ đội hoá học tron
         <locked>0</locked>
         <speedwheel>1</speedwheel>
         <vrskinfile>feather_vr.ggsk</vrskinfile>
+        <fullscreencontext>0</fullscreencontext>
       </htmlcss>
     </output>
     <streetview/>
