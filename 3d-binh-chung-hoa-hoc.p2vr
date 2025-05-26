@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!-- Pano2VR project file  -->
-<pano2vrconfig version="7.0.9" rev="20024">
+<pano2vrconfig rev="20024" version="7.0.9">
   <tour>
     <start>node38</start>
     <panorama>
@@ -2799,6 +2799,7 @@
           <linktype>node</linktype>
           <linksubtype>unknown</linksubtype>
           <url>{node47}</url>
+          <skinid>floor_hotspot</skinid>
           <type>point</type>
           <distance>0</distance>
           <distanceauto>1</distanceauto>
